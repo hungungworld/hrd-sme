@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>중소기업 HRD 교육 현황</title>
+<meta name="description" content='중소 무역회사 HRD 담당자를 위한 교육 현황 대시보드: 법정교육 마감, 환급, 교육 사각지대, 직무 역량.'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/base.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>window.DASH_SOURCES = {"comp_levels": "data/comp_levels.csv", "competencies": "data/competencies.csv", "depts": "data/depts.csv", "employees": "data/employees.csv", "legal_weekly": "data/legal_weekly.csv", "monthly": "data/monthly.csv", "refund": "data/refund.csv", "training": "data/training.csv"};</script>
+<script src="assets/dash-lite.js"></script>
+</head>
+<body>
+<header class="site-bar"><span>HRD 대시보드 포트폴리오 · 모든 수치는 가상 데이터입니다</span></header>
+<div id="dash-root">
+<style>
+  /* 한글은 단어 단위로 줄바꿈하고, 문단 끝에 한두 글자만 남지 않게 합니다. */
+  .hr { word-break: keep-all; overflow-wrap: anywhere; }
+  .hr p, .hr li, .hr dd { text-wrap: pretty; }
+  .hr h1, .hr h2 { text-wrap: balance; }
+  .hr { display: grid; gap: var(--cds-gap-lg); font-family: var(--font-anthropic-sans); font-variant-numeric: tabular-nums; }
+  .hr-page { display: grid; gap: var(--cds-gap-xl); }
+  .hr-page[hidden] { display: none; }
+  .hr-top { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); align-items: flex-end; justify-content: space-between; }
+  .hr-head { min-width: 0; flex: 1 1 24rem; }
+  .hr-head h1 { margin: 0; font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); text-wrap: balance; }
+  .hr-sub { margin: var(--cds-gap-xs) 0 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .hr-take { margin: 0; max-width: 65ch; font-size: var(--cds-font-size-body); }
+  .hr .hr-take b { font-weight: var(--cds-font-weight-medium); }
+  /* 문장마다 새 줄, 줄이 넘치면 의미 덩어리(.nb) 사이에서만 끊습니다. */
+  .hr-line { display: block; }
+  .hr-line[hidden] { display: none; }
+  .hr .nb { display: inline-block; max-width: 100%; }
+  .hr-filter { display: flex; flex-direction: column; gap: var(--cds-gap-xs); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .hr select { font: inherit; font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg); }
+  .hr-filter select { min-width: 11rem; font-size: var(--cds-font-size-body); }
+  .hr-tabs { display: flex; gap: var(--cds-gap-xs); overflow-x: auto; border-bottom: 1px solid var(--color-border-line); }
+  .hr-tab { all: unset; cursor: pointer; white-space: nowrap; padding: var(--cds-pad-sm) var(--cds-pad-md); font-size: var(--cds-font-size-body); color: var(--color-fg-muted); border-bottom: 2px solid transparent; margin-bottom: -1px; }
+  .hr-tab[aria-selected="true"] { color: var(--color-fg); border-bottom-color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+  .hr-tab:focus-visible { outline: 2px solid var(--cds-chart-axis); outline-offset: -2px; }
+  .hr-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: var(--cds-gap-md); }
+  .hr-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: var(--cds-gap-md); }
+  .hr-card { min-width: 0; display: flex; flex-direction: column; gap: var(--cds-gap-sm); background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); }
+  .hr-card h2 { margin: 0; font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); }
+  .hr-scope { color: var(--color-fg-muted); font-weight: 400; }
+  .hr-note { margin: 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .hr-label { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .hr-big { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: calc(var(--cds-font-size-title) * 1.5); line-height: 1.1; }
+  .hr-big.is-alert { color: var(--color-bad); }
+  .hr-unit { font-size: var(--cds-font-size-body); color: var(--color-fg-muted); margin-left: 2px; }
+  .hr-meter { position: relative; height: 6px; border-radius: 3px; background: var(--cds-chart-grid); overflow: hidden; }
+  .hr-meter-fill { height: 100%; border-radius: 3px; }
+  .hr-chart { position: relative; min-height: 240px; }
+  .hr-chart.is-short { min-height: 220px; }
+  .hr-list { display: grid; gap: var(--cds-gap-xs); min-height: 18rem; align-content: start; }
+  .hr-list.is-short { min-height: 8rem; }
+  .hr-row { display: grid; grid-template-columns: 6.5rem 1fr auto; align-items: center; gap: var(--cds-gap-sm); padding: 3px var(--cds-pad-xs); border-radius: var(--cds-radius); font-size: var(--cds-font-size-caption); }
+  .hr-row.is-click { cursor: pointer; }
+  .hr-row.is-click:hover { background: var(--cds-chart-grid); }
+  .hr-row:focus-visible { outline: 2px solid var(--cds-chart-axis); outline-offset: 1px; }
+  .hr-row.is-dim { opacity: .45; }
+  .hr-row.is-on { font-weight: var(--cds-font-weight-medium); }
+  .hr-row-name { min-width: 0; }
+  .hr-track { position: relative; height: 14px; border-radius: 3px; background: var(--cds-chart-grid); }
+  .hr-fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 3px; }
+  .hr-target { position: absolute; top: -3px; bottom: -3px; width: 0; border-left: 2px dashed var(--cds-chart-reference); }
+  .hr-val { min-width: 7.5rem; text-align: right; white-space: nowrap; }
+  .hr-val small { color: var(--color-fg-muted); margin-left: var(--cds-gap-xs); font-size: inherit; }
+  .hr-bad, .hr-val small.hr-bad { color: var(--color-bad); }
+  .hr-warn, .hr-val small.hr-warn { color: var(--color-warn); }
+  .hr-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); white-space: nowrap; z-index: 2; }
+  .hr-tip-head { color: var(--cds-text-secondary); }
+  .hr-tools { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: center; justify-content: space-between; }
+  .hr-btn { font: inherit; font-size: var(--cds-font-size-caption); cursor: pointer; padding: var(--cds-pad-xs) var(--cds-pad-sm); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg); }
+  .hr-btn:hover { background: var(--cds-chart-grid); }
+  .hr-btn:focus-visible { outline: 2px solid var(--cds-chart-axis); outline-offset: 2px; }
+  .hr-copied { font-size: var(--cds-font-size-caption); color: var(--color-ok); }
+  .hr-copyfail { font-size: var(--cds-font-size-caption); color: var(--color-warn); }
+  .hr-tablecard { container-type: inline-size; }
+  .hr-tablewrap { overflow-x: auto; }
+  .hr-tablewrap.is-tall { max-height: 26rem; overflow: auto; }
+  .hr-tablewrap.is-tall th { position: sticky; top: 0; background: var(--color-panel); z-index: 1; }
+  .hr-table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); }
+  .hr-table th, .hr-table td { padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); text-align: left; white-space: nowrap; }
+  .hr-table th { font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); }
+  .hr-table .num { text-align: right; }
+  .hr-table td.wrap { white-space: normal; min-width: 10rem; }
+  .hr-sort { all: unset; cursor: pointer; }
+  .hr-sort:focus-visible { outline: 2px solid var(--cds-chart-axis); outline-offset: 2px; }
+  .hr-sort::after { content: ""; margin-left: 4px; }
+  th[aria-sort="ascending"] .hr-sort::after { content: "▲"; }
+  th[aria-sort="descending"] .hr-sort::after { content: "▼"; }
+  .hr-cellbar { display: flex; align-items: center; gap: var(--cds-gap-sm); justify-content: flex-end; }
+  .hr-cellbar .hr-track { width: 5rem; height: 8px; }
+  .hr-chip { display: inline-block; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--color-border-line); color: var(--color-fg-muted); }
+  .hr-chip.legal, .hr-chip.alert { border-color: var(--color-bad); color: var(--color-bad); }
+  .hr-chip.ok { border-color: var(--color-ok); color: var(--color-ok); }
+  .hr-chip.warn { border-color: var(--color-warn); color: var(--color-warn); }
+  .hr-matrix-wrap { overflow-x: auto; }
+  .hr-matrix { display: grid; grid-template-columns: 6.5rem repeat(5, minmax(4.5rem, 1fr)); gap: 3px; min-width: 32rem; font-size: var(--cds-font-size-caption); min-height: 18rem; }
+  .hr-mh { color: var(--color-fg-muted); text-align: center; padding: var(--cds-pad-xs); align-self: end; }
+  .hr-mr { padding: var(--cds-pad-xs); align-self: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .hr-mc { text-align: center; padding: var(--cds-pad-xs); border-radius: 3px; }
+  .hr-mc.is-zero { color: var(--color-fg-muted); }
+  .hr-matrix .is-dim { opacity: .4; }
+  .hr-matrix .is-total { font-weight: var(--cds-font-weight-medium); border-top: 1px solid var(--color-border-line); }
+  .hr-matrix.is-comp { grid-template-columns: 6.5rem repeat(6, minmax(4.5rem, 1fr)); min-width: 36rem; min-height: 16rem; }
+  .hr-scale { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-md); margin: 0; padding: 0; list-style: none; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .hr-scale b { color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+  .hr-steps { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); margin: 0; padding: 0; list-style: none; counter-reset: step; font-size: var(--cds-font-size-caption); }
+  .hr-steps li { counter-increment: step; padding: 2px var(--cds-pad-sm); border: 1px solid var(--color-border-line); border-radius: 999px; }
+  .hr-steps li::before { content: counter(step) ". "; color: var(--color-fg-muted); }
+  .hr-stack { display: flex; height: 28px; border-radius: var(--cds-radius); overflow: hidden; background: var(--cds-chart-grid); }
+  .hr-stack > div { height: 100%; }
+  .hr-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); font-size: var(--cds-font-size-caption); }
+  .hr-legend span { display: inline-flex; align-items: center; gap: var(--cds-gap-xs); }
+  .hr-legend i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+  .hr-fail { display: flex; align-items: center; justify-content: center; gap: var(--cds-gap-sm); min-height: inherit; height: 100%; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .hr-fail::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+  [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+  [data-dash-source-state=empty] { color: transparent; }
+  @container (max-width: 560px) { .hr-sec { display: none; } }
+</style>
+
+<div class="hr">
+  <div class="hr-top">
+    <header class="hr-head">
+      <h1>중소기업 HRD 교육 현황</h1>
+      <p class="hr-sub">가상 무역회사 · <span data-draw="scope-name">—</span> · 인원 <span data-draw="headcount" data-source="summary" data-field="headcount">—</span>명 · 2026년 1월 1일 ~ 10월 30일 누적 · 예시 데이터</p>
+    </header>
+    <label class="hr-filter" for="hr-dept">부서
+      <select id="hr-dept" data-draw="dept-pick" data-source="depts"></select>
+    </label>
+  </div>
+
+  <nav class="hr-tabs" role="tablist" aria-label="대시보드 화면">
+    <button type="button" class="hr-tab" role="tab" data-tab="overview" aria-selected="true">운영 현황</button>
+    <button type="button" class="hr-tab" role="tab" data-tab="deadline" aria-selected="false">법정교육 마감 대응</button>
+    <button type="button" class="hr-tab" role="tab" data-tab="blind" aria-selected="false">교육 사각지대</button>
+    <button type="button" class="hr-tab" role="tab" data-tab="refund" aria-selected="false">예산·환급</button>
+    <button type="button" class="hr-tab" role="tab" data-tab="skills" aria-selected="false">직무 역량 지도</button>
+  </nav>
+
+  <!-- 운영 현황 -->
+  <section class="hr-page" id="overview">
+    <p class="hr-take">
+      <span class="hr-line hr-take-miss"><span class="nb">법정의무교육 미이수자는</span> <span class="nb"><b data-draw="missing" data-source="summary" data-field="missing">—</b>명이며,</span></span>
+      <span class="hr-line hr-take-miss"><span class="nb">가장 많이 빠진 과정은</span> <span class="nb"><b data-draw="top-course" data-source="summary" data-field="top_course">—</b>(<b data-draw="top-course-missing" data-source="summary" data-field="top_course_missing">—</b>명)입니다.</span></span>
+      <span class="hr-line hr-take-dept"><span class="nb">부서별로는</span> <span class="nb"><b data-draw="top-dept" data-source="summary" data-field="top_dept">—</b>이</span> <span class="nb"><b data-draw="top-missing" data-source="summary" data-field="top_missing">—</b>명으로</span> <span class="nb">가장 많습니다.</span></span>
+      <span class="hr-line hr-take-miss"><span class="nb">12월 31일 전에</span> <span class="nb">개별 안내가 필요합니다.</span></span>
+      <span class="hr-line hr-take-done" hidden><span class="nb">법정의무교육 5과목을</span> <span class="nb">전원 이수했습니다.</span></span>
+    </p>
+
+    <div class="hr-kpis" aria-label="핵심 지표" data-fetchpriority="high">
+      <div class="hr-card">
+        <span class="hr-label">법정의무교육 이수율 (5과목 모두 이수)</span>
+        <span><span class="hr-big" data-draw="legal-rate" data-source="summary" data-field="legal_rate">—</span><span class="hr-unit">%</span></span>
+        <div class="hr-meter" data-draw="legal-meter" data-source="summary">—</div>
+        <span class="hr-note"><span data-draw="legal-done" data-source="summary" data-field="legal_done">—</span> / <span data-draw="headcount" data-source="summary" data-field="headcount">—</span>명 이수 · 목표 100%</span>
+      </div>
+      <div class="hr-card">
+        <span class="hr-label">1인당 교육시간 (연간 누적)</span>
+        <span><span class="hr-big" data-draw="hours-per" data-source="summary" data-field="hours_per">—</span><span class="hr-unit">시간</span></span>
+        <div class="hr-meter" data-draw="hours-meter" data-source="summary">—</div>
+        <span class="hr-note">연간 목표 <span data-draw="hour-target" data-source="summary" data-field="hour_target">—</span>시간</span>
+      </div>
+      <div class="hr-card">
+        <span class="hr-label">교육예산 집행률</span>
+        <span><span class="hr-big" data-draw="budget-rate" data-source="summary" data-field="budget_rate">—</span><span class="hr-unit">%</span></span>
+        <div class="hr-meter" data-draw="budget-meter" data-source="summary">—</div>
+        <span class="hr-note"><span data-draw="cost" data-source="summary" data-field="cost">—</span> / <span data-draw="budget" data-source="summary" data-field="budget">—</span>만원 집행 · 부서 예산은 인원 비율로 배분</span>
+      </div>
+      <div class="hr-card">
+        <span class="hr-label">교육 만족도 (이수 인원 가중 평균)</span>
+        <span><span class="hr-big" data-draw="satisfaction" data-source="summary" data-field="satisfaction">—</span><span class="hr-unit">/ 5.0</span></span>
+        <div class="hr-meter" data-draw="sat-meter" data-source="summary">—</div>
+        <span class="hr-note">과정 종료 후 설문, 5점 척도</span>
+      </div>
+    </div>
+
+    <section class="hr-card" id="monthly">
+      <h2>월별 교육시간 <span class="hr-scope">· <span data-draw="scope-name">—</span></span></h2>
+      <p class="hr-note">그달에 받은 교육시간의 합계입니다. 막대에 마우스를 올리면 교육비도 볼 수 있습니다. 10월은 30일까지 집계했습니다.</p>
+      <div class="hr-chart" data-draw="monthly" data-source="monthly_scope">—</div>
+    </section>
+
+    <div class="hr-grid">
+      <section class="hr-card" id="dept-legal">
+        <h2>부서별 법정의무교육 이수율</h2>
+        <p class="hr-note">이수율이 <span data-draw="legal-threshold">—</span>% 미만인 부서는 빨간색입니다. 부서를 누르면 그 부서만 보고, 다시 누르면 전체로 돌아갑니다.</p>
+        <div class="hr-list" data-draw="dept-legal" data-source="dept_rates">—</div>
+      </section>
+      <section class="hr-card" id="dept-hours">
+        <h2>부서별 1인당 교육시간</h2>
+        <p class="hr-note">점선은 연간 목표 <span data-draw="hour-target" data-source="summary" data-field="hour_target">—</span>시간입니다. 부서를 누르면 그 부서만 봅니다.</p>
+        <div class="hr-list" data-draw="dept-hours" data-source="dept_rates">—</div>
+      </section>
+    </div>
+
+    <section class="hr-card hr-tablecard" id="courses">
+      <div class="hr-tools">
+        <h2>과정별 운영 현황 <span class="hr-scope">· <span data-draw="scope-name">—</span></span></h2>
+        <select id="hr-cat" data-draw="course-cat" data-source="training" aria-label="과정 분류"></select>
+      </div>
+      <p class="hr-note">이수율은 대상 인원 중 이수한 인원의 비율입니다. 열 제목을 누르면 정렬됩니다.</p>
+      <div class="hr-tablewrap">
+        <table class="hr-table" data-source="course_scope" data-row-key="scope,course">
+          <thead>
+            <tr>
+              <th data-field="course" aria-sort="none"><button type="button" class="hr-sort" data-key="course">과정명</button></th>
+              <th data-field="category" class="hr-sec" aria-sort="none"><button type="button" class="hr-sort" data-key="category">분류</button></th>
+              <th data-field="target" class="num hr-sec" aria-sort="none"><button type="button" class="hr-sort" data-key="target">대상</button></th>
+              <th data-field="done" class="num" aria-sort="none"><button type="button" class="hr-sort" data-key="done">이수</button></th>
+              <th data-field="rate" class="num" aria-sort="ascending"><button type="button" class="hr-sort" data-key="rate">이수율</button></th>
+              <th data-field="hours" class="num hr-sec" aria-sort="none"><button type="button" class="hr-sort" data-key="hours">1인당 시간</button></th>
+              <th data-field="satisfaction" class="num" aria-sort="none"><button type="button" class="hr-sort" data-key="satisfaction">만족도</button></th>
+              <th data-field="cost" class="num hr-sec" aria-sort="none"><button type="button" class="hr-sort" data-key="cost">교육비(만원)</button></th>
+            </tr>
+          </thead>
+          <tbody data-draw="courses-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </section>
+
+  <!-- 법정교육 마감 대응 -->
+  <section class="hr-page" id="deadline" hidden>
+    <div class="hr-kpis">
+      <div class="hr-card">
+        <span class="hr-label">법정의무교육 마감까지</span>
+        <span class="hr-big" data-draw="dday">—</span>
+        <span class="hr-note">마감 <span data-draw="deadline-label">—</span> · 오늘 <span data-draw="today-label">—</span></span>
+      </div>
+      <div class="hr-card">
+        <span class="hr-label">미이수 인원 <span class="hr-scope">· <span data-draw="scope-name">—</span></span></span>
+        <span><span class="hr-big" data-draw="dl-people" data-source="deadline_kpi" data-field="missing_people">—</span><span class="hr-unit">명</span></span>
+        <span class="hr-note">남은 과목 합계 <span data-draw="dl-courses" data-source="deadline_kpi" data-field="missing_courses">—</span>건</span>
+      </div>
+      <div class="hr-card">
+        <span class="hr-label">이번 주 안내할 대상</span>
+        <span><span class="hr-big" data-draw="dl-due" data-source="deadline_kpi" data-field="due_count">—</span><span class="hr-unit">명</span></span>
+        <span class="hr-note">안내한 적 없거나 마지막 안내 후 7일 이상 지난 사람</span>
+      </div>
+      <div class="hr-card">
+        <span class="hr-label">마감까지 주마다 이수시켜야 할 인원</span>
+        <span><span class="hr-big" data-draw="dl-pace" data-source="deadline_kpi">—</span><span class="hr-unit">명/주</span></span>
+        <span class="hr-note">미이수 인원을 남은 주 수로 나눈 값</span>
+      </div>
+    </div>
+
+    <div class="hr-grid">
+      <section class="hr-card" id="legal-matrix">
+        <h2>과정별·부서별 미이수 인원</h2>
+        <p class="hr-note">색이 진할수록 미이수 인원이 많습니다. 부서 이름을 누르면 그 부서만 봅니다.</p>
+        <div class="hr-matrix-wrap">
+          <div class="hr-matrix" data-draw="matrix" data-source="legal_matrix">—</div>
+        </div>
+      </section>
+      <section class="hr-card" id="legal-weekly">
+        <h2>주별 미이수 인원 추이 <span class="hr-scope">· <span data-draw="scope-name">—</span></span></h2>
+        <p class="hr-note">매주 월요일 기준으로 법정의무 5과목 중 하나라도 남은 사람 수입니다.</p>
+        <div class="hr-chart is-short" data-draw="weekly" data-source="weekly_scope">—</div>
+      </section>
+    </div>
+
+    <section class="hr-card hr-tablecard" id="notice">
+      <div class="hr-tools">
+        <h2>안내 대상자 <span class="hr-scope">· <span data-draw="scope-name">—</span></span></h2>
+        <span>
+          <button type="button" class="hr-btn" id="hr-copy">이번 주 안내 대상 사번 복사</button>
+          <span class="hr-copied" hidden>복사했습니다</span>
+          <span class="hr-copyfail" hidden>복사하지 못했습니다. 표에서 직접 선택해 주세요</span>
+        </span>
+      </div>
+      <p class="hr-note">개인정보 보호를 위해 가명 사번으로 표시합니다. 이번 주 안내 대상이 위로 오고, 남은 과목이 많은 순서입니다. 데이터 기준일은 <span data-draw="as-of" data-source="deadline_kpi" data-field="as_of">—</span>입니다.</p>
+      <div class="hr-tablewrap is-tall">
+        <table class="hr-table" data-source="notice_list" data-row-key="emp_id">
+          <thead>
+            <tr>
+              <th data-field="emp_id">사번</th>
+              <th data-field="dept">부서</th>
+              <th data-field="work_type" class="hr-sec">근무 형태</th>
+              <th data-field="courses">남은 과목</th>
+              <th data-field="remaining" class="num">과목 수</th>
+              <th data-field="last_notice" class="hr-sec">마지막 안내</th>
+              <th data-field="due">상태</th>
+            </tr>
+          </thead>
+          <tbody data-draw="notice-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </section>
+
+  <!-- 교육 사각지대 -->
+  <section class="hr-page" id="blind" hidden>
+    <p class="hr-take">
+      <span class="hr-line"><span class="nb">평균 교육시간만 보면</span> <span class="nb">놓치는 사람이 있습니다.</span></span>
+      <span class="hr-line"><span class="nb">법정의무교육을 빼고</span> <span class="nb">연간 교육이 <b data-draw="blind-th" data-source="blind" data-field="threshold">—</b>시간 미만인 직원을</span> <span class="nb"><b>교육 사각지대</b>로 봅니다.</span></span>
+    </p>
+    <div class="hr-kpis">
+      <div class="hr-card">
+        <span class="hr-label">사각지대 직원 <span class="hr-scope">· <span data-draw="scope-name">—</span></span></span>
+        <span><span class="hr-big" data-draw="blind-under" data-source="blind" data-field="under">—</span><span class="hr-unit">명</span></span>
+        <span class="hr-note">전체 <span data-draw="blind-people" data-source="blind" data-field="people">—</span>명 중</span>
+      </div>
+      <div class="hr-card">
+        <span class="hr-label">사각지대 비율</span>
+        <span><span class="hr-big" data-draw="blind-share" data-source="blind" data-field="share">—</span><span class="hr-unit">%</span></span>
+        <div class="hr-meter" data-draw="blind-meter" data-source="blind">—</div>
+      </div>
+      <div class="hr-card">
+        <span class="hr-label">법정 외 교육시간 중앙값</span>
+        <span><span class="hr-big" data-draw="blind-median" data-source="blind" data-field="median_other">—</span><span class="hr-unit">시간</span></span>
+        <span class="hr-note">한가운데 있는 직원의 값이라 평균보다 실제에 가깝습니다</span>
+      </div>
+    </div>
+
+    <section class="hr-card" id="blind-hist">
+      <h2>법정 외 교육시간 분포 <span class="hr-scope">· <span data-draw="scope-name">—</span></span></h2>
+      <p class="hr-note">구간마다 직원 수입니다. 빨간 막대가 사각지대 구간입니다.</p>
+      <div class="hr-chart" data-draw="hist" data-source="employees">—</div>
+    </section>
+
+    <div class="hr-grid">
+      <section class="hr-card" id="blind-type">
+        <h2>근무 형태별 사각지대 비율 <span class="hr-scope">· <span data-draw="scope-name">—</span></span></h2>
+        <p class="hr-note">현장직과 출장이 잦은 직무는 정해진 시간의 집합교육에 참여하기 어렵습니다.</p>
+        <div class="hr-list is-short" data-draw="blind-type" data-source="blind_type">—</div>
+      </section>
+      <section class="hr-card" id="blind-dept">
+        <h2>부서별 사각지대 비율</h2>
+        <p class="hr-note">부서를 누르면 그 부서만 봅니다. 오른쪽 숫자는 사각지대 인원입니다.</p>
+        <div class="hr-list" data-draw="blind-dept" data-source="blind">—</div>
+      </section>
+    </div>
+  </section>
+
+  <!-- 예산·환급 -->
+  <section class="hr-page" id="refund" hidden>
+    <p class="hr-take">
+      <span class="hr-line hr-take-unclaimed"><span class="nb">사전 인정 없이 진행한</span> <span class="nb">사내 과정 <b data-draw="rf-uncount" data-source="refund_sum" data-field="missed_count" data-row="0">—</b>개는</span> <span class="nb">환급을 받을 수 없습니다.</span></span>
+      <span class="hr-line hr-take-unclaimed"><span class="nb">다음 차수부터</span> <span class="nb">교육 시작 전에 훈련과정 인정을 받으면</span> <span class="nb"><b data-draw="rf-unclaimed" data-source="refund_sum" data-field="missed" data-row="0">—</b>만원을</span> <span class="nb">아낄 수 있습니다.</span></span>
+      <span class="hr-line"><span class="nb">환급은 회사 단위로 신청하므로</span> <span class="nb">이 화면은 부서 필터와 상관없이</span> <span class="nb">전사 기준입니다.</span></span>
+    </p>
+    <div class="hr-kpis">
+      <div class="hr-card">
+        <span class="hr-label">환급 회수율</span>
+        <span><span class="hr-big" data-draw="rf-rate" data-source="refund_sum" data-field="rate" data-row="0">—</span><span class="hr-unit">%</span></span>
+        <div class="hr-meter" data-draw="rf-meter" data-source="refund_sum">—</div>
+        <span class="hr-note">받을 수 있는 환급액 중 실제로 받은 비율</span>
+      </div>
+      <div class="hr-card">
+        <span class="hr-label">환급 지급 완료</span>
+        <span><span class="hr-big" data-draw="rf-paid" data-source="refund_sum" data-field="paid" data-row="0">—</span><span class="hr-unit">만원</span></span>
+        <span class="hr-note">예상 환급액 <span data-draw="rf-expected" data-source="refund_sum" data-field="expected" data-row="0">—</span>만원</span>
+      </div>
+      <div class="hr-card">
+        <span class="hr-label">순교육비 (현재)</span>
+        <span><span class="hr-big" data-draw="rf-net" data-source="refund_sum" data-field="net_now" data-row="0">—</span><span class="hr-unit">만원</span></span>
+        <span class="hr-note">총교육비 <span data-draw="rf-cost" data-source="refund_sum" data-field="cost" data-row="0">—</span>만원 − 지급 완료 환급액</span>
+      </div>
+      <div class="hr-card">
+        <span class="hr-label">순교육비 (환급을 모두 받으면)</span>
+        <span><span class="hr-big" data-draw="rf-final" data-source="refund_sum" data-field="net_final" data-row="0">—</span><span class="hr-unit">만원</span></span>
+        <span class="hr-note">아직 받지 않은 환급 <span data-draw="rf-pending" data-source="refund_sum" data-field="pending" data-row="0">—</span>만원을 모두 받았을 때</span>
+      </div>
+    </div>
+
+    <section class="hr-card" id="refund-stack">
+      <h2>총교육비 구성</h2>
+      <p class="hr-note">총교육비 중 회사가 실제로 부담하는 몫과 환급으로 돌아오는 몫입니다.</p>
+      <div class="hr-stack" data-draw="rf-stack" data-source="refund_sum">—</div>
+      <div class="hr-legend">
+        <span><i data-draw="rf-key-net"></i>회사 부담 (예상)</span>
+        <span><i data-draw="rf-key-paid"></i>환급 지급 완료</span>
+        <span><i data-draw="rf-key-pending"></i>환급 대기 (수료 확인·지원금 신청)</span>
+      </div>
+    </section>
+
+    <section class="hr-card hr-tablecard" id="refund-table">
+      <h2>과정별 환급 진행 상태</h2>
+      <ol class="hr-steps" aria-label="환급 받는 순서">
+        <li>교육 시작 전 훈련과정 인정</li>
+        <li>교육 진행</li>
+        <li>수료 확인 (출석 80% 이상)</li>
+        <li>지원금 신청</li>
+        <li>지급</li>
+      </ol>
+      <p class="hr-note">환급은 교육 시작 전에 인정받은 과정만 받을 수 있습니다. 인정 없이 진행한 사내 교육은 나중에 신청할 수 없어 "환급 없음"으로만 표시하고, 다음 차수에 인정을 받으면 아낄 수 있는 금액을 보여 줍니다. 성희롱 예방교육 같은 일반 법정의무교육은 지원 대상이 아니고, 직무 관련 법정훈련은 낮은 비율로 지원되기도 합니다. 지원율과 한도는 회사 규모에 따라 다릅니다(HRD4U 기준 우선지원대상기업 90%, 한도는 해당 보험료의 240%).</p>
+      <div class="hr-tablewrap">
+        <table class="hr-table" data-source="refund" data-row-key="course">
+          <thead>
+            <tr>
+              <th data-field="course">과정명</th>
+              <th data-field="delivery" class="hr-sec">운영 방식</th>
+              <th data-field="approved">사전 인정</th>
+              <th data-field="status">진행 상태</th>
+              <th data-field="expected" class="num">예상 환급액(만원)</th>
+              <th data-field="paid" class="num">지급액(만원)</th>
+              <th data-field="missed" class="num hr-sec">다음 차수 절감 가능(만원)</th>
+            </tr>
+          </thead>
+          <tbody data-draw="refund-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </section>
+
+  <!-- 무역 직무 역량 지도 -->
+  <section class="hr-page" id="skills" hidden>
+    <p class="hr-take">
+      <span class="hr-line"><span class="nb">역량 차이(요구 수준 − 보유 수준)가</span> <span class="nb">가장 큰 곳은</span> <span class="nb"><b data-draw="cg-dept" data-source="comp_gap" data-field="dept">—</b>의</span> <span class="nb"><b data-draw="cg-comp" data-source="comp_gap" data-field="competency">—</b> 역량입니다.</span></span>
+      <span class="hr-line"><span class="nb">요구 수준 <b data-draw="cg-req" data-source="comp_gap" data-field="required">—</b>에</span> <span class="nb">보유 수준 <b data-draw="cg-cur" data-source="comp_gap" data-field="current">—</b>으로</span> <span class="nb"><b data-draw="cg-gap" data-source="comp_gap" data-field="gap">—</b>만큼 부족합니다.</span></span>
+      <span class="hr-line"><span class="nb">차이가 큰 칸부터</span> <span class="nb">2027년 교육계획에 반영합니다.</span></span>
+    </p>
+
+    <ul class="hr-scale" aria-label="역량 수준 척도">
+      <li><b>1</b> 입문: 개념을 안다</li>
+      <li><b>2</b> 기초: 도움을 받아 수행한다</li>
+      <li><b>3</b> 실무: 혼자 수행한다</li>
+      <li><b>4</b> 숙련: 복잡한 상황도 처리한다</li>
+      <li><b>5</b> 전문가: 남을 가르칠 수 있다</li>
+    </ul>
+
+    <section class="hr-card" id="comp-matrix">
+      <h2>부서 × 역량 차이 지도</h2>
+      <p class="hr-note">숫자는 요구 수준에서 보유 수준을 뺀 값이고, 클수록 부족합니다. <span data-draw="gap-alert">—</span> 이상은 우선 개발 대상입니다. 칸에 마우스를 올리면 요구·보유 수준이 보입니다. 부서 이름을 누르면 그 부서만 봅니다.</p>
+      <div class="hr-matrix-wrap">
+        <div class="hr-matrix is-comp" data-draw="comp-matrix" data-source="comp_gap">—</div>
+      </div>
+    </section>
+
+    <div class="hr-grid">
+      <section class="hr-card" id="comp-profile">
+        <h2>역량 프로필 <span class="hr-scope">· <span data-draw="scope-name">—</span></span></h2>
+        <p class="hr-note">막대는 보유 수준, 점선은 요구 수준입니다(5점 척도). 전체 부서는 인원 가중 평균입니다. 2026년 9월 역량 진단(본인·팀장 평가 평균) 기준입니다.</p>
+        <div class="hr-list is-short" data-draw="comp-profile" data-source="comp_profile">—</div>
+      </section>
+      <section class="hr-card hr-tablecard" id="comp-priority">
+        <h2>2027년 교육 우선순위 <span class="hr-scope">· <span data-draw="scope-name">—</span></span></h2>
+        <p class="hr-note">역량 차이가 큰 순서로 최대 8개입니다. 관련 과정이 이미 있으면 대상을 넓히고, 차이가 줄지 않으면 과정 내용을 다시 설계합니다.</p>
+        <div class="hr-tablewrap">
+          <table class="hr-table" data-source="comp_gap" data-row-key="dept,competency">
+            <thead>
+              <tr>
+                <th data-field="dept">부서</th>
+                <th data-field="competency">역량</th>
+                <th data-field="required" class="num hr-sec">요구</th>
+                <th data-field="current" class="num hr-sec">보유</th>
+                <th data-field="gap" class="num">차이</th>
+                <th data-field="course" class="hr-sec">관련 과정</th>
+              </tr>
+            </thead>
+            <tbody data-draw="comp-priority"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <section class="hr-card hr-tablecard" id="comp-dictionary">
+      <h2>무역 직무 역량 사전</h2>
+      <p class="hr-note">각 역량이 무엇을 할 수 있는 상태인지 행동으로 정의했습니다. 부서별 요구 수준은 팀장과 함께 정합니다.</p>
+      <div class="hr-tablewrap">
+        <table class="hr-table" data-source="competencies" data-row-key="competency">
+          <thead>
+            <tr>
+              <th data-field="competency">역량</th>
+              <th data-field="area" class="hr-sec">영역</th>
+              <th data-field="definition">행동 정의</th>
+              <th data-field="linked_course" class="hr-sec">관련 과정</th>
+            </tr>
+          </thead>
+          <tbody data-draw="comp-dict"></tbody>
+        </table>
+      </div>
+    </section>
+  </section>
+</div>
+
+<script>
+  const LEGAL_THRESHOLD = 90; // 이 이수율(%) 미만 부서는 주의 표시
+  const DEADLINE = '2026-12-31'; // 법정의무교육 연간 마감일
+  const ALL = '전체';
+
+  dash.calc('summary', {
+    inputs: ['depts', 'training'],
+    title: '교육 요약 (전체·부서별)',
+    description: '전체와 부서마다 법정의무 이수율, 1인당 교육시간, 예산 집행률(연간 예산 9,600만원을 인원 비율로 배분), 만족도를 계산합니다.',
+    fn: (depts, training) => {
+      const n = Number;
+      const r1 = (v) => Math.round(v * 10) / 10;
+      const budgetTotal = 9600; // 연간 교육예산(만원)
+      const hourTarget = 40; // 1인당 연간 교육시간 목표
+      const headAll = d3.sum(depts, (d) => n(d.headcount));
+      const scopes = [{ scope: '전체', ds: depts }, ...depts.map((d) => ({ scope: d.dept, ds: [d] }))];
+      return scopes.map(({ scope, ds }) => {
+        const names = new Set(ds.map((d) => d.dept));
+        const tr = training.filter((t) => names.has(t.dept));
+        const head = d3.sum(ds, (d) => n(d.headcount));
+        const done = d3.sum(ds, (d) => n(d.legal_done));
+        const cost = d3.sum(tr, (t) => n(t.cost));
+        const budget = Math.round(budgetTotal * head / headAll);
+        const learners = d3.sum(tr, (t) => n(t.done));
+        const top = d3.greatest(ds, (d) => n(d.headcount) - n(d.legal_done));
+        const legal = d3.rollups(tr.filter((t) => t.category === '법정의무'), (v) => d3.sum(v, (t) => n(t.target) - n(t.done)), (t) => t.course);
+        const topCourse = d3.greatest(legal, (c) => c[1]);
+        return {
+          scope, headcount: head, legal_done: done, legal_rate: r1(done / head * 100), missing: head - done,
+          hours_per: r1(d3.sum(tr, (t) => n(t.done) * n(t.hours)) / head), hour_target: hourTarget,
+          cost, budget, budget_rate: r1(cost / budget * 100),
+          satisfaction: r1(d3.sum(tr, (t) => n(t.done) * n(t.satisfaction)) / learners),
+          top_dept: top.dept, top_missing: n(top.headcount) - n(top.legal_done),
+          top_course: topCourse[0], top_course_missing: topCourse[1],
+        };
+      });
+    },
+  });
+
+  dash.calc('monthly_scope', {
+    inputs: ['monthly'],
+    title: '월별 교육시간 (전체·부서별)',
+    description: '부서별 월 실적과, 그 합계인 전체 월 실적입니다.',
+    fn: (monthly) => [
+      ...d3.rollups(monthly, (v) => ({ hours: d3.sum(v, (d) => Number(d.hours)), cost: d3.sum(v, (d) => Number(d.cost)) }), (d) => d.month)
+        .map(([month, s]) => ({ scope: '전체', month, ...s })),
+      ...monthly.map((d) => ({ scope: d.dept, month: d.month, hours: Number(d.hours), cost: Number(d.cost) })),
+    ],
+  });
+
+  dash.calc('course_scope', {
+    inputs: ['training'],
+    title: '과정별 실적 (전체·부서별)',
+    description: '과정마다 대상·이수 인원, 이수율(%), 이수 인원 가중 만족도, 교육비를 전체와 부서별로 합산합니다.',
+    fn: (training) => {
+      const n = Number;
+      const agg = (scope, rows) => d3.rollups(rows, (v) => {
+        const target = d3.sum(v, (t) => n(t.target));
+        const done = d3.sum(v, (t) => n(t.done));
+        return {
+          scope, course: v[0].course, category: v[0].category, target, done,
+          rate: Math.round(done / target * 1000) / 10, hours: n(v[0].hours),
+          satisfaction: done ? Math.round(d3.sum(v, (t) => n(t.done) * n(t.satisfaction)) / done * 10) / 10 : null,
+          cost: d3.sum(v, (t) => n(t.cost)),
+        };
+      }, (t) => t.course).map((c) => c[1]);
+      const depts = [...new Set(training.map((t) => t.dept))];
+      return [agg('전체', training), ...depts.map((d) => agg(d, training.filter((t) => t.dept === d)))].flat();
+    },
+  });
+
+  dash.calc('dept_rates', {
+    inputs: ['depts', 'training'],
+    title: '부서별 이수율·교육시간',
+    description: '부서마다 법정의무 이수율, 미이수 인원, 1인당 교육시간을 계산합니다.',
+    fn: (depts, training) => depts.map((d) => ({
+      dept: d.dept,
+      legal_rate: Math.round(Number(d.legal_done) / Number(d.headcount) * 1000) / 10,
+      missing: Number(d.headcount) - Number(d.legal_done),
+      hours_per: Math.round(d3.sum(training.filter((t) => t.dept === d.dept), (t) => Number(t.done) * Number(t.hours)) / Number(d.headcount) * 10) / 10,
+    })),
+  });
+
+  dash.calc('legal_matrix', {
+    inputs: ['employees'],
+    title: '과정별·부서별 미이수 인원',
+    description: '법정의무 5과목마다 부서별로 아직 이수하지 않은 직원 수와 합계입니다.',
+    fn: (employees) => {
+      const courses = [['miss_harass', '성희롱 예방'], ['miss_privacy', '개인정보보호'], ['miss_safety', '산업안전보건'], ['miss_disability', '장애인 인식개선'], ['miss_pension', '퇴직연금']];
+      const depts = [...new Set(employees.map((e) => e.dept)), '합계'];
+      return depts.flatMap((dept) => courses.map(([col, course]) => ({
+        dept, course,
+        missing: d3.sum(employees.filter((e) => dept === '합계' || e.dept === dept), (e) => Number(e[col])),
+      })));
+    },
+  });
+
+  dash.calc('notice_list', {
+    inputs: ['employees', 'legal_weekly'],
+    title: '법정교육 안내 대상자',
+    description: '법정의무 과목이 남은 직원과 남은 과목입니다. 안내한 적이 없거나 마지막 안내가 데이터 기준일보다 7일 이상 앞서면 안내 필요로 봅니다.',
+    fn: (employees, legal_weekly) => {
+      const courses = [['miss_harass', '성희롱 예방'], ['miss_privacy', '개인정보보호'], ['miss_safety', '산업안전보건'], ['miss_disability', '장애인 인식개선'], ['miss_pension', '퇴직연금']];
+      const asOf = d3.max(legal_weekly, (w) => w.week);
+      const daysSince = (d) => (Date.parse(asOf) - Date.parse(d)) / 86400000;
+      return employees
+        .map((e) => ({ e, left: courses.filter(([col]) => Number(e[col]) === 1).map((c) => c[1]) }))
+        .filter((x) => x.left.length)
+        .map(({ e, left }) => ({
+          emp_id: e.emp_id, dept: e.dept, work_type: e.work_type,
+          courses: left.join(', '), remaining: left.length,
+          last_notice: e.last_notice || '없음',
+          due: !e.last_notice || daysSince(e.last_notice) >= 7 ? '안내 필요' : '최근 안내함',
+        }));
+    },
+  });
+
+  dash.calc('deadline_kpi', {
+    inputs: ['notice_list', 'legal_weekly'],
+    title: '마감 대응 요약 (전체·부서별)',
+    description: '전체와 부서마다 미이수 인원, 남은 과목 합계, 이번 주 안내 대상 수와 데이터 기준일입니다.',
+    fn: (notice_list, legal_weekly) => {
+      const asOf = d3.max(legal_weekly, (w) => w.week);
+      const depts = [...new Set(legal_weekly.map((w) => w.dept))];
+      return ['전체', ...depts].map((scope) => {
+        const rows = notice_list.filter((p) => scope === '전체' || p.dept === scope);
+        return {
+          scope, as_of: asOf, missing_people: rows.length,
+          missing_courses: d3.sum(rows, (p) => p.remaining),
+          due_count: rows.filter((p) => p.due === '안내 필요').length,
+        };
+      });
+    },
+  });
+
+  dash.calc('weekly_scope', {
+    inputs: ['legal_weekly'],
+    title: '주별 미이수 인원 (전체·부서별)',
+    description: '주마다 법정의무 과목이 하나라도 남은 직원 수를 부서별로, 그리고 합계로 보여 줍니다.',
+    fn: (legal_weekly) => [
+      ...d3.rollups(legal_weekly, (v) => d3.sum(v, (w) => Number(w.missing)), (w) => w.week).map(([week, missing]) => ({ scope: '전체', week, missing })),
+      ...legal_weekly.map((w) => ({ scope: w.dept, week: w.week, missing: Number(w.missing) })),
+    ],
+  });
+
+  dash.calc('blind', {
+    inputs: ['employees'],
+    title: '교육 사각지대 (전체·부서별)',
+    description: '법정의무교육을 뺀 연간 교육시간이 8시간 미만인 직원 수와 비율, 법정 외 교육시간 중앙값입니다.',
+    fn: (employees) => {
+      const threshold = 8; // 법정 외 교육시간 기준(시간)
+      const depts = [...new Set(employees.map((e) => e.dept))];
+      return ['전체', ...depts].map((scope) => {
+        const rows = employees.filter((e) => scope === '전체' || e.dept === scope);
+        const under = rows.filter((e) => Number(e.other_hours) < threshold).length;
+        return {
+          scope, threshold, people: rows.length, under,
+          share: Math.round(under / rows.length * 1000) / 10,
+          median_other: d3.median(rows, (e) => Number(e.other_hours)),
+        };
+      });
+    },
+  });
+
+  dash.calc('blind_type', {
+    inputs: ['employees'],
+    title: '근무 형태별 사각지대',
+    description: '전체와 부서마다 근무 형태별 인원, 법정 외 교육 8시간 미만 인원과 비율입니다.',
+    fn: (employees) => {
+      const threshold = 8; // 법정 외 교육시간 기준(시간)
+      const depts = [...new Set(employees.map((e) => e.dept))];
+      return ['전체', ...depts].flatMap((scope) => {
+        const rows = employees.filter((e) => scope === '전체' || e.dept === scope);
+        return d3.rollups(rows, (v) => {
+          const under = v.filter((e) => Number(e.other_hours) < threshold).length;
+          return { scope, work_type: v[0].work_type, people: v.length, under, share: Math.round(under / v.length * 1000) / 10 };
+        }, (e) => e.work_type).map((x) => x[1]);
+      });
+    },
+  });
+
+  dash.calc('refund_sum', {
+    inputs: ['refund', 'training'],
+    title: '환급·순교육비 요약',
+    description: '총교육비, 인정 과정의 예상·지급 환급액, 환급 회수율, 순교육비(현재와 환급을 모두 받았을 때), 사전 인정 없이 진행해 환급을 못 받는 과정 수와 다음 차수 절감 가능액입니다.',
+    fn: (refund, training) => {
+      const n = Number;
+      const cost = d3.sum(training, (t) => n(t.cost));
+      const expected = d3.sum(refund, (r) => n(r.expected));
+      const paid = d3.sum(refund, (r) => n(r.paid));
+      const missed = refund.filter((r) => r.approved === '미인정');
+      return [{
+        cost, expected, paid, pending: expected - paid,
+        rate: Math.round(paid / expected * 1000) / 10,
+        net_now: cost - paid, net_final: cost - expected,
+        missed_count: missed.length, missed: d3.sum(missed, (r) => n(r.missed)),
+      }];
+    },
+  });
+
+  dash.calc('comp_gap', {
+    inputs: ['comp_levels', 'competencies'],
+    title: '부서별 역량 차이',
+    description: '부서와 역량마다 요구 수준에서 보유 수준을 뺀 차이와 관련 과정입니다.',
+    fn: (comp_levels, competencies) => comp_levels.map((c) => {
+      const def = competencies.find((d) => d.competency === c.competency);
+      return {
+        dept: c.dept, competency: c.competency, area: def ? def.area : '',
+        required: Number(c.required), current: Number(c.current),
+        gap: Math.round((Number(c.required) - Number(c.current)) * 10) / 10,
+        course: def ? def.linked_course : '',
+      };
+    }),
+  });
+
+  dash.calc('comp_profile', {
+    inputs: ['comp_gap', 'depts'],
+    title: '역량 프로필 (전체·부서별)',
+    description: '역량마다 요구·보유 수준과 차이입니다. 전체는 부서 인원으로 가중 평균합니다.',
+    fn: (comp_gap, depts) => {
+      const head = new Map(depts.map((d) => [d.dept, Number(d.headcount)]));
+      const r1 = (v) => Math.round(v * 10) / 10;
+      const all = d3.rollups(comp_gap, (v) => {
+        const w = d3.sum(v, (c) => head.get(c.dept) || 0);
+        const required = r1(d3.sum(v, (c) => c.required * (head.get(c.dept) || 0)) / w);
+        const current = r1(d3.sum(v, (c) => c.current * (head.get(c.dept) || 0)) / w);
+        return { scope: '전체', competency: v[0].competency, required, current, gap: r1(required - current) };
+      }, (c) => c.competency).map((x) => x[1]);
+      return [...all, ...comp_gap.map((c) => ({ scope: c.dept, competency: c.competency, required: c.required, current: c.current, gap: c.gap }))];
+    },
+  });
+
+  const fmt = d3.format(',');
+  const enc =(s) => String(s).replace(/[%&=,]/g, encodeURIComponent);
+  const scope = () => dash.params().dept || ALL;
+  const pick = (dept) => dash.setParams({ dept: dept && dept !== scope() ? dept : null });
+  const md = (iso) => `${Number(iso.slice(5, 7))}월 ${Number(iso.slice(8, 10))}일`;
+
+  const fail = (el) => {
+    const p = document.createElement('div');
+    p.className = 'hr-fail';
+    p.textContent = '불러오지 못했습니다';
+    el.replaceChildren(p);
+  };
+  // 모두 준비되면 각 데이터의 행을, 아니면 null을 돌려주고 자리표시를 되돌립니다.
+  const ready = (el, ids, empty = '—') => {
+    const ds = ids.map((id) => dash.data(id));
+    const err = ds.some((d) => d.status === 'error');
+    const ok = ds.every((d) => d.status === 'ok');
+    el.classList.toggle('dash-skeleton', !ok && !err);
+    if (err) { fail(el); return null; }
+    if (!ok) { el.replaceChildren(); if (empty) el.textContent = empty; return null; }
+    return ds.map((d) => d.data);
+  };
+  // 지금 고른 부서(없으면 전체)의 행을 찾고, 그 행을 가리키도록 표시합니다.
+  const scoped = (el, id, mark = true) => {
+    const r = ready(el, [id]);
+    const s = r && r[0].find((d) => d.scope === scope());
+    if (r && !s) el.textContent = '—';
+    if (s && mark) el.setAttribute('data-where', `scope=${enc(s.scope)}`);
+    return s || null;
+  };
+  const one = (el, id) => {
+    const r = ready(el, [id]);
+    return r && r[0].length ? r[0][0] : null;
+  };
+
+  // 탭
+  const PAGES = ['overview', 'deadline', 'blind', 'refund', 'skills'];
+  const showPage = (id) => {
+    document.querySelectorAll('.hr-page').forEach((s) => { s.hidden = s.id !== id; });
+    document.querySelectorAll('.hr-tab').forEach((t) => t.setAttribute('aria-selected', String(t.dataset.tab === id)));
+    dash.setLink(id);
+  };
+  document.querySelectorAll('.hr-tab').forEach((t) => t.addEventListener('click', () => showPage(t.dataset.tab)));
+  if (PAGES.includes(location.hash.slice(1))) showPage(location.hash.slice(1));
+
+  // 고른 부서에 따라 요약 문장을 바꿉니다.
+  dash.onData(() => {
+    const s = dash.data('summary');
+    const row = s.status === 'ok' ? s.data.find((d) => d.scope === scope()) : null;
+    const clean = row && row.missing === 0;
+    document.querySelectorAll('.hr-take-miss').forEach((el) => { el.hidden = !!clean; });
+    document.querySelectorAll('.hr-take-done').forEach((el) => { el.hidden = !clean; });
+    document.querySelectorAll('.hr-take-dept').forEach((el) => { el.hidden = scope() !== ALL; });
+  });
+
+  dash.draw('dept-pick', (sel) => {
+    const g = dash.data('depts');
+    sel.replaceChildren(new Option('전체 부서', ''), ...(g.status === 'ok' ? g.data : []).map((d) => new Option(d.dept, d.dept)));
+    sel.value = dash.params().dept ?? '';
+    sel.onchange = () => dash.setParams({ dept: sel.value || null });
+  });
+  dash.draw('scope-name', (el) => { el.textContent = dash.params().dept || '전체 부서'; });
+
+  const text = (name, id, f) => dash.draw(name, (el) => {
+    const s = scoped(el, id);
+    if (s) el.textContent = f(s);
+  });
+  const textOne = (name, id, f) => dash.draw(name, (el) => {
+    const s = one(el, id);
+    if (s) el.textContent = f(s);
+  });
+
+  // ── 운영 현황 ──
+  text('headcount', 'summary', (s) => fmt(s.headcount));
+  text('missing', 'summary', (s) => fmt(s.missing));
+  text('top-course', 'summary', (s) => s.top_course);
+  text('top-course-missing', 'summary', (s) => fmt(s.top_course_missing));
+  text('top-dept', 'summary', (s) => s.top_dept);
+  text('top-missing', 'summary', (s) => fmt(s.top_missing));
+  text('legal-rate', 'summary', (s) => s.legal_rate.toFixed(1));
+  text('legal-done', 'summary', (s) => fmt(s.legal_done));
+  text('hours-per', 'summary', (s) => s.hours_per.toFixed(1));
+  text('hour-target', 'summary', (s) => fmt(s.hour_target));
+  text('budget-rate', 'summary', (s) => s.budget_rate.toFixed(1));
+  text('cost', 'summary', (s) => fmt(s.cost));
+  text('budget', 'summary', (s) => fmt(s.budget));
+  text('satisfaction', 'summary', (s) => s.satisfaction.toFixed(1));
+  dash.draw('legal-threshold', (el) => { el.textContent = String(LEGAL_THRESHOLD); });
+
+  const fillMeter = (el, share, color) => {
+    const fill = document.createElement('div');
+    fill.className = 'hr-meter-fill';
+    fill.style.width = `${Math.max(0, Math.min(1, share)) * 100}%`;
+    fill.style.background = color;
+    el.replaceChildren(fill);
+  };
+  const meter = (name, id, share, color) => dash.draw(name, (el) => {
+    const s = scoped(el, id, false);
+    if (s) fillMeter(el, share(s), color(s));
+  });
+  meter('legal-meter', 'summary', (s) => s.legal_rate / 100, (s) => (s.legal_rate < LEGAL_THRESHOLD ? 'var(--cds-chart-status-critical)' : dash.colors[0]));
+  meter('hours-meter', 'summary', (s) => s.hours_per / s.hour_target, () => dash.colors[0]);
+  meter('budget-meter', 'summary', (s) => s.budget_rate / 100, () => dash.colors[0]);
+  meter('sat-meter', 'summary', (s) => s.satisfaction / 5, () => dash.colors[0]);
+
+  // 막대그래프: rows = [{label, value, color, tip: [줄...]}]
+  const barChart = (el, rows, aria) => {
+    el.replaceChildren();
+    if (!rows.length) return;
+    const W = Math.max(280, el.clientWidth), H = 240;
+    const y = d3.scaleLinear([0, (d3.max(rows, (d) => d.value) || 1) * 1.1], [H - 28, 12]).nice();
+    const ticks = y.ticks(4);
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', aria);
+    const probe = svg.append('g').attr('font-size', 'var(--cds-font-size-caption)');
+    const widest = d3.max(ticks, (t) => probe.append('text').text(fmt(t)).node().getComputedTextLength()) || 24;
+    probe.remove();
+    const m = { l: Math.ceil(widest) + 10, r: 4 };
+    const x = d3.scaleBand(rows.map((d) => d.label), [m.l, W - m.r]).padding(0.28);
+    const bw = Math.min(32, x.bandwidth());
+    const off = (x.bandwidth() - bw) / 2;
+    const g = svg.append('g').attr('font-size', 'var(--cds-font-size-caption)');
+    g.selectAll('line.grid').data(ticks).join('line')
+      .attr('x1', m.l).attr('x2', W - m.r).attr('y1', (t) => y(t)).attr('y2', (t) => y(t))
+      .attr('stroke', 'var(--cds-chart-grid)');
+    g.selectAll('text.yt').data(ticks).join('text')
+      .attr('x', m.l - 8).attr('y', (t) => y(t)).attr('dy', '0.32em').attr('text-anchor', 'end')
+      .attr('fill', 'var(--color-fg-muted)').text((t) => fmt(t));
+    const longest = d3.max(rows, (d) => d.label.length);
+    const step = x.step() < longest * 8 ? 2 : 1;
+    g.selectAll('text.xt').data(rows).join('text')
+      .attr('x', (d) => x(d.label) + x.bandwidth() / 2).attr('y', H - 8).attr('text-anchor', 'middle')
+      .attr('fill', 'var(--color-fg-muted)').text((d, i) => (i % step === 0 || i === rows.length - 1 ? d.label : ''));
+    const bars = g.selectAll('rect.bar').data(rows).join('rect')
+      .attr('x', (d) => x(d.label) + off).attr('width', bw)
+      .attr('y', (d) => y(d.value)).attr('height', (d) => y(0) - y(d.value))
+      .attr('rx', 3).attr('fill', (d) => d.color).attr('fill-opacity', 0.85);
+    g.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(0)).attr('y2', y(0)).attr('stroke', 'var(--cds-chart-axis)');
+    const tip = document.createElement('div');
+    tip.className = 'hr-tip';
+    tip.hidden = true;
+    el.append(tip);
+    g.selectAll('rect.hit').data(rows).join('rect')
+      .attr('x', (d) => x(d.label) - (x.step() - x.bandwidth()) / 2).attr('width', x.step())
+      .attr('y', 0).attr('height', H - 20).attr('fill', 'transparent')
+      .on('pointerenter pointermove', (ev, d) => {
+        bars.attr('fill-opacity', (b) => (b === d ? 1 : 0.45));
+        tip.replaceChildren(...d.tip.map((line, i) => {
+          const div = document.createElement('div');
+          if (i === 0) div.className = 'hr-tip-head';
+          div.textContent = line;
+          return div;
+        }));
+        tip.hidden = false;
+        const k = el.clientWidth / W;
+        const cx = (x(d.label) + x.bandwidth() / 2) * k;
+        tip.style.left = `${Math.max(0, Math.min(el.clientWidth - tip.offsetWidth, cx - tip.offsetWidth / 2))}px`;
+        tip.style.top = `${Math.max(0, y(d.value) * k - tip.offsetHeight - 8)}px`;
+      })
+      .on('pointerleave', () => { tip.hidden = true; bars.attr('fill-opacity', 0.85); });
+  };
+
+  dash.draw('monthly', (el) => {
+    const r = ready(el, ['monthly_scope'], '');
+    if (!r) return;
+    barChart(el, r[0].filter((d) => d.scope === scope()).map((d) => {
+      const label = `${Number(d.month.slice(5, 7))}월`;
+      return { label, value: d.hours, color: dash.colors[0], tip: [`2026년 ${label}`, `교육시간 ${fmt(d.hours)}시간`, `교육비 ${fmt(d.cost)}만원`] };
+    }), '월별 교육시간 막대그래프');
+  });
+
+  // 부서 막대 목록의 한 줄. onPick이 있으면 눌러서 부서를 고를 수 있습니다.
+  const barRow = (name, pct, color, valText, extra, opt = {}) => {
+    const row = document.createElement('div');
+    const sel = scope();
+    const isDept = opt.dept != null;
+    row.className = `hr-row${isDept ? ' is-click' : ''}${isDept && sel === opt.dept ? ' is-on' : isDept && sel !== ALL ? ' is-dim' : ''}`;
+    if (isDept) {
+      row.tabIndex = 0;
+      row.setAttribute('role', 'button');
+      row.setAttribute('aria-pressed', String(sel === opt.dept));
+      row.addEventListener('click', () => pick(opt.dept));
+      row.addEventListener('keydown', (ev) => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); pick(opt.dept); } });
+    }
+    const nm = document.createElement('span');
+    nm.className = 'hr-row-name';
+    nm.textContent = name;
+    const track = document.createElement('div');
+    track.className = 'hr-track';
+    const fill = document.createElement('div');
+    fill.className = 'hr-fill';
+    fill.style.width = `${Math.max(0, Math.min(100, pct))}%`;
+    fill.style.background = color;
+    track.append(fill);
+    if (opt.targetPct != null) {
+      const t = document.createElement('div');
+      t.className = 'hr-target';
+      t.style.left = `${opt.targetPct}%`;
+      track.append(t);
+    }
+    const v = document.createElement('span');
+    v.className = 'hr-val';
+    v.textContent = valText;
+    const s = document.createElement('small');
+    s.textContent = extra.text;
+    if (extra.cls) s.className = extra.cls;
+    v.append(s);
+    row.append(nm, track, v);
+    return row;
+  };
+
+  dash.draw('dept-legal', (el) => {
+    const r = ready(el, ['dept_rates']);
+    if (!r) return;
+    const rows = r[0].slice().sort((a, b) => a.legal_rate - b.legal_rate);
+    el.replaceChildren(...rows.map((d) => {
+      const low = d.legal_rate < LEGAL_THRESHOLD;
+      return barRow(d.dept, d.legal_rate, low ? 'var(--cds-chart-status-critical)' : dash.colors[0],
+        `${d.legal_rate.toFixed(1)}%`,
+        { text: d.missing ? `미이수 ${d.missing}명` : '전원 이수', cls: low ? 'hr-bad' : '' }, { dept: d.dept });
+    }));
+  });
+
+  dash.draw('dept-hours', (el) => {
+    const r = ready(el, ['dept_rates', 'summary']);
+    if (!r) return;
+    const target = r[1][0].hour_target;
+    const rows = r[0].slice().sort((a, b) => b.hours_per - a.hours_per);
+    const max = Math.max(target * 1.15, d3.max(rows, (d) => d.hours_per));
+    el.replaceChildren(...rows.map((d) => barRow(d.dept, d.hours_per / max * 100,
+      d.hours_per >= target ? dash.colors[0] : 'var(--cds-chart-muted)',
+      `${d.hours_per.toFixed(1)}시간`,
+      { text: d.hours_per >= target ? '목표 달성' : `${(target - d.hours_per).toFixed(1)}시간 부족`, cls: d.hours_per < target * 0.6 ? 'hr-warn' : '' },
+      { dept: d.dept, targetPct: target / max * 100 })));
+  });
+
+  // 과정 표: 분류 선택과 정렬 상태는 이 페이지 안에서만 유지합니다.
+  const view = { cat: '', key: 'rate', dir: 1 };
+
+  dash.draw('course-cat', (sel) => {
+    const c = dash.data('training');
+    const cats = c.status === 'ok' ? [...new Set(c.data.map((d) => d.category))] : [];
+    sel.replaceChildren(new Option('전체 분류', ''), ...cats.map((v) => new Option(v, v)));
+    sel.value = view.cat;
+    sel.onchange = () => { view.cat = sel.value; dash.draw('courses-body'); };
+  });
+
+  document.querySelectorAll('.hr-sort').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const key = btn.dataset.key;
+      view.dir = view.key === key ? -view.dir : (key === 'course' || key === 'category' ? 1 : -1);
+      view.key = key;
+      document.querySelectorAll('#courses th').forEach((th) => {
+        const b = th.querySelector('.hr-sort');
+        th.setAttribute('aria-sort', b && b.dataset.key === key ? (view.dir === 1 ? 'ascending' : 'descending') : 'none');
+      });
+      dash.draw('courses-body');
+    });
+  });
+
+  const td = (txt, cls) => { const c = document.createElement('td'); if (cls) c.className = cls; if (txt != null) c.textContent = txt; return c; };
+  const chip = (txt, cls) => { const s = document.createElement('span'); s.className = `hr-chip${cls ? ` ${cls}` : ''}`; s.textContent = txt; return s; };
+
+  dash.draw('courses-body', (tbody) => {
+    const r = ready(tbody, ['course_scope'], '');
+    if (!r) return;
+    let rows = r[0].filter((d) => d.scope === scope());
+    if (view.cat) rows = rows.filter((d) => d.category === view.cat);
+    rows.sort((a, b) => {
+      const A = a[view.key] ?? -1, B = b[view.key] ?? -1;
+      return (typeof A === 'number' ? A - B : String(A).localeCompare(String(B), 'ko')) * view.dir;
+    });
+    tbody.replaceChildren(...rows.map((d) => {
+      const tr = document.createElement('tr');
+      tr.dataset.key = `${enc(d.scope)},${enc(d.course)}`;
+      const cat = td(null, 'hr-sec');
+      cat.append(chip(d.category, d.category === '법정의무' ? 'legal' : ''));
+      const rc = td(null, 'num');
+      const wrap = document.createElement('div');
+      wrap.className = 'hr-cellbar';
+      const track = document.createElement('div');
+      track.className = 'hr-track';
+      const fill = document.createElement('div');
+      fill.className = 'hr-fill';
+      fill.style.width = `${d.rate}%`;
+      fill.style.background = d.category === '법정의무' && d.rate < 100 ? 'var(--cds-chart-status-critical)' : dash.colors[0];
+      track.append(fill);
+      const lab = document.createElement('span');
+      lab.textContent = `${d.rate.toFixed(1)}%`;
+      wrap.append(track, lab);
+      rc.append(wrap);
+      tr.append(
+        td(d.course), cat, td(fmt(d.target), 'num hr-sec'), td(fmt(d.done), 'num'), rc,
+        td(String(d.hours), 'num hr-sec'),
+        td(d.satisfaction == null ? '—' : d.satisfaction.toFixed(1), d.satisfaction != null && d.satisfaction < 4 ? 'num hr-warn' : 'num'),
+        td(fmt(d.cost), 'num hr-sec'),
+      );
+      return tr;
+    }));
+  });
+
+  // ── 법정교육 마감 대응 ──
+  const daysLeft = () => {
+    const now = new Date();
+    const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+    return Math.round((Date.parse(DEADLINE) - today) / 86400000);
+  };
+  dash.draw('dday', (el) => {
+    const d = daysLeft();
+    el.textContent = d > 0 ? `D-${d}` : d === 0 ? 'D-DAY' : `마감 ${-d}일 지남`;
+    el.classList.toggle('is-alert', d <= 14);
+  });
+  dash.draw('deadline-label', (el) => { el.textContent = md(DEADLINE); });
+  dash.draw('today-label', (el) => {
+    const now = new Date();
+    el.textContent = `${now.getMonth() + 1}월 ${now.getDate()}일`;
+  });
+  text('dl-people', 'deadline_kpi', (s) => fmt(s.missing_people));
+  text('dl-courses', 'deadline_kpi', (s) => fmt(s.missing_courses));
+  text('dl-due', 'deadline_kpi', (s) => fmt(s.due_count));
+  text('as-of', 'deadline_kpi', (s) => md(s.as_of));
+  dash.draw('dl-pace', (el) => {
+    const s = scoped(el, 'deadline_kpi', false);
+    if (!s) return;
+    const weeks = Math.max(1, Math.ceil(daysLeft() / 7));
+    el.textContent = s.missing_people ? fmt(Math.ceil(s.missing_people / weeks)) : '0';
+  });
+
+  dash.draw('matrix', (el) => {
+    const r = ready(el, ['legal_matrix']);
+    if (!r) return;
+    const rows = r[0];
+    const courses = [...new Set(rows.map((d) => d.course))];
+    const depts = [...new Set(rows.map((d) => d.dept))];
+    const max = d3.max(rows.filter((d) => d.dept !== '합계'), (d) => d.missing) || 1;
+    const sel = scope();
+    const cells = [document.createElement('div')];
+    courses.forEach((c) => {
+      const h = document.createElement('div');
+      h.className = 'hr-mh';
+      h.textContent = c;
+      cells.push(h);
+    });
+    depts.forEach((dept) => {
+      const total = dept === '합계';
+      const dim = !total && sel !== ALL && sel !== dept;
+      const name = document.createElement('div');
+      name.className = `hr-mr${total ? ' is-total' : ''}${dim ? ' is-dim' : ''}`;
+      name.textContent = dept;
+      if (!total) {
+        name.style.cursor = 'pointer';
+        name.tabIndex = 0;
+        name.setAttribute('role', 'button');
+        name.addEventListener('click', () => pick(dept));
+        name.addEventListener('keydown', (ev) => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); pick(dept); } });
+      }
+      cells.push(name);
+      courses.forEach((course) => {
+        const d = rows.find((x) => x.dept === dept && x.course === course);
+        const c = document.createElement('div');
+        c.className = `hr-mc${d.missing ? '' : ' is-zero'}${total ? ' is-total' : ''}${dim ? ' is-dim' : ''}`;
+        c.setAttribute('data-source', 'legal_matrix');
+        c.setAttribute('data-field', 'missing');
+        c.setAttribute('data-where', `dept=${enc(dept)}&course=${enc(course)}`);
+        if (!total && d.missing) c.style.background = `color-mix(in srgb, var(--cds-chart-status-critical) ${Math.round(12 + 58 * d.missing / max)}%, transparent)`;
+        c.textContent = String(d.missing);
+        cells.push(c);
+      });
+    });
+    el.replaceChildren(...cells);
+  });
+
+  dash.draw('weekly', (el) => {
+    const r = ready(el, ['weekly_scope'], '');
+    if (!r) return;
+    el.replaceChildren();
+    const rows = r[0].filter((d) => d.scope === scope()).sort((a, b) => d3.ascending(a.week, b.week))
+      .map((d) => ({ week: d.week, label: `${Number(d.week.slice(5, 7))}/${Number(d.week.slice(8, 10))}`, value: d.missing }));
+    if (!rows.length) return;
+    const W = Math.max(280, el.clientWidth), H = 220;
+    const y = d3.scaleLinear([0, (d3.max(rows, (d) => d.value) || 1) * 1.1], [H - 28, 12]).nice();
+    const ticks = y.ticks(4).filter((t) => Number.isInteger(t));
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', '주별 미이수 인원 선그래프');
+    const g = svg.append('g').attr('font-size', 'var(--cds-font-size-caption)');
+    const widest = d3.max(ticks, (t) => g.append('text').attr('class', 'probe').text(fmt(t)).node().getComputedTextLength()) || 20;
+    const endLabel = `${fmt(rows[rows.length - 1].value)}명`;
+    const endW = g.append('text').attr('class', 'probe').text(endLabel).node().getComputedTextLength();
+    g.selectAll('text.probe').remove();
+    const m = { l: Math.ceil(widest) + 10, r: Math.ceil(endW) + 12 };
+    const x = d3.scalePoint(rows.map((d) => d.label), [m.l + 6, W - m.r]);
+    g.selectAll('line.grid').data(ticks).join('line')
+      .attr('x1', m.l).attr('x2', W - m.r + 6).attr('y1', (t) => y(t)).attr('y2', (t) => y(t)).attr('stroke', 'var(--cds-chart-grid)');
+    g.selectAll('text.yt').data(ticks).join('text')
+      .attr('x', m.l - 8).attr('y', (t) => y(t)).attr('dy', '0.32em').attr('text-anchor', 'end')
+      .attr('fill', 'var(--color-fg-muted)').text((t) => fmt(t));
+    const step = x.step() < 34 ? 2 : 1;
+    g.selectAll('text.xt').data(rows).join('text')
+      .attr('x', (d) => x(d.label)).attr('y', H - 8).attr('text-anchor', 'middle')
+      .attr('fill', 'var(--color-fg-muted)').text((d, i) => ((rows.length - 1 - i) % step === 0 ? d.label : ''));
+    g.append('path').datum(rows)
+      .attr('d', d3.line((d) => x(d.label), (d) => y(d.value)))
+      .attr('fill', 'none').attr('stroke', dash.colors[0]).attr('stroke-width', 2)
+      .attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round');
+    const dots = g.selectAll('circle').data(rows).join('circle')
+      .attr('cx', (d) => x(d.label)).attr('cy', (d) => y(d.value)).attr('r', (d, i) => (i === rows.length - 1 ? 4 : 2.5))
+      .attr('fill', dash.colors[0]);
+    const last = rows[rows.length - 1];
+    g.append('text').attr('x', x(last.label) + 8).attr('y', y(last.value)).attr('dy', '0.32em')
+      .attr('fill', 'var(--color-fg)').text(endLabel);
+    const tip = document.createElement('div');
+    tip.className = 'hr-tip';
+    tip.hidden = true;
+    el.append(tip);
+    g.selectAll('rect.hit').data(rows).join('rect')
+      .attr('x', (d) => x(d.label) - x.step() / 2).attr('width', x.step()).attr('y', 0).attr('height', H - 20)
+      .attr('fill', 'transparent')
+      .on('pointerenter pointermove', (ev, d) => {
+        dots.attr('r', (p, i) => (p === d ? 5 : i === rows.length - 1 ? 4 : 2.5));
+        const head = document.createElement('div');
+        head.className = 'hr-tip-head';
+        head.textContent = `${md(d.week)} 주`;
+        const a = document.createElement('div');
+        a.textContent = `미이수 ${fmt(d.value)}명`;
+        tip.replaceChildren(head, a);
+        tip.hidden = false;
+        const k = el.clientWidth / W;
+        tip.style.left = `${Math.max(0, Math.min(el.clientWidth - tip.offsetWidth, x(d.label) * k - tip.offsetWidth / 2))}px`;
+        tip.style.top = `${Math.max(0, y(d.value) * k - tip.offsetHeight - 10)}px`;
+      })
+      .on('pointerleave', () => { tip.hidden = true; dots.attr('r', (p, i) => (i === rows.length - 1 ? 4 : 2.5)); });
+  });
+
+  const noticeRows = () => {
+    const n = dash.data('notice_list');
+    if (n.status !== 'ok') return [];
+    return n.data.filter((p) => scope() === ALL || p.dept === scope())
+      .sort((a, b) => d3.ascending(a.due === '안내 필요' ? 0 : 1, b.due === '안내 필요' ? 0 : 1)
+        || d3.descending(a.remaining, b.remaining)
+        || d3.ascending(a.last_notice === '없음' ? '' : a.last_notice, b.last_notice === '없음' ? '' : b.last_notice));
+  };
+
+  dash.draw('notice-body', (tbody) => {
+    const r = ready(tbody, ['notice_list'], '');
+    if (!r) return;
+    tbody.replaceChildren(...noticeRows().map((p) => {
+      const tr = document.createElement('tr');
+      const st = td(null);
+      st.append(chip(p.due, p.due === '안내 필요' ? 'alert' : 'ok'));
+      tr.append(td(p.emp_id), td(p.dept), td(p.work_type, 'hr-sec'), td(p.courses, 'wrap'),
+        td(String(p.remaining), 'num'), td(p.last_notice, 'hr-sec'), st);
+      return tr;
+    }));
+  });
+
+  document.querySelectorAll('#hr-copy').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const ok = btn.parentElement.querySelector('.hr-copied');
+      const bad = btn.parentElement.querySelector('.hr-copyfail');
+      const lines = noticeRows().filter((p) => p.due === '안내 필요').map((p) => `${p.emp_id}\t${p.dept}\t${p.courses}`);
+      const flash = (el) => { if (!el) return; el.hidden = false; setTimeout(() => { el.hidden = true; }, 2500); };
+      try {
+        navigator.clipboard.writeText(lines.join('\n')).then(() => flash(ok), () => flash(bad));
+      } catch (e) {
+        flash(bad);
+      }
+    });
+  });
+
+  // ── 교육 사각지대 ──
+  text('blind-th', 'blind', (s) => fmt(s.threshold));
+  text('blind-under', 'blind', (s) => fmt(s.under));
+  text('blind-people', 'blind', (s) => fmt(s.people));
+  text('blind-share', 'blind', (s) => s.share.toFixed(1));
+  text('blind-median', 'blind', (s) => fmt(s.median_other));
+  meter('blind-meter', 'blind', (s) => s.share / 100, () => 'var(--cds-chart-status-critical)');
+
+  dash.draw('hist', (el) => {
+    const r = ready(el, ['employees', 'blind'], '');
+    if (!r) return;
+    const threshold = r[1][0].threshold;
+    const people = r[0].filter((e) => scope() === ALL || e.dept === scope());
+    const edges = [0, 4, 8, 16, 24, 32, 48];
+    barChart(el, edges.map((lo, i) => {
+      const hi = edges[i + 1];
+      const label = hi == null ? `${lo}시간+` : `${lo}–${hi}`;
+      const count = people.filter((e) => Number(e.other_hours) >= lo && (hi == null || Number(e.other_hours) < hi)).length;
+      return {
+        label, value: count,
+        color: hi != null && hi <= threshold ? 'var(--cds-chart-status-critical)' : dash.colors[0],
+        tip: [hi == null ? `${lo}시간 이상` : `${lo}시간 이상 ${hi}시간 미만`, `${fmt(count)}명`],
+      };
+    }), '법정 외 교육시간 분포 막대그래프');
+  });
+
+  dash.draw('blind-type', (el) => {
+    const r = ready(el, ['blind_type']);
+    if (!r) return;
+    const rows = r[0].filter((d) => d.scope === scope()).sort((a, b) => b.share - a.share);
+    el.replaceChildren(...rows.map((d) => barRow(d.work_type, d.share, 'var(--cds-chart-status-critical)',
+      `${d.share.toFixed(1)}%`, { text: `${d.under} / ${d.people}명` })));
+  });
+
+  dash.draw('blind-dept', (el) => {
+    const r = ready(el, ['blind']);
+    if (!r) return;
+    const rows = r[0].filter((d) => d.scope !== ALL).sort((a, b) => b.share - a.share);
+    el.replaceChildren(...rows.map((d) => barRow(d.scope, d.share, 'var(--cds-chart-status-critical)',
+      `${d.share.toFixed(1)}%`, { text: `${d.under}명` }, { dept: d.scope })));
+  });
+
+  // ── 예산·환급 ──
+  dash.onData(() => {
+    const s = dash.data('refund_sum');
+    const none = s.status === 'ok' && s.data.length && s.data[0].missed_count === 0;
+    document.querySelectorAll('.hr-take-unclaimed').forEach((el) => { el.hidden = !!none; });
+  });
+  textOne('rf-uncount', 'refund_sum', (s) => fmt(s.missed_count));
+  textOne('rf-unclaimed', 'refund_sum', (s) => fmt(s.missed));
+  textOne('rf-rate', 'refund_sum', (s) => s.rate.toFixed(1));
+  textOne('rf-paid', 'refund_sum', (s) => fmt(s.paid));
+  textOne('rf-expected', 'refund_sum', (s) => fmt(s.expected));
+  textOne('rf-net', 'refund_sum', (s) => fmt(s.net_now));
+  textOne('rf-final', 'refund_sum', (s) => fmt(s.net_final));
+  textOne('rf-cost', 'refund_sum', (s) => fmt(s.cost));
+  textOne('rf-pending', 'refund_sum', (s) => fmt(s.pending));
+  dash.draw('rf-meter', (el) => {
+    const s = one(el, 'refund_sum');
+    if (s) fillMeter(el, s.rate / 100, dash.colors[0]);
+  });
+
+  const STACK = [
+    ['net_final', () => 'var(--cds-chart-muted)'],
+    ['paid', () => dash.colors[0]],
+    ['pending', () => dash.colors[1]],
+  ];
+  dash.draw('rf-stack', (el) => {
+    const s = one(el, 'refund_sum');
+    if (!s) return;
+    el.replaceChildren(...STACK.map(([key, color]) => {
+      const seg = document.createElement('div');
+      seg.style.width = `${s[key] / s.cost * 100}%`;
+      seg.style.background = color();
+      seg.title = `${fmt(s[key])}만원`;
+      return seg;
+    }));
+  });
+  dash.draw('rf-key-net', (el) => { el.style.background = STACK[0][1](); });
+  dash.draw('rf-key-paid', (el) => { el.style.background = STACK[1][1](); });
+  dash.draw('rf-key-pending', (el) => { el.style.background = STACK[2][1](); });
+
+  const STATUS_CHIP = { '지급 완료': 'ok', '지원금 신청': '', '수료 확인 중': '', '환급 없음': 'warn', '대상 아님': '' };
+  dash.draw('refund-body', (tbody) => {
+    const r = ready(tbody, ['refund'], '');
+    if (!r) return;
+    const rank = { '환급 없음': 0, '수료 확인 중': 1, '지원금 신청': 2, '지급 완료': 3, '대상 아님': 4 };
+    const rows = r[0].slice().sort((a, b) => d3.ascending(rank[a.status] ?? 9, rank[b.status] ?? 9) || d3.descending(Number(a.expected), Number(b.expected)));
+    tbody.replaceChildren(...rows.map((d) => {
+      const tr = document.createElement('tr');
+      const st = td(null);
+      st.append(chip(d.status, STATUS_CHIP[d.status] || ''));
+      const ap = td(null);
+      ap.append(chip(d.approved, d.approved === '인정' ? 'ok' : d.approved === '미인정' ? 'warn' : ''));
+      tr.append(td(d.course), td(d.delivery, 'hr-sec'), ap, st, td(fmt(Number(d.expected)), 'num'), td(fmt(Number(d.paid)), 'num'),
+        td(fmt(Number(d.missed)), Number(d.missed) ? 'num hr-sec hr-warn' : 'num hr-sec'));
+      return tr;
+    }));
+  });
+
+  // ── 무역 직무 역량 지도 ──
+  const GAP_ALERT = 1.0; // 이 차이 이상이면 우선 개발 대상
+  const gapColor = (gap) => (gap >= GAP_ALERT ? 'var(--cds-chart-status-critical)' : gap >= GAP_ALERT / 2 ? dash.colors[1] : dash.colors[0]);
+  const gapRows = () => {
+    const g = dash.data('comp_gap');
+    if (g.status !== 'ok') return [];
+    return g.data.filter((c) => scope() === ALL || c.dept === scope())
+      .sort((a, b) => d3.descending(a.gap, b.gap) || d3.ascending(a.dept, b.dept));
+  };
+  dash.draw('gap-alert', (el) => { el.textContent = GAP_ALERT.toFixed(1); });
+
+  const topGap = (name, f) => dash.draw(name, (el) => {
+    const r = ready(el, ['comp_gap']);
+    if (!r) return;
+    const top = gapRows()[0];
+    if (!top) { el.textContent = '—'; return; }
+    el.setAttribute('data-where', `dept=${enc(top.dept)}&competency=${enc(top.competency)}`);
+    el.textContent = f(top);
+  });
+  topGap('cg-dept', (c) => c.dept);
+  topGap('cg-comp', (c) => c.competency);
+  topGap('cg-req', (c) => String(c.required));
+  topGap('cg-cur', (c) => c.current.toFixed(1));
+  topGap('cg-gap', (c) => c.gap.toFixed(1));
+
+  dash.draw('comp-matrix', (el) => {
+    const r = ready(el, ['comp_gap']);
+    if (!r) return;
+    const rows = r[0];
+    const comps = [...new Set(rows.map((d) => d.competency))];
+    const depts = [...new Set(rows.map((d) => d.dept))];
+    const max = d3.max(rows, (d) => d.gap) || 1;
+    const sel = scope();
+    const cells = [document.createElement('div')];
+    comps.forEach((c) => {
+      const h = document.createElement('div');
+      h.className = 'hr-mh';
+      h.textContent = c;
+      cells.push(h);
+    });
+    depts.forEach((dept) => {
+      const dim = sel !== ALL && sel !== dept;
+      const name = document.createElement('div');
+      name.className = `hr-mr${dim ? ' is-dim' : ''}`;
+      name.textContent = dept;
+      name.style.cursor = 'pointer';
+      name.tabIndex = 0;
+      name.setAttribute('role', 'button');
+      name.addEventListener('click', () => pick(dept));
+      name.addEventListener('keydown', (ev) => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); pick(dept); } });
+      cells.push(name);
+      comps.forEach((comp) => {
+        const d = rows.find((x) => x.dept === dept && x.competency === comp);
+        const c = document.createElement('div');
+        if (!d) { cells.push(c); return; }
+        c.className = `hr-mc${d.gap <= 0 ? ' is-zero' : ''}${dim ? ' is-dim' : ''}`;
+        c.setAttribute('data-source', 'comp_gap');
+        c.setAttribute('data-field', 'gap');
+        c.setAttribute('data-where', `dept=${enc(dept)}&competency=${enc(comp)}`);
+        c.title = `${dept} · ${comp}\n요구 ${d.required} · 보유 ${d.current.toFixed(1)}`;
+        if (d.gap > 0) c.style.background = `color-mix(in srgb, var(--cds-chart-status-critical) ${Math.round(8 + 62 * d.gap / max)}%, transparent)`;
+        if (d.gap >= GAP_ALERT) c.style.fontWeight = 'var(--cds-font-weight-medium)';
+        c.textContent = d.gap.toFixed(1);
+        cells.push(c);
+      });
+    });
+    el.replaceChildren(...cells);
+  });
+
+  dash.draw('comp-profile', (el) => {
+    const r = ready(el, ['comp_profile']);
+    if (!r) return;
+    const rows = r[0].filter((d) => d.scope === scope()).sort((a, b) => b.gap - a.gap);
+    el.replaceChildren(...rows.map((d) => barRow(d.competency, d.current / 5 * 100, gapColor(d.gap),
+      `${d.current.toFixed(1)} / ${d.required.toFixed(1)}`,
+      { text: d.gap > 0 ? `차이 ${d.gap.toFixed(1)}` : '충족', cls: d.gap >= GAP_ALERT ? 'hr-bad' : '' },
+      { targetPct: d.required / 5 * 100 })));
+  });
+
+  dash.draw('comp-priority', (tbody) => {
+    const r = ready(tbody, ['comp_gap'], '');
+    if (!r) return;
+    tbody.replaceChildren(...gapRows().filter((c) => c.gap > 0).slice(0, 8).map((c) => {
+      const tr = document.createElement('tr');
+      tr.append(td(c.dept), td(c.competency), td(String(c.required), 'num hr-sec'), td(c.current.toFixed(1), 'num hr-sec'),
+        td(c.gap.toFixed(1), c.gap >= GAP_ALERT ? 'num hr-bad' : 'num'), td(c.course, 'hr-sec'));
+      return tr;
+    }));
+  });
+
+  dash.draw('comp-dict', (tbody) => {
+    const r = ready(tbody, ['competencies'], '');
+    if (!r) return;
+    tbody.replaceChildren(...r[0].map((c) => {
+      const tr = document.createElement('tr');
+      const area = td(null, 'hr-sec');
+      area.append(chip(c.area));
+      tr.append(td(c.competency), area, td(c.definition, 'wrap'), td(c.linked_course, 'hr-sec'));
+      return tr;
+    }));
+  });
+</script>
+
+</div>
+</body>
+</html>
