@@ -20,12 +20,12 @@
   --cds-shadow-popover: 0 6px 24px rgba(20, 24, 33, .14);
   --cds-text-secondary: #5e6470;
   --cds-font-size-caption: .8125rem;
-  --cds-font-size-body: .9375rem;
+  --cds-font-size-body: 1rem;
   --cds-font-size-heading: 1.25rem;
   --cds-font-size-title: 1.75rem;
   --cds-font-weight-medium: 600;
-  --cds-gap-xs: 4px; --cds-gap-sm: 8px; --cds-gap-md: 12px; --cds-gap-lg: 20px; --cds-gap-xl: 32px;
-  --cds-pad-xs: 4px; --cds-pad-sm: 8px; --cds-pad-md: 12px; --cds-pad-lg: 20px;
+  --cds-gap-xs: 4px; --cds-gap-sm: 8px; --cds-gap-md: 12px; --cds-gap-lg: 24px; --cds-gap-xl: 32px;
+  --cds-pad-xs: 4px; --cds-pad-sm: 8px; --cds-pad-md: 12px; --cds-pad-lg: 24px;
   --cds-radius: 8px;
   --cds-dur-slow: .3s;
   --cds-ease-out: cubic-bezier(.2, .7, .3, 1);
@@ -42,7 +42,13 @@
   }
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--color-bg); color: var(--color-fg); font-family: var(--font-anthropic-sans); font-size: var(--cds-font-size-body); line-height: 1.55; word-break: keep-all; overflow-wrap: anywhere; -webkit-font-smoothing: antialiased; }
+/* 한국어 UI 텍스트 배치 규칙 1장 */
+html { word-break: keep-all; overflow-wrap: break-word; }
+p, li { text-wrap: pretty; }
+h1, h2, h3 { text-wrap: balance; }
+.nw { white-space: nowrap; }
+.num { font-variant-numeric: tabular-nums; }
+body { margin: 0; background: var(--color-bg); color: var(--color-fg); font-family: var(--font-anthropic-sans); font-size: var(--cds-font-size-body); line-height: 1.65; -webkit-font-smoothing: antialiased; }
 a { color: inherit; }
 .site-bar { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm) var(--cds-gap-md); align-items: center; justify-content: space-between; max-width: 1280px; margin: 0 auto; padding: var(--cds-pad-md) 16px; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); border-bottom: 1px solid var(--color-border-line); }
 .site-bar a { text-decoration: none; }

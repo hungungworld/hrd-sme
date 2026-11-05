@@ -1,7 +1,8 @@
 """_source/dashboard.html(Claude 대시보드 원본)을 배포용 index.html로 만듭니다.
 
 실행: python _source/build.py   (이 폴더의 상위 폴더에서)
-- 데이터는 data/*.csv를 그대로 읽습니다. 숫자를 고치려면 CSV를 고치세요.
+- 화면 숫자는 원본(data/raw/*.csv)에서 브라우저가 계산합니다 (assets/hrd-data.js).
+  원본 샘플을 다시 만들려면 _source/scripts/gen_raw.py, 계산을 확인하려면 node _source/scripts/verify.js.
 - 화면을 고치려면 _source/dashboard.html을 고친 뒤 다시 실행하세요.
 """
 import json
@@ -19,7 +20,8 @@ for old, new in REPLACE:
     assert old in body, old[:60]
     body = body.replace(old, new)
 
-sources = {p.stem: f"data/{p.name}" for p in sorted((ROOT / "data").glob("*.csv"))}
+# 계산해서 넣는 데이터: 들어올 때까지 '불러오는 중'
+pending = ["competencies", "depts", "employees", "training", "monthly", "legal_weekly", "refund", "comp_levels", "meta"]
 
 html = f"""<!DOCTYPE html>
 <html lang="ko">
@@ -31,17 +33,21 @@ html = f"""<!DOCTYPE html>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap">
 <link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/hrd-app.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
-<script>window.DASH_SOURCES = {json.dumps(sources)};</script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script>window.DASH_SOURCES = {{}}; window.DASH_PENDING = {json.dumps(pending)};</script>
 <script src="assets/dash-lite.js"></script>
+<script src="assets/hrd-data.js"></script>
 </head>
 <body>
 <header class="site-bar"><span>HRD 대시보드 포트폴리오 · 모든 수치는 가상 데이터입니다</span></header>
 <div id="dash-root">
 {body}
 </div>
+<script src="assets/hrd-app.js"></script>
 </body>
 </html>
 """
 (ROOT / "index.html").write_text(html, encoding="utf-8")
-print("index.html 생성:", len(sources), "개 데이터")
+print("index.html 생성")

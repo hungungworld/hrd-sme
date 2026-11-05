@@ -1,22 +1,25 @@
 <meta name="dash-one-writer">
 <style>
-  /* 한글은 단어 단위로 줄바꿈하고, 문단 끝에 한두 글자만 남지 않게 합니다. */
-  .hr { word-break: keep-all; overflow-wrap: anywhere; }
-  .hr p, .hr li, .hr dd { text-wrap: pretty; }
-  .hr h1, .hr h2 { text-wrap: balance; }
+  /* 한국어 UI 텍스트 배치 규칙 1장: 단어 중간에서 안 끊고, 짧은 글은 줄 길이를 고르게 */
+  .hr { word-break: keep-all; overflow-wrap: break-word; line-height: 1.65; }
+  .hr p, .hr li, .hr .hr-note { text-wrap: pretty; }
+  .hr h1, .hr h2, .hr h3, .hr .hr-label { text-wrap: balance; }
+  .hr .nw { white-space: nowrap; }
   .hr { display: grid; gap: var(--cds-gap-lg); font-family: var(--font-anthropic-sans); font-variant-numeric: tabular-nums; }
   .hr-page { display: grid; gap: var(--cds-gap-xl); }
   .hr-page[hidden] { display: none; }
   .hr-top { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); align-items: flex-end; justify-content: space-between; }
   .hr-head { min-width: 0; flex: 1 1 24rem; }
-  .hr-head h1 { margin: 0; font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); text-wrap: balance; }
+  .hr-head h1 { margin: 0; line-height: 1.3; font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); text-wrap: balance; }
   .hr-sub { margin: var(--cds-gap-xs) 0 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
-  .hr-take { margin: 0; max-width: 65ch; font-size: var(--cds-font-size-body); }
+  /* 대사·메시지(결론 문장): 한 줄 = 한 호흡, 문단은 4줄까지 */
+  .hr-takes { display: grid; gap: var(--cds-gap-lg); }
+  .hr-take { margin: 0; font-size: var(--cds-font-size-body); }
   .hr .hr-take b { font-weight: var(--cds-font-weight-medium); }
-  /* 문장마다 새 줄, 줄이 넘치면 의미 덩어리(.nb) 사이에서만 끊습니다. */
   .hr-line { display: block; }
   .hr-line[hidden] { display: none; }
-  .hr .nb { display: inline-block; max-width: 100%; }
+  /* 지문(설명): 첫 문장만 한 줄에 따로, 나머지는 이어서. 한 줄 36자 안팎 */
+  .hr-lead { display: block; }
   .hr-filter { display: flex; flex-direction: column; gap: var(--cds-gap-xs); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
   .hr select { font: inherit; font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg); }
   .hr-filter select { min-width: 11rem; font-size: var(--cds-font-size-body); }
@@ -24,12 +27,13 @@
   .hr-tab { all: unset; cursor: pointer; white-space: nowrap; padding: var(--cds-pad-sm) var(--cds-pad-md); font-size: var(--cds-font-size-body); color: var(--color-fg-muted); border-bottom: 2px solid transparent; margin-bottom: -1px; }
   .hr-tab[aria-selected="true"] { color: var(--color-fg); border-bottom-color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
   .hr-tab:focus-visible { outline: 2px solid var(--cds-chart-axis); outline-offset: -2px; }
+  .hr-tab-setup { margin-left: auto; }
   .hr-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: var(--cds-gap-md); }
   .hr-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: var(--cds-gap-md); }
   .hr-card { min-width: 0; display: flex; flex-direction: column; gap: var(--cds-gap-sm); background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); }
-  .hr-card h2 { margin: 0; font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); }
+  .hr-card h2 { margin: 0; font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); line-height: 1.3; }
   .hr-scope { color: var(--color-fg-muted); font-weight: 400; }
-  .hr-note { margin: 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .hr-note { margin: 0; max-width: 36em; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); line-height: 1.5; }
   .hr-label { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
   .hr-big { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: calc(var(--cds-font-size-title) * 1.5); line-height: 1.1; }
   .hr-big.is-alert { color: var(--color-bad); }
@@ -40,7 +44,7 @@
   .hr-chart.is-short { min-height: 220px; }
   .hr-list { display: grid; gap: var(--cds-gap-xs); min-height: 18rem; align-content: start; }
   .hr-list.is-short { min-height: 8rem; }
-  .hr-row { display: grid; grid-template-columns: 6.5rem 1fr auto; align-items: center; gap: var(--cds-gap-sm); padding: 3px var(--cds-pad-xs); border-radius: var(--cds-radius); font-size: var(--cds-font-size-caption); }
+  .hr-row { display: grid; grid-template-columns: 6.5rem 1fr auto; align-items: center; gap: var(--cds-gap-sm); padding: var(--cds-pad-xs); border-radius: var(--cds-radius); font-size: var(--cds-font-size-caption); }
   .hr-row.is-click { cursor: pointer; }
   .hr-row.is-click:hover { background: var(--cds-chart-grid); }
   .hr-row:focus-visible { outline: 2px solid var(--cds-chart-axis); outline-offset: 1px; }
@@ -85,7 +89,7 @@
   .hr-matrix-wrap { overflow-x: auto; }
   .hr-matrix { display: grid; grid-template-columns: 6.5rem repeat(5, minmax(4.5rem, 1fr)); gap: 3px; min-width: 32rem; font-size: var(--cds-font-size-caption); min-height: 18rem; }
   .hr-mh { color: var(--color-fg-muted); text-align: center; padding: var(--cds-pad-xs); align-self: end; }
-  .hr-mr { padding: var(--cds-pad-xs); align-self: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .hr-mr { padding: var(--cds-pad-xs); align-self: center; white-space: nowrap; }
   .hr-mc { text-align: center; padding: var(--cds-pad-xs); border-radius: 3px; }
   .hr-mc.is-zero { color: var(--color-fg-muted); }
   .hr-matrix .is-dim { opacity: .4; }
@@ -112,7 +116,7 @@
   <div class="hr-top">
     <header class="hr-head">
       <h1>중소기업 HRD 교육 현황</h1>
-      <p class="hr-sub">가상 무역회사 · <span data-draw="scope-name">—</span> · 인원 <span data-draw="headcount" data-source="summary" data-field="headcount">—</span>명 · 2026년 1월 1일 ~ 10월 30일 누적 · 예시 데이터</p>
+      <p class="hr-sub">가상 무역회사 · <span data-draw="scope-name">—</span> · 인원 <span data-draw="headcount" data-source="summary" data-field="headcount">—</span>명 · <span class="nw" data-draw="period" data-source="meta">—</span> 누적 · <span data-draw="data-kind" data-source="meta">예시 데이터</span></p>
     </header>
     <label class="hr-filter" for="hr-dept">부서
       <select id="hr-dept" data-draw="dept-pick" data-source="depts"></select>
@@ -125,60 +129,68 @@
     <button type="button" class="hr-tab" role="tab" data-tab="blind" aria-selected="false">교육 사각지대</button>
     <button type="button" class="hr-tab" role="tab" data-tab="refund" aria-selected="false">예산·환급</button>
     <button type="button" class="hr-tab" role="tab" data-tab="skills" aria-selected="false">직무 역량 지도</button>
+    <button type="button" class="hr-tab hr-tab-setup" role="tab" data-tab="setup" aria-selected="false">설정</button>
   </nav>
+  <div class="hr-fresh" id="hr-fresh" aria-label="데이터 기준일"></div>
 
   <!-- 운영 현황 -->
   <section class="hr-page" id="overview">
+<div class="hr-takes">
     <p class="hr-take">
-      <span class="hr-line hr-take-miss"><span class="nb">법정의무교육 미이수자는</span> <span class="nb"><b data-draw="missing" data-source="summary" data-field="missing">—</b>명이며,</span></span>
-      <span class="hr-line hr-take-miss"><span class="nb">가장 많이 빠진 과정은</span> <span class="nb"><b data-draw="top-course" data-source="summary" data-field="top_course">—</b>(<b data-draw="top-course-missing" data-source="summary" data-field="top_course_missing">—</b>명)입니다.</span></span>
-      <span class="hr-line hr-take-dept"><span class="nb">부서별로는</span> <span class="nb"><b data-draw="top-dept" data-source="summary" data-field="top_dept">—</b>이</span> <span class="nb"><b data-draw="top-missing" data-source="summary" data-field="top_missing">—</b>명으로</span> <span class="nb">가장 많습니다.</span></span>
-      <span class="hr-line hr-take-miss"><span class="nb">12월 31일 전에</span> <span class="nb">개별 안내가 필요합니다.</span></span>
-      <span class="hr-line hr-take-done" hidden><span class="nb">법정의무교육 5과목을</span> <span class="nb">전원 이수했습니다.</span></span>
+      <span class="hr-line hr-take-miss">법정의무교육 미이수자는 <b data-draw="missing" data-source="summary" data-field="missing">—</b>명이에요.</span>
+      <span class="hr-line hr-take-miss">가장 많이 빠진 과정은</span>
+      <span class="hr-line hr-take-miss"><span data-draw="top-course" data-source="summary" data-field="top_course">—</span>(<span class="nw"><span data-draw="top-course-missing" data-source="summary" data-field="top_course_missing">—</span>명)이에요.</span></span>
+      <span class="hr-line hr-take-done" hidden>법정의무교육 5과목을</span>
+      <span class="hr-line hr-take-done" hidden><b>전원 이수</b>했어요.</span>
     </p>
+    <p class="hr-take">
+      <span class="hr-line hr-take-dept">부서별로는 <span data-draw="top-dept" data-source="summary" data-field="top_dept">—</span>이 <span class="nw"><span data-draw="top-missing" data-source="summary" data-field="top_missing">—</span>명으로</span> 가장 많아요.</span>
+      <span class="hr-line hr-take-miss"><b>12월 31일</b> 전에 개별 안내가 필요해요.</span>
+    </p>
+    </div>
 
     <div class="hr-kpis" aria-label="핵심 지표" data-fetchpriority="high">
       <div class="hr-card">
-        <span class="hr-label">법정의무교육 이수율 (5과목 모두 이수)</span>
+        <span class="hr-label">법정의무교육 이수율</span>
         <span><span class="hr-big" data-draw="legal-rate" data-source="summary" data-field="legal_rate">—</span><span class="hr-unit">%</span></span>
         <div class="hr-meter" data-draw="legal-meter" data-source="summary">—</div>
-        <span class="hr-note"><span data-draw="legal-done" data-source="summary" data-field="legal_done">—</span> / <span data-draw="headcount" data-source="summary" data-field="headcount">—</span>명 이수 · 목표 100%</span>
+        <span class="hr-note">5과목 모두 이수 <span class="nw"><span data-draw="legal-done" data-source="summary" data-field="legal_done">—</span>/<span data-draw="headcount" data-source="summary" data-field="headcount">—</span>명</span> · 목표 100%</span>
       </div>
       <div class="hr-card">
-        <span class="hr-label">1인당 교육시간 (연간 누적)</span>
+        <span class="hr-label">1인당 교육시간</span>
         <span><span class="hr-big" data-draw="hours-per" data-source="summary" data-field="hours_per">—</span><span class="hr-unit">시간</span></span>
         <div class="hr-meter" data-draw="hours-meter" data-source="summary">—</div>
-        <span class="hr-note">연간 목표 <span data-draw="hour-target" data-source="summary" data-field="hour_target">—</span>시간</span>
+        <span class="hr-note">연간 누적 · 목표 <span data-draw="hour-target" data-source="summary" data-field="hour_target">—</span>시간</span>
       </div>
       <div class="hr-card">
         <span class="hr-label">교육예산 집행률</span>
         <span><span class="hr-big" data-draw="budget-rate" data-source="summary" data-field="budget_rate">—</span><span class="hr-unit">%</span></span>
         <div class="hr-meter" data-draw="budget-meter" data-source="summary">—</div>
-        <span class="hr-note"><span data-draw="cost" data-source="summary" data-field="cost">—</span> / <span data-draw="budget" data-source="summary" data-field="budget">—</span>만원 집행 · 부서 예산은 인원 비율로 배분</span>
+        <span class="hr-note"><span class="nw"><span data-draw="cost" data-source="summary" data-field="cost">—</span>/<span data-draw="budget" data-source="summary" data-field="budget">—</span>만원</span> 집행 · 부서 예산은 인원 비율로 나눠요</span>
       </div>
       <div class="hr-card">
-        <span class="hr-label">교육 만족도 (이수 인원 가중 평균)</span>
+        <span class="hr-label">교육 만족도</span>
         <span><span class="hr-big" data-draw="satisfaction" data-source="summary" data-field="satisfaction">—</span><span class="hr-unit">/ 5.0</span></span>
         <div class="hr-meter" data-draw="sat-meter" data-source="summary">—</div>
-        <span class="hr-note">과정 종료 후 설문, 5점 척도</span>
+        <span class="hr-note">과정 종료 후 설문 · 이수 인원 가중 평균</span>
       </div>
     </div>
 
     <section class="hr-card" id="monthly">
       <h2>월별 교육시간 <span class="hr-scope">· <span data-draw="scope-name">—</span></span></h2>
-      <p class="hr-note">그달에 받은 교육시간의 합계입니다. 막대에 마우스를 올리면 교육비도 볼 수 있습니다. 10월은 30일까지 집계했습니다.</p>
+      <p class="hr-note"><span class="hr-lead">그달에 받은 교육시간의 합계예요.</span>막대에 마우스를 올리면 교육비도 보여요. 10월은 30일까지 집계했어요.</p>
       <div class="hr-chart" data-draw="monthly" data-source="monthly_scope">—</div>
     </section>
 
     <div class="hr-grid">
       <section class="hr-card" id="dept-legal">
         <h2>부서별 법정의무교육 이수율</h2>
-        <p class="hr-note">이수율이 <span data-draw="legal-threshold">—</span>% 미만인 부서는 빨간색입니다. 부서를 누르면 그 부서만 보고, 다시 누르면 전체로 돌아갑니다.</p>
+        <p class="hr-note"><span class="hr-lead">이수율 <span class="nw"><span data-draw="legal-threshold">—</span>% 미만</span>인 부서는 빨간색이에요.</span>부서를 누르면 그 부서만 보고, 다시 누르면 전체로 돌아가요.</p>
         <div class="hr-list" data-draw="dept-legal" data-source="dept_rates">—</div>
       </section>
       <section class="hr-card" id="dept-hours">
         <h2>부서별 1인당 교육시간</h2>
-        <p class="hr-note">점선은 연간 목표 <span data-draw="hour-target" data-source="summary" data-field="hour_target">—</span>시간입니다. 부서를 누르면 그 부서만 봅니다.</p>
+        <p class="hr-note"><span class="hr-lead">점선은 연간 목표 <span class="nw"><span data-draw="hour-target" data-source="summary" data-field="hour_target">—</span>시간</span>이에요.</span>부서를 누르면 그 부서만 봐요.</p>
         <div class="hr-list" data-draw="dept-hours" data-source="dept_rates">—</div>
       </section>
     </div>
@@ -188,7 +200,7 @@
         <h2>과정별 운영 현황 <span class="hr-scope">· <span data-draw="scope-name">—</span></span></h2>
         <select id="hr-cat" data-draw="course-cat" data-source="training" aria-label="과정 분류"></select>
       </div>
-      <p class="hr-note">이수율은 대상 인원 중 이수한 인원의 비율입니다. 열 제목을 누르면 정렬됩니다.</p>
+      <p class="hr-note"><span class="hr-lead">이수율은 대상 인원 중 이수한 인원의 비율이에요.</span>열 제목을 누르면 정렬돼요.</p>
       <div class="hr-tablewrap">
         <table class="hr-table" data-source="course_scope" data-row-key="scope,course">
           <thead>
@@ -228,23 +240,23 @@
         <span class="hr-note">안내한 적 없거나 마지막 안내 후 7일 이상 지난 사람</span>
       </div>
       <div class="hr-card">
-        <span class="hr-label">마감까지 주마다 이수시켜야 할 인원</span>
+        <span class="hr-label">주마다 필요한 이수 인원</span>
         <span><span class="hr-big" data-draw="dl-pace" data-source="deadline_kpi">—</span><span class="hr-unit">명/주</span></span>
-        <span class="hr-note">미이수 인원을 남은 주 수로 나눈 값</span>
+        <span class="hr-note">미이수 인원을 마감까지 남은 주 수로 나눈 값</span>
       </div>
     </div>
 
     <div class="hr-grid">
       <section class="hr-card" id="legal-matrix">
         <h2>과정별·부서별 미이수 인원</h2>
-        <p class="hr-note">색이 진할수록 미이수 인원이 많습니다. 부서 이름을 누르면 그 부서만 봅니다.</p>
+        <p class="hr-note"><span class="hr-lead">색이 진할수록 미이수 인원이 많아요.</span>부서 이름을 누르면 그 부서만 봐요.</p>
         <div class="hr-matrix-wrap">
           <div class="hr-matrix" data-draw="matrix" data-source="legal_matrix">—</div>
         </div>
       </section>
       <section class="hr-card" id="legal-weekly">
         <h2>주별 미이수 인원 추이 <span class="hr-scope">· <span data-draw="scope-name">—</span></span></h2>
-        <p class="hr-note">매주 월요일 기준으로 법정의무 5과목 중 하나라도 남은 사람 수입니다.</p>
+        <p class="hr-note"><span class="hr-lead">매주 월요일 기준, 법정의무 5과목 중 하나라도 남은 사람 수예요.</span></p>
         <div class="hr-chart is-short" data-draw="weekly" data-source="weekly_scope">—</div>
       </section>
     </div>
@@ -254,11 +266,11 @@
         <h2>안내 대상자 <span class="hr-scope">· <span data-draw="scope-name">—</span></span></h2>
         <span>
           <button type="button" class="hr-btn" id="hr-copy">이번 주 안내 대상 사번 복사</button>
-          <span class="hr-copied" hidden>복사했습니다</span>
-          <span class="hr-copyfail" hidden>복사하지 못했습니다. 표에서 직접 선택해 주세요</span>
+          <span class="hr-copied" hidden>복사했어요</span>
+          <span class="hr-copyfail" hidden>복사하지 못했어요. 표에서 직접 선택해 주세요</span>
         </span>
       </div>
-      <p class="hr-note">개인정보 보호를 위해 가명 사번으로 표시합니다. 이번 주 안내 대상이 위로 오고, 남은 과목이 많은 순서입니다. 데이터 기준일은 <span data-draw="as-of" data-source="deadline_kpi" data-field="as_of">—</span>입니다.</p>
+      <p class="hr-note"><span class="hr-lead">개인정보 보호를 위해 가명 사번으로 보여 줘요.</span>이번 주 안내 대상이 위로 오고, 남은 과목이 많은 순서예요. 데이터 기준일은 <span class="nw" data-draw="as-of" data-source="deadline_kpi" data-field="as_of">—</span>이에요.</p>
       <div class="hr-tablewrap is-tall">
         <table class="hr-table" data-source="notice_list" data-row-key="emp_id">
           <thead>
@@ -281,8 +293,10 @@
   <!-- 교육 사각지대 -->
   <section class="hr-page" id="blind" hidden>
     <p class="hr-take">
-      <span class="hr-line"><span class="nb">평균 교육시간만 보면</span> <span class="nb">놓치는 사람이 있습니다.</span></span>
-      <span class="hr-line"><span class="nb">법정의무교육을 빼고</span> <span class="nb">연간 교육이 <b data-draw="blind-th" data-source="blind" data-field="threshold">—</b>시간 미만인 직원을</span> <span class="nb"><b>교육 사각지대</b>로 봅니다.</span></span>
+      <span class="hr-line">평균 교육시간만 보면</span>
+      <span class="hr-line">놓치는 사람이 있어요.</span>
+      <span class="hr-line">법정교육을 빼고 연 <b class="nw"><span data-draw="blind-th" data-source="blind" data-field="threshold">—</span>시간 미만</b>인 직원이</span>
+      <span class="hr-line">교육 사각지대예요.</span>
     </p>
     <div class="hr-kpis">
       <div class="hr-card">
@@ -298,25 +312,25 @@
       <div class="hr-card">
         <span class="hr-label">법정 외 교육시간 중앙값</span>
         <span><span class="hr-big" data-draw="blind-median" data-source="blind" data-field="median_other">—</span><span class="hr-unit">시간</span></span>
-        <span class="hr-note">한가운데 있는 직원의 값이라 평균보다 실제에 가깝습니다</span>
+        <span class="hr-note">한가운데 있는 직원의 값이라 평균보다 실제에 가까워요</span>
       </div>
     </div>
 
     <section class="hr-card" id="blind-hist">
       <h2>법정 외 교육시간 분포 <span class="hr-scope">· <span data-draw="scope-name">—</span></span></h2>
-      <p class="hr-note">구간마다 직원 수입니다. 빨간 막대가 사각지대 구간입니다.</p>
+      <p class="hr-note"><span class="hr-lead">구간마다 직원 수예요.</span>빨간 막대가 사각지대 구간이에요.</p>
       <div class="hr-chart" data-draw="hist" data-source="employees">—</div>
     </section>
 
     <div class="hr-grid">
       <section class="hr-card" id="blind-type">
         <h2>근무 형태별 사각지대 비율 <span class="hr-scope">· <span data-draw="scope-name">—</span></span></h2>
-        <p class="hr-note">현장직과 출장이 잦은 직무는 정해진 시간의 집합교육에 참여하기 어렵습니다.</p>
+        <p class="hr-note"><span class="hr-lead">현장직과 출장이 잦은 직무는 정해진 시간의 집합교육에 참여하기 어려워요.</span></p>
         <div class="hr-list is-short" data-draw="blind-type" data-source="blind_type">—</div>
       </section>
       <section class="hr-card" id="blind-dept">
         <h2>부서별 사각지대 비율</h2>
-        <p class="hr-note">부서를 누르면 그 부서만 봅니다. 오른쪽 숫자는 사각지대 인원입니다.</p>
+        <p class="hr-note"><span class="hr-lead">오른쪽 숫자는 사각지대 인원이에요.</span>부서를 누르면 그 부서만 봐요.</p>
         <div class="hr-list" data-draw="blind-dept" data-source="blind">—</div>
       </section>
     </div>
@@ -324,11 +338,19 @@
 
   <!-- 예산·환급 -->
   <section class="hr-page" id="refund" hidden>
+<div class="hr-takes">
     <p class="hr-take">
-      <span class="hr-line hr-take-unclaimed"><span class="nb">사전 인정 없이 진행한</span> <span class="nb">사내 과정 <b data-draw="rf-uncount" data-source="refund_sum" data-field="missed_count" data-row="0">—</b>개는</span> <span class="nb">환급을 받을 수 없습니다.</span></span>
-      <span class="hr-line hr-take-unclaimed"><span class="nb">다음 차수부터</span> <span class="nb">교육 시작 전에 훈련과정 인정을 받으면</span> <span class="nb"><b data-draw="rf-unclaimed" data-source="refund_sum" data-field="missed" data-row="0">—</b>만원을</span> <span class="nb">아낄 수 있습니다.</span></span>
-      <span class="hr-line"><span class="nb">환급은 회사 단위로 신청하므로</span> <span class="nb">이 화면은 부서 필터와 상관없이</span> <span class="nb">전사 기준입니다.</span></span>
+      <span class="hr-line hr-take-unclaimed">사전 인정 없이 진행한 <span class="nw">사내 과정 <span data-draw="rf-uncount" data-source="refund_sum" data-field="missed_count" data-row="0">—</span>개는</span></span>
+      <span class="hr-line hr-take-unclaimed">환급을 받을 수 없어요.</span>
+      <span class="hr-line hr-take-unclaimed">다음 차수부터 시작 전에 인정받으면</span>
+      <span class="hr-line hr-take-unclaimed"><b class="nw"><span data-draw="rf-unclaimed" data-source="refund_sum" data-field="missed" data-row="0">—</span>만원</b>을 아낄 수 있어요.</span>
     </p>
+    <p class="hr-take">
+      <span class="hr-line">환급은 회사 단위로 신청해서</span>
+      <span class="hr-line">부서 필터와 상관없이</span>
+      <span class="hr-line"><b>전사 기준</b>으로 보여 줘요.</span>
+    </p>
+    </div>
     <div class="hr-kpis">
       <div class="hr-card">
         <span class="hr-label">환급 회수율</span>
@@ -347,7 +369,7 @@
         <span class="hr-note">총교육비 <span data-draw="rf-cost" data-source="refund_sum" data-field="cost" data-row="0">—</span>만원 − 지급 완료 환급액</span>
       </div>
       <div class="hr-card">
-        <span class="hr-label">순교육비 (환급을 모두 받으면)</span>
+        <span class="hr-label">순교육비 (환급 완료 시)</span>
         <span><span class="hr-big" data-draw="rf-final" data-source="refund_sum" data-field="net_final" data-row="0">—</span><span class="hr-unit">만원</span></span>
         <span class="hr-note">아직 받지 않은 환급 <span data-draw="rf-pending" data-source="refund_sum" data-field="pending" data-row="0">—</span>만원을 모두 받았을 때</span>
       </div>
@@ -355,7 +377,7 @@
 
     <section class="hr-card" id="refund-stack">
       <h2>총교육비 구성</h2>
-      <p class="hr-note">총교육비 중 회사가 실제로 부담하는 몫과 환급으로 돌아오는 몫입니다.</p>
+      <p class="hr-note"><span class="hr-lead">총교육비 중 회사가 실제로 부담하는 몫과 환급으로 돌아오는 몫이에요.</span></p>
       <div class="hr-stack" data-draw="rf-stack" data-source="refund_sum">—</div>
       <div class="hr-legend">
         <span><i data-draw="rf-key-net"></i>회사 부담 (예상)</span>
@@ -373,7 +395,7 @@
         <li>지원금 신청</li>
         <li>지급</li>
       </ol>
-      <p class="hr-note">환급은 교육 시작 전에 인정받은 과정만 받을 수 있습니다. 인정 없이 진행한 사내 교육은 나중에 신청할 수 없어 "환급 없음"으로만 표시하고, 다음 차수에 인정을 받으면 아낄 수 있는 금액을 보여 줍니다. 성희롱 예방교육 같은 일반 법정의무교육은 지원 대상이 아니고, 직무 관련 법정훈련은 낮은 비율로 지원되기도 합니다. 지원율과 한도는 회사 규모에 따라 다릅니다(HRD4U 기준 우선지원대상기업 90%, 한도는 해당 보험료의 240%).</p>
+      <p class="hr-note"><span class="hr-lead">환급은 교육 시작 전에 인정받은 과정만 받을 수 있어요.</span>인정 없이 진행한 사내 교육은 나중에 신청할 수 없어 “환급 없음”으로 표시하고, 다음 차수에 인정을 받으면 아낄 수 있는 금액을 보여 줘요. 성희롱 예방교육 같은 일반 법정의무교육은 지원 대상이 아니고, 직무 관련 법정훈련은 낮은 비율로 지원되기도 해요. 지원율과 한도는 회사 규모에 따라 달라요(HRD4U 기준 우선지원대상기업 90%, 한도는 해당 보험료의 240%).</p>
       <div class="hr-tablewrap">
         <table class="hr-table" data-source="refund" data-row-key="course">
           <thead>
@@ -395,23 +417,30 @@
 
   <!-- 무역 직무 역량 지도 -->
   <section class="hr-page" id="skills" hidden>
+<div class="hr-takes">
     <p class="hr-take">
-      <span class="hr-line"><span class="nb">역량 차이(요구 수준 − 보유 수준)가</span> <span class="nb">가장 큰 곳은</span> <span class="nb"><b data-draw="cg-dept" data-source="comp_gap" data-field="dept">—</b>의</span> <span class="nb"><b data-draw="cg-comp" data-source="comp_gap" data-field="competency">—</b> 역량입니다.</span></span>
-      <span class="hr-line"><span class="nb">요구 수준 <b data-draw="cg-req" data-source="comp_gap" data-field="required">—</b>에</span> <span class="nb">보유 수준 <b data-draw="cg-cur" data-source="comp_gap" data-field="current">—</b>으로</span> <span class="nb"><b data-draw="cg-gap" data-source="comp_gap" data-field="gap">—</b>만큼 부족합니다.</span></span>
-      <span class="hr-line"><span class="nb">차이가 큰 칸부터</span> <span class="nb">2027년 교육계획에 반영합니다.</span></span>
+      <span class="hr-line">역량 차이가 가장 큰 곳은 <span data-draw="cg-dept" data-source="comp_gap" data-field="dept">—</span>,</span>
+      <span class="hr-line"><span data-draw="cg-comp" data-source="comp_gap" data-field="competency">—</span> 역량이에요.</span>
+      <span class="hr-line"><span class="nw">요구 수준 <span data-draw="cg-req" data-source="comp_gap" data-field="required">—</span>에</span> <span class="nw">보유 수준 <span data-draw="cg-cur" data-source="comp_gap" data-field="current">—</span>으로</span></span>
+      <span class="hr-line"><b class="nw"><span data-draw="cg-gap" data-source="comp_gap" data-field="gap">—</span>만큼</b> 부족해요.</span>
     </p>
+    <p class="hr-take">
+      <span class="hr-line">차이가 큰 칸부터</span>
+      <span class="hr-line">2027년 교육계획에 반영해요.</span>
+    </p>
+    </div>
 
     <ul class="hr-scale" aria-label="역량 수준 척도">
-      <li><b>1</b> 입문: 개념을 안다</li>
-      <li><b>2</b> 기초: 도움을 받아 수행한다</li>
-      <li><b>3</b> 실무: 혼자 수행한다</li>
-      <li><b>4</b> 숙련: 복잡한 상황도 처리한다</li>
-      <li><b>5</b> 전문가: 남을 가르칠 수 있다</li>
+      <li><b>1</b> 입문: 개념을 알아요</li>
+      <li><b>2</b> 기초: 도움을 받아 수행해요</li>
+      <li><b>3</b> 실무: 혼자 수행해요</li>
+      <li><b>4</b> 숙련: 복잡한 상황도 처리해요</li>
+      <li><b>5</b> 전문가: 남을 가르칠 수 있어요</li>
     </ul>
 
     <section class="hr-card" id="comp-matrix">
       <h2>부서 × 역량 차이 지도</h2>
-      <p class="hr-note">숫자는 요구 수준에서 보유 수준을 뺀 값이고, 클수록 부족합니다. <span data-draw="gap-alert">—</span> 이상은 우선 개발 대상입니다. 칸에 마우스를 올리면 요구·보유 수준이 보입니다. 부서 이름을 누르면 그 부서만 봅니다.</p>
+      <p class="hr-note"><span class="hr-lead">숫자는 요구 수준에서 보유 수준을 뺀 값이고, 클수록 부족해요.</span><span class="nw"><span data-draw="gap-alert">—</span> 이상</span>은 우선 개발 대상이에요. 칸에 마우스를 올리면 요구·보유 수준이 보이고, 부서 이름을 누르면 그 부서만 봐요.</p>
       <div class="hr-matrix-wrap">
         <div class="hr-matrix is-comp" data-draw="comp-matrix" data-source="comp_gap">—</div>
       </div>
@@ -420,12 +449,12 @@
     <div class="hr-grid">
       <section class="hr-card" id="comp-profile">
         <h2>역량 프로필 <span class="hr-scope">· <span data-draw="scope-name">—</span></span></h2>
-        <p class="hr-note">막대는 보유 수준, 점선은 요구 수준입니다(5점 척도). 전체 부서는 인원 가중 평균입니다. 2026년 9월 역량 진단(본인·팀장 평가 평균) 기준입니다.</p>
+        <p class="hr-note"><span class="hr-lead">막대는 보유 수준, 점선은 요구 수준이에요(5점 척도).</span>전체 부서는 인원 가중 평균이고, 2026년 9월 역량 진단(본인·팀장 평가 평균) 기준이에요.</p>
         <div class="hr-list is-short" data-draw="comp-profile" data-source="comp_profile">—</div>
       </section>
       <section class="hr-card hr-tablecard" id="comp-priority">
         <h2>2027년 교육 우선순위 <span class="hr-scope">· <span data-draw="scope-name">—</span></span></h2>
-        <p class="hr-note">역량 차이가 큰 순서로 최대 8개입니다. 관련 과정이 이미 있으면 대상을 넓히고, 차이가 줄지 않으면 과정 내용을 다시 설계합니다.</p>
+        <p class="hr-note"><span class="hr-lead">역량 차이가 큰 순서로 최대 8개예요.</span>관련 과정이 이미 있으면 대상을 넓히고, 차이가 줄지 않으면 과정 내용을 다시 설계해요.</p>
         <div class="hr-tablewrap">
           <table class="hr-table" data-source="comp_gap" data-row-key="dept,competency">
             <thead>
@@ -446,7 +475,7 @@
 
     <section class="hr-card hr-tablecard" id="comp-dictionary">
       <h2>무역 직무 역량 사전</h2>
-      <p class="hr-note">각 역량이 무엇을 할 수 있는 상태인지 행동으로 정의했습니다. 부서별 요구 수준은 팀장과 함께 정합니다.</p>
+      <p class="hr-note"><span class="hr-lead">각 역량이 무엇을 할 수 있는 상태인지 행동으로 정의했어요.</span>부서별 요구 수준은 팀장과 함께 정해요.</p>
       <div class="hr-tablewrap">
         <table class="hr-table" data-source="competencies" data-row-key="competency">
           <thead>
@@ -462,6 +491,9 @@
       </div>
     </section>
   </section>
+
+  <!-- 설정 → 데이터 가져오기 (assets/hrd-app.js가 그린다) -->
+  <section class="hr-page" id="setup" hidden></section>
 </div>
 
 <script>
@@ -705,7 +737,7 @@
   const fail = (el) => {
     const p = document.createElement('div');
     p.className = 'hr-fail';
-    p.textContent = '불러오지 못했습니다';
+    p.textContent = '불러오지 못했어요';
     el.replaceChildren(p);
   };
   // 모두 준비되면 각 데이터의 행을, 아니면 null을 돌려주고 자리표시를 되돌립니다.
@@ -732,14 +764,18 @@
   };
 
   // 탭
-  const PAGES = ['overview', 'deadline', 'blind', 'refund', 'skills'];
+  const PAGES = ['overview', 'deadline', 'blind', 'refund', 'skills', 'setup'];
   const showPage = (id) => {
     document.querySelectorAll('.hr-page').forEach((s) => { s.hidden = s.id !== id; });
     document.querySelectorAll('.hr-tab').forEach((t) => t.setAttribute('aria-selected', String(t.dataset.tab === id)));
     dash.setLink(id);
+    const fr = document.getElementById('hr-fresh');
+    if (fr) fr.hidden = id === 'setup';
   };
+  window.hrShowPage = showPage;
   document.querySelectorAll('.hr-tab').forEach((t) => t.addEventListener('click', () => showPage(t.dataset.tab)));
   if (PAGES.includes(location.hash.slice(1))) showPage(location.hash.slice(1));
+  window.addEventListener('hashchange', () => { if (PAGES.includes(location.hash.slice(1))) showPage(location.hash.slice(1)); });
 
   // 고른 부서에 따라 요약 문장을 바꿉니다.
   dash.onData(() => {
@@ -758,6 +794,15 @@
     sel.onchange = () => dash.setParams({ dept: sel.value || null });
   });
   dash.draw('scope-name', (el) => { el.textContent = dash.params().dept || '전체 부서'; });
+  // 기간과 데이터 종류는 원본에서 계산한 값(meta)으로 씁니다.
+  dash.draw('period', (el) => {
+    const m = one(el, 'meta');
+    if (m) el.textContent = `${m.period_start.slice(0, 4)}년 ${md(m.period_start)}~${md(m.period_end)}`;
+  });
+  dash.draw('data-kind', (el) => {
+    const m = one(el, 'meta');
+    if (m) el.textContent = m.sample ? '예시 데이터' : '가져온 데이터';
+  });
 
   const text = (name, id, f) => dash.draw(name, (el) => {
     const s = scoped(el, id);
@@ -1179,7 +1224,7 @@
     const edges = [0, 4, 8, 16, 24, 32, 48];
     barChart(el, edges.map((lo, i) => {
       const hi = edges[i + 1];
-      const label = hi == null ? `${lo}시간+` : `${lo}–${hi}`;
+      const label = hi == null ? `${lo}시간+` : `${lo}~${hi}`;
       const count = people.filter((e) => Number(e.other_hours) >= lo && (hi == null || Number(e.other_hours) < hi)).length;
       return {
         label, value: count,
@@ -1284,7 +1329,7 @@
   });
   topGap('cg-dept', (c) => c.dept);
   topGap('cg-comp', (c) => c.competency);
-  topGap('cg-req', (c) => String(c.required));
+  topGap('cg-req', (c) => Number(c.required).toFixed(1));
   topGap('cg-cur', (c) => c.current.toFixed(1));
   topGap('cg-gap', (c) => c.gap.toFixed(1));
 

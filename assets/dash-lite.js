@@ -14,6 +14,8 @@
   try { params = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { params = {}; }
 
   const pending = () => ({ status: 'loading', data: [], columns: [], refreshing: false, meta: [] });
+  // 계산해서 넣을 데이터(window.DASH_PENDING)는 들어올 때까지 '불러오는 중'으로 둡니다.
+  (window.DASH_PENDING || []).forEach((id) => { store[id] = pending(); });
 
   Object.keys(sources).forEach((id) => {
     store[id] = pending();
@@ -121,6 +123,17 @@
     resetParams: () => { params = {}; try { localStorage.removeItem(KEY); } catch (e) {} schedule(); },
     setLink: (name) => { try { history.replaceState(null, '', name ? `#${name}` : location.pathname); } catch (e) {} },
     refresh: () => {},
+    // 브라우저에서 계산한 데이터를 넣습니다. 넣을 때마다 모든 그림을 다시 그립니다.
+    put: (id, rows) => {
+      store[id] = { status: 'ok', data: rows.slice(), columns: rows.length ? Object.keys(rows[0]) : [], refreshing: false, meta: [] };
+      Object.keys(memo).forEach((k) => delete memo[k]);
+      schedule();
+    },
+    fail: (id, message) => {
+      store[id] = { status: 'error', data: [], columns: [], message: String(message), refreshing: false, meta: [] };
+      Object.keys(memo).forEach((k) => delete memo[k]);
+      schedule();
+    },
     colors: ['#2f6fdb', '#e0902a', '#1f9e89', '#9b5de5', '#d6457a', '#6b8e23', '#5c6bc0', '#8d6e63'],
   };
 
