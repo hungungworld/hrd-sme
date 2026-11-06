@@ -39,6 +39,7 @@ html = f"""<!DOCTYPE html>
 <script>window.DASH_SOURCES = {{}}; window.DASH_PENDING = {json.dumps(pending)};</script>
 <script src="assets/dash-lite.js"></script>
 <script src="assets/hrd-data.js"></script>
+<script src="assets/hrd-connect.js"></script>
 </head>
 <body>
 <header class="site-bar"><span>HRD 대시보드 포트폴리오 · 모든 수치는 가상 데이터입니다</span></header>

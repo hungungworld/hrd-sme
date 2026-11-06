@@ -1,0 +1,8486 @@
+{
+ "items": [
+  {
+   "user_id": "E1001",
+   "user_name": "한서윤",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-27T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1001",
+   "user_name": "한서윤",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1001",
+   "user_name": "한서윤",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1001",
+   "user_name": "한서윤",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1002",
+   "user_name": "서미경",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1002",
+   "user_name": "서미경",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1002",
+   "user_name": "서미경",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-18T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1002",
+   "user_name": "서미경",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1003",
+   "user_name": "이지호",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1003",
+   "user_name": "이지호",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1003",
+   "user_name": "이지호",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-23T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1003",
+   "user_name": "이지호",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1004",
+   "user_name": "백성민",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1004",
+   "user_name": "백성민",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1004",
+   "user_name": "백성민",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1004",
+   "user_name": "백성민",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1005",
+   "user_name": "최예린",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1005",
+   "user_name": "최예린",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1005",
+   "user_name": "최예린",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1005",
+   "user_name": "최예린",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 25,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1006",
+   "user_name": "류하은",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1006",
+   "user_name": "류하은",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1006",
+   "user_name": "류하은",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1006",
+   "user_name": "류하은",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1007",
+   "user_name": "남재민",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1007",
+   "user_name": "남재민",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1007",
+   "user_name": "남재민",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-18T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1007",
+   "user_name": "남재민",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1008",
+   "user_name": "조도윤",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1008",
+   "user_name": "조도윤",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1008",
+   "user_name": "조도윤",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1008",
+   "user_name": "조도윤",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1009",
+   "user_name": "박나연",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1009",
+   "user_name": "박나연",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1009",
+   "user_name": "박나연",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 25,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1009",
+   "user_name": "박나연",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1010",
+   "user_name": "신지호",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-18T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1010",
+   "user_name": "신지호",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1010",
+   "user_name": "신지호",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-31T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1010",
+   "user_name": "신지호",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1011",
+   "user_name": "윤수아",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1011",
+   "user_name": "윤수아",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1011",
+   "user_name": "윤수아",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1011",
+   "user_name": "윤수아",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1012",
+   "user_name": "송나연",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1012",
+   "user_name": "송나연",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1012",
+   "user_name": "송나연",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1012",
+   "user_name": "송나연",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-23T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1013",
+   "user_name": "이준혁",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1013",
+   "user_name": "이준혁",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1013",
+   "user_name": "이준혁",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-27T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1013",
+   "user_name": "이준혁",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-01T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1014",
+   "user_name": "최현우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1014",
+   "user_name": "최현우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1014",
+   "user_name": "최현우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1014",
+   "user_name": "최현우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1015",
+   "user_name": "홍영호",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1015",
+   "user_name": "홍영호",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1015",
+   "user_name": "홍영호",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1015",
+   "user_name": "홍영호",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1016",
+   "user_name": "류민서",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-29T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1016",
+   "user_name": "류민서",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-25T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1016",
+   "user_name": "류민서",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1016",
+   "user_name": "류민서",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1017",
+   "user_name": "서하은",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1017",
+   "user_name": "서하은",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1017",
+   "user_name": "서하은",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1017",
+   "user_name": "서하은",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1018",
+   "user_name": "윤도윤",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1018",
+   "user_name": "윤도윤",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1018",
+   "user_name": "윤도윤",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1018",
+   "user_name": "윤도윤",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1019",
+   "user_name": "송시우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1019",
+   "user_name": "송시우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-31T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1019",
+   "user_name": "송시우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-18T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1019",
+   "user_name": "송시우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1020",
+   "user_name": "임지훈",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1020",
+   "user_name": "임지훈",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1020",
+   "user_name": "임지훈",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1020",
+   "user_name": "임지훈",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-01T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1021",
+   "user_name": "정성민",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1021",
+   "user_name": "정성민",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-31T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1021",
+   "user_name": "정성민",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1021",
+   "user_name": "정성민",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-23T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1022",
+   "user_name": "최준혁",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1022",
+   "user_name": "최준혁",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1022",
+   "user_name": "최준혁",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1022",
+   "user_name": "최준혁",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1023",
+   "user_name": "임하윤",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1023",
+   "user_name": "임하윤",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1023",
+   "user_name": "임하윤",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1023",
+   "user_name": "임하윤",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1024",
+   "user_name": "백혜진",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1024",
+   "user_name": "백혜진",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1024",
+   "user_name": "백혜진",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1024",
+   "user_name": "백혜진",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1025",
+   "user_name": "강예준",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1025",
+   "user_name": "강예준",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1025",
+   "user_name": "강예준",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1025",
+   "user_name": "강예준",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-23T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1026",
+   "user_name": "류준혁",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-23T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1026",
+   "user_name": "류준혁",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-31T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1026",
+   "user_name": "류준혁",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-27T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1026",
+   "user_name": "류준혁",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-18T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1027",
+   "user_name": "홍건우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1027",
+   "user_name": "홍건우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1027",
+   "user_name": "홍건우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1027",
+   "user_name": "홍건우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1028",
+   "user_name": "오예준",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1028",
+   "user_name": "오예준",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1028",
+   "user_name": "오예준",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1028",
+   "user_name": "오예준",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1029",
+   "user_name": "송선영",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 80,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1029",
+   "user_name": "송선영",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 80,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1029",
+   "user_name": "송선영",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1029",
+   "user_name": "송선영",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-25T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1030",
+   "user_name": "박준혁",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1030",
+   "user_name": "박준혁",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1030",
+   "user_name": "박준혁",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1030",
+   "user_name": "박준혁",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1031",
+   "user_name": "이보람",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1031",
+   "user_name": "이보람",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1031",
+   "user_name": "이보람",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-27T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1031",
+   "user_name": "이보람",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-25T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1032",
+   "user_name": "조유진",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1032",
+   "user_name": "조유진",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1032",
+   "user_name": "조유진",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1032",
+   "user_name": "조유진",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1033",
+   "user_name": "고성민",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1033",
+   "user_name": "고성민",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1033",
+   "user_name": "고성민",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1033",
+   "user_name": "고성민",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1034",
+   "user_name": "신연우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1034",
+   "user_name": "신연우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1034",
+   "user_name": "신연우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1034",
+   "user_name": "신연우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1035",
+   "user_name": "권민서",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1035",
+   "user_name": "권민서",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1035",
+   "user_name": "권민서",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1035",
+   "user_name": "권민서",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1036",
+   "user_name": "남수빈",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1036",
+   "user_name": "남수빈",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1036",
+   "user_name": "남수빈",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-18T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1036",
+   "user_name": "남수빈",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1037",
+   "user_name": "오다은",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1037",
+   "user_name": "오다은",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1037",
+   "user_name": "오다은",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1037",
+   "user_name": "오다은",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1038",
+   "user_name": "윤하린",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1038",
+   "user_name": "윤하린",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1038",
+   "user_name": "윤하린",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1038",
+   "user_name": "윤하린",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-27T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1039",
+   "user_name": "문채원",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1039",
+   "user_name": "문채원",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1039",
+   "user_name": "문채원",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-23T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1039",
+   "user_name": "문채원",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1040",
+   "user_name": "임은서",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1040",
+   "user_name": "임은서",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1040",
+   "user_name": "임은서",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1040",
+   "user_name": "임은서",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1041",
+   "user_name": "황소율",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1041",
+   "user_name": "황소율",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1041",
+   "user_name": "황소율",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1041",
+   "user_name": "황소율",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1042",
+   "user_name": "양동현",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1042",
+   "user_name": "양동현",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1042",
+   "user_name": "양동현",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1042",
+   "user_name": "양동현",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-01T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1043",
+   "user_name": "임상훈",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1043",
+   "user_name": "임상훈",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1043",
+   "user_name": "임상훈",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-18T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1043",
+   "user_name": "임상훈",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1044",
+   "user_name": "박지유",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-27T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1044",
+   "user_name": "박지유",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1044",
+   "user_name": "박지유",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1044",
+   "user_name": "박지유",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1045",
+   "user_name": "안지훈",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1045",
+   "user_name": "안지훈",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-27T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1045",
+   "user_name": "안지훈",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1045",
+   "user_name": "안지훈",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-25T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1046",
+   "user_name": "강소율",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-23T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1046",
+   "user_name": "강소율",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1046",
+   "user_name": "강소율",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 10,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1046",
+   "user_name": "강소율",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 80,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1047",
+   "user_name": "정유진",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1047",
+   "user_name": "정유진",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1047",
+   "user_name": "정유진",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1047",
+   "user_name": "정유진",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1048",
+   "user_name": "신도윤",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1048",
+   "user_name": "신도윤",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1048",
+   "user_name": "신도윤",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1048",
+   "user_name": "신도윤",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1049",
+   "user_name": "고지호",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1049",
+   "user_name": "고지호",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1049",
+   "user_name": "고지호",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1049",
+   "user_name": "고지호",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1050",
+   "user_name": "손하윤",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1050",
+   "user_name": "손하윤",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1050",
+   "user_name": "손하윤",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1050",
+   "user_name": "손하윤",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-29T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1051",
+   "user_name": "류연우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1051",
+   "user_name": "류연우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1051",
+   "user_name": "류연우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1051",
+   "user_name": "류연우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1052",
+   "user_name": "한광수",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-27T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1052",
+   "user_name": "한광수",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1052",
+   "user_name": "한광수",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-18T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1052",
+   "user_name": "한광수",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1053",
+   "user_name": "오상훈",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1053",
+   "user_name": "오상훈",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-01T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1053",
+   "user_name": "오상훈",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1053",
+   "user_name": "오상훈",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1054",
+   "user_name": "황민서",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1054",
+   "user_name": "황민서",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1054",
+   "user_name": "황민서",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1054",
+   "user_name": "황민서",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1055",
+   "user_name": "배수빈",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-18T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1055",
+   "user_name": "배수빈",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1055",
+   "user_name": "배수빈",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1055",
+   "user_name": "배수빈",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1056",
+   "user_name": "박수아",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1056",
+   "user_name": "박수아",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1056",
+   "user_name": "박수아",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1056",
+   "user_name": "박수아",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1057",
+   "user_name": "장태윤",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1057",
+   "user_name": "장태윤",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1057",
+   "user_name": "장태윤",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1057",
+   "user_name": "장태윤",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1058",
+   "user_name": "문정민",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1058",
+   "user_name": "문정민",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1058",
+   "user_name": "문정민",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1058",
+   "user_name": "문정민",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1059",
+   "user_name": "박하은",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1059",
+   "user_name": "박하은",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1059",
+   "user_name": "박하은",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1059",
+   "user_name": "박하은",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-29T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1060",
+   "user_name": "양광수",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1060",
+   "user_name": "양광수",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-01T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1060",
+   "user_name": "양광수",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1060",
+   "user_name": "양광수",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1061",
+   "user_name": "임미경",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1061",
+   "user_name": "임미경",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1061",
+   "user_name": "임미경",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1061",
+   "user_name": "임미경",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1062",
+   "user_name": "류혜진",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1062",
+   "user_name": "류혜진",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1062",
+   "user_name": "류혜진",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-29T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1062",
+   "user_name": "류혜진",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1063",
+   "user_name": "백동현",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-29T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1063",
+   "user_name": "백동현",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1063",
+   "user_name": "백동현",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 25,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1063",
+   "user_name": "백동현",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-01T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1064",
+   "user_name": "임선영",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1064",
+   "user_name": "임선영",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1064",
+   "user_name": "임선영",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1064",
+   "user_name": "임선영",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-23T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1065",
+   "user_name": "서정민",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1065",
+   "user_name": "서정민",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1065",
+   "user_name": "서정민",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1065",
+   "user_name": "서정민",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1066",
+   "user_name": "오서연",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1066",
+   "user_name": "오서연",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1066",
+   "user_name": "오서연",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1066",
+   "user_name": "오서연",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1067",
+   "user_name": "권정우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1067",
+   "user_name": "권정우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1067",
+   "user_name": "권정우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 40,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1067",
+   "user_name": "권정우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 80,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1068",
+   "user_name": "강보람",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-29T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1068",
+   "user_name": "강보람",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-25T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1068",
+   "user_name": "강보람",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1068",
+   "user_name": "강보람",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1069",
+   "user_name": "최유진",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-29T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1069",
+   "user_name": "최유진",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1069",
+   "user_name": "최유진",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1069",
+   "user_name": "최유진",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1070",
+   "user_name": "이지아",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 60,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1070",
+   "user_name": "이지아",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 40,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1070",
+   "user_name": "이지아",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-31T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1070",
+   "user_name": "이지아",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-27T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1071",
+   "user_name": "손선우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1071",
+   "user_name": "손선우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1071",
+   "user_name": "손선우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-29T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1071",
+   "user_name": "손선우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1072",
+   "user_name": "정은지",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1072",
+   "user_name": "정은지",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1072",
+   "user_name": "정은지",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1072",
+   "user_name": "정은지",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1073",
+   "user_name": "윤가은",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1073",
+   "user_name": "윤가은",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1073",
+   "user_name": "윤가은",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1073",
+   "user_name": "윤가은",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1074",
+   "user_name": "서유진",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1074",
+   "user_name": "서유진",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1074",
+   "user_name": "서유진",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1074",
+   "user_name": "서유진",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1075",
+   "user_name": "박주원",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1075",
+   "user_name": "박주원",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1075",
+   "user_name": "박주원",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1075",
+   "user_name": "박주원",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1076",
+   "user_name": "권가은",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1076",
+   "user_name": "권가은",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1076",
+   "user_name": "권가은",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1076",
+   "user_name": "권가은",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1077",
+   "user_name": "송윤서",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1077",
+   "user_name": "송윤서",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1077",
+   "user_name": "송윤서",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1077",
+   "user_name": "송윤서",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1078",
+   "user_name": "유시우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1078",
+   "user_name": "유시우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1078",
+   "user_name": "유시우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1078",
+   "user_name": "유시우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1079",
+   "user_name": "백나연",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1079",
+   "user_name": "백나연",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1079",
+   "user_name": "백나연",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1079",
+   "user_name": "백나연",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1080",
+   "user_name": "허하윤",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1080",
+   "user_name": "허하윤",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1080",
+   "user_name": "허하윤",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1080",
+   "user_name": "허하윤",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-29T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1081",
+   "user_name": "장선영",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1081",
+   "user_name": "장선영",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1081",
+   "user_name": "장선영",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1081",
+   "user_name": "장선영",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1082",
+   "user_name": "신정우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1082",
+   "user_name": "신정우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1082",
+   "user_name": "신정우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1082",
+   "user_name": "신정우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1083",
+   "user_name": "고승현",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1083",
+   "user_name": "고승현",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1083",
+   "user_name": "고승현",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1083",
+   "user_name": "고승현",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1084",
+   "user_name": "윤서윤",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1084",
+   "user_name": "윤서윤",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-23T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1084",
+   "user_name": "윤서윤",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-01T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1084",
+   "user_name": "윤서윤",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1085",
+   "user_name": "박하린",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1085",
+   "user_name": "박하린",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1085",
+   "user_name": "박하린",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1085",
+   "user_name": "박하린",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1086",
+   "user_name": "정현우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1086",
+   "user_name": "정현우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1086",
+   "user_name": "정현우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1086",
+   "user_name": "정현우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1087",
+   "user_name": "고현우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1087",
+   "user_name": "고현우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1087",
+   "user_name": "고현우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-25T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1087",
+   "user_name": "고현우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1088",
+   "user_name": "김유진",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1088",
+   "user_name": "김유진",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1088",
+   "user_name": "김유진",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1088",
+   "user_name": "김유진",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-18T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1089",
+   "user_name": "백민서",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1089",
+   "user_name": "백민서",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1089",
+   "user_name": "백민서",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1089",
+   "user_name": "백민서",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1090",
+   "user_name": "강우진",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1090",
+   "user_name": "강우진",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1090",
+   "user_name": "강우진",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1090",
+   "user_name": "강우진",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1091",
+   "user_name": "임민준",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1091",
+   "user_name": "임민준",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1091",
+   "user_name": "임민준",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1091",
+   "user_name": "임민준",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1092",
+   "user_name": "정지훈",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1092",
+   "user_name": "정지훈",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1092",
+   "user_name": "정지훈",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 10,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1092",
+   "user_name": "정지훈",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1093",
+   "user_name": "송예린",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1093",
+   "user_name": "송예린",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1093",
+   "user_name": "송예린",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1093",
+   "user_name": "송예린",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1094",
+   "user_name": "전준혁",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-25T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1094",
+   "user_name": "전준혁",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-01T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1094",
+   "user_name": "전준혁",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1094",
+   "user_name": "전준혁",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1095",
+   "user_name": "한시우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-23T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1095",
+   "user_name": "한시우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1095",
+   "user_name": "한시우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-31T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1095",
+   "user_name": "한시우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1096",
+   "user_name": "문재민",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1096",
+   "user_name": "문재민",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1096",
+   "user_name": "문재민",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1096",
+   "user_name": "문재민",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1097",
+   "user_name": "전미경",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1097",
+   "user_name": "전미경",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1097",
+   "user_name": "전미경",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1097",
+   "user_name": "전미경",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1098",
+   "user_name": "고은지",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1098",
+   "user_name": "고은지",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1098",
+   "user_name": "고은지",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1098",
+   "user_name": "고은지",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1099",
+   "user_name": "이수빈",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1099",
+   "user_name": "이수빈",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-18T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1099",
+   "user_name": "이수빈",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1099",
+   "user_name": "이수빈",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1100",
+   "user_name": "유혜진",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1100",
+   "user_name": "유혜진",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1100",
+   "user_name": "유혜진",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-27T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1100",
+   "user_name": "유혜진",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1101",
+   "user_name": "배하윤",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1101",
+   "user_name": "배하윤",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1101",
+   "user_name": "배하윤",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1101",
+   "user_name": "배하윤",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1102",
+   "user_name": "서가은",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1102",
+   "user_name": "서가은",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1102",
+   "user_name": "서가은",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1102",
+   "user_name": "서가은",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1103",
+   "user_name": "최태윤",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1103",
+   "user_name": "최태윤",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1103",
+   "user_name": "최태윤",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1103",
+   "user_name": "최태윤",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1104",
+   "user_name": "홍가은",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 10,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1104",
+   "user_name": "홍가은",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 60,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1104",
+   "user_name": "홍가은",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 25,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1104",
+   "user_name": "홍가은",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1105",
+   "user_name": "이건우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1105",
+   "user_name": "이건우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1105",
+   "user_name": "이건우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1105",
+   "user_name": "이건우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 25,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1106",
+   "user_name": "박지아",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-25T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1106",
+   "user_name": "박지아",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1106",
+   "user_name": "박지아",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1106",
+   "user_name": "박지아",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-23T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1107",
+   "user_name": "권주원",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1107",
+   "user_name": "권주원",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1107",
+   "user_name": "권주원",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1107",
+   "user_name": "권주원",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 40,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1108",
+   "user_name": "최소율",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1108",
+   "user_name": "최소율",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1108",
+   "user_name": "최소율",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1108",
+   "user_name": "최소율",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 25,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1109",
+   "user_name": "전하은",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1109",
+   "user_name": "전하은",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1109",
+   "user_name": "전하은",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 80,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1109",
+   "user_name": "전하은",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1110",
+   "user_name": "최민준",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1110",
+   "user_name": "최민준",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 25,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1110",
+   "user_name": "최민준",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1110",
+   "user_name": "최민준",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1111",
+   "user_name": "류서윤",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1111",
+   "user_name": "류서윤",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1111",
+   "user_name": "류서윤",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1111",
+   "user_name": "류서윤",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1112",
+   "user_name": "송예준",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1112",
+   "user_name": "송예준",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1112",
+   "user_name": "송예준",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1112",
+   "user_name": "송예준",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1113",
+   "user_name": "오보람",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1113",
+   "user_name": "오보람",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1113",
+   "user_name": "오보람",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1113",
+   "user_name": "오보람",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1114",
+   "user_name": "김지호",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1114",
+   "user_name": "김지호",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1114",
+   "user_name": "김지호",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1114",
+   "user_name": "김지호",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1115",
+   "user_name": "허지아",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1115",
+   "user_name": "허지아",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1115",
+   "user_name": "허지아",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1115",
+   "user_name": "허지아",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1116",
+   "user_name": "전승현",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1116",
+   "user_name": "전승현",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1116",
+   "user_name": "전승현",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1116",
+   "user_name": "전승현",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1117",
+   "user_name": "정영호",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1117",
+   "user_name": "정영호",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1117",
+   "user_name": "정영호",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1117",
+   "user_name": "정영호",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1118",
+   "user_name": "장정우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1118",
+   "user_name": "장정우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1118",
+   "user_name": "장정우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1118",
+   "user_name": "장정우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1119",
+   "user_name": "전예린",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 60,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1119",
+   "user_name": "전예린",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 80,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1119",
+   "user_name": "전예린",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 60,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1119",
+   "user_name": "전예린",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1120",
+   "user_name": "황지유",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-27T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1120",
+   "user_name": "황지유",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-31T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1120",
+   "user_name": "황지유",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1120",
+   "user_name": "황지유",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1121",
+   "user_name": "권태윤",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1121",
+   "user_name": "권태윤",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1121",
+   "user_name": "권태윤",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-29T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1121",
+   "user_name": "권태윤",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1122",
+   "user_name": "황다은",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1122",
+   "user_name": "황다은",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1122",
+   "user_name": "황다은",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1122",
+   "user_name": "황다은",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1123",
+   "user_name": "박서윤",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-01T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1123",
+   "user_name": "박서윤",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1123",
+   "user_name": "박서윤",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1123",
+   "user_name": "박서윤",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1124",
+   "user_name": "최은지",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 40,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1124",
+   "user_name": "최은지",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1124",
+   "user_name": "최은지",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 10,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1124",
+   "user_name": "최은지",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1125",
+   "user_name": "한은지",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1125",
+   "user_name": "한은지",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1125",
+   "user_name": "한은지",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1125",
+   "user_name": "한은지",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1126",
+   "user_name": "백광수",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1126",
+   "user_name": "백광수",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1126",
+   "user_name": "백광수",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 10,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1126",
+   "user_name": "백광수",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 60,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1127",
+   "user_name": "강은서",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-25T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1127",
+   "user_name": "강은서",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1127",
+   "user_name": "강은서",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1127",
+   "user_name": "강은서",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1128",
+   "user_name": "김지아",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-01T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1128",
+   "user_name": "김지아",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1128",
+   "user_name": "김지아",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1128",
+   "user_name": "김지아",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1129",
+   "user_name": "안예린",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1129",
+   "user_name": "안예린",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1129",
+   "user_name": "안예린",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1129",
+   "user_name": "안예린",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1130",
+   "user_name": "정광수",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1130",
+   "user_name": "정광수",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1130",
+   "user_name": "정광수",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1130",
+   "user_name": "정광수",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1131",
+   "user_name": "송서연",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 80,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1131",
+   "user_name": "송서연",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 25,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1131",
+   "user_name": "송서연",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 60,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1131",
+   "user_name": "송서연",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1132",
+   "user_name": "손은서",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1132",
+   "user_name": "손은서",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1132",
+   "user_name": "손은서",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1132",
+   "user_name": "손은서",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1133",
+   "user_name": "허수아",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1133",
+   "user_name": "허수아",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1133",
+   "user_name": "허수아",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1133",
+   "user_name": "허수아",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-23T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1134",
+   "user_name": "문우진",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1134",
+   "user_name": "문우진",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1134",
+   "user_name": "문우진",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1134",
+   "user_name": "문우진",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1135",
+   "user_name": "남주원",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1135",
+   "user_name": "남주원",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 10,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1135",
+   "user_name": "남주원",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1135",
+   "user_name": "남주원",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 10,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1136",
+   "user_name": "오현우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1136",
+   "user_name": "오현우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1136",
+   "user_name": "오현우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1136",
+   "user_name": "오현우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1137",
+   "user_name": "송성민",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1137",
+   "user_name": "송성민",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1137",
+   "user_name": "송성민",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-18T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1137",
+   "user_name": "송성민",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1138",
+   "user_name": "손재민",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1138",
+   "user_name": "손재민",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1138",
+   "user_name": "손재민",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1138",
+   "user_name": "손재민",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1139",
+   "user_name": "한영호",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1139",
+   "user_name": "한영호",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1139",
+   "user_name": "한영호",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1139",
+   "user_name": "한영호",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-29T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1140",
+   "user_name": "윤보람",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1140",
+   "user_name": "윤보람",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1140",
+   "user_name": "윤보람",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 25,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1140",
+   "user_name": "윤보람",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1141",
+   "user_name": "배건우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1141",
+   "user_name": "배건우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1141",
+   "user_name": "배건우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1141",
+   "user_name": "배건우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1142",
+   "user_name": "배채원",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1142",
+   "user_name": "배채원",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1142",
+   "user_name": "배채원",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1142",
+   "user_name": "배채원",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1143",
+   "user_name": "백가은",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1143",
+   "user_name": "백가은",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-29T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1143",
+   "user_name": "백가은",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1143",
+   "user_name": "백가은",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1144",
+   "user_name": "양현우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-31T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1144",
+   "user_name": "양현우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1144",
+   "user_name": "양현우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1144",
+   "user_name": "양현우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1145",
+   "user_name": "조은서",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1145",
+   "user_name": "조은서",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1145",
+   "user_name": "조은서",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1145",
+   "user_name": "조은서",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1146",
+   "user_name": "황정우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1146",
+   "user_name": "황정우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1146",
+   "user_name": "황정우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1146",
+   "user_name": "황정우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1147",
+   "user_name": "양서연",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-31T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1147",
+   "user_name": "양서연",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1147",
+   "user_name": "양서연",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1147",
+   "user_name": "양서연",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1148",
+   "user_name": "김윤서",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-27T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1148",
+   "user_name": "김윤서",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1148",
+   "user_name": "김윤서",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1148",
+   "user_name": "김윤서",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1149",
+   "user_name": "황우진",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1149",
+   "user_name": "황우진",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1149",
+   "user_name": "황우진",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1149",
+   "user_name": "황우진",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1150",
+   "user_name": "조광수",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1150",
+   "user_name": "조광수",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1150",
+   "user_name": "조광수",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1150",
+   "user_name": "조광수",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1151",
+   "user_name": "전정우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1151",
+   "user_name": "전정우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1151",
+   "user_name": "전정우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-23T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1151",
+   "user_name": "전정우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-29T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1152",
+   "user_name": "권진우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1152",
+   "user_name": "권진우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1152",
+   "user_name": "권진우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1152",
+   "user_name": "권진우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1153",
+   "user_name": "오예린",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1153",
+   "user_name": "오예린",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1153",
+   "user_name": "오예린",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1153",
+   "user_name": "오예린",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1154",
+   "user_name": "박현우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1154",
+   "user_name": "박현우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-18T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1154",
+   "user_name": "박현우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 40,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1154",
+   "user_name": "박현우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1155",
+   "user_name": "황건우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1155",
+   "user_name": "황건우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1155",
+   "user_name": "황건우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-23T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1155",
+   "user_name": "황건우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1156",
+   "user_name": "한지아",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1156",
+   "user_name": "한지아",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1156",
+   "user_name": "한지아",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1156",
+   "user_name": "한지아",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1157",
+   "user_name": "황보람",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1157",
+   "user_name": "황보람",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-18T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1157",
+   "user_name": "황보람",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1157",
+   "user_name": "황보람",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-23T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1158",
+   "user_name": "유보람",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1158",
+   "user_name": "유보람",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1158",
+   "user_name": "유보람",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1158",
+   "user_name": "유보람",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1159",
+   "user_name": "백민준",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1159",
+   "user_name": "백민준",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-18T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1159",
+   "user_name": "백민준",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1159",
+   "user_name": "백민준",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1160",
+   "user_name": "황미경",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1160",
+   "user_name": "황미경",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1160",
+   "user_name": "황미경",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1160",
+   "user_name": "황미경",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1161",
+   "user_name": "오미경",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-18T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1161",
+   "user_name": "오미경",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1161",
+   "user_name": "오미경",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1161",
+   "user_name": "오미경",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 80,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1162",
+   "user_name": "박정민",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1162",
+   "user_name": "박정민",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1162",
+   "user_name": "박정민",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-23T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1162",
+   "user_name": "박정민",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1163",
+   "user_name": "최승현",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1163",
+   "user_name": "최승현",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-29T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1163",
+   "user_name": "최승현",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-29T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1163",
+   "user_name": "최승현",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1164",
+   "user_name": "배선영",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-01T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1164",
+   "user_name": "배선영",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1164",
+   "user_name": "배선영",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1164",
+   "user_name": "배선영",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1165",
+   "user_name": "손건우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1165",
+   "user_name": "손건우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-27T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1165",
+   "user_name": "손건우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1165",
+   "user_name": "손건우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-27T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1166",
+   "user_name": "황하린",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1166",
+   "user_name": "황하린",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1166",
+   "user_name": "황하린",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1166",
+   "user_name": "황하린",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1167",
+   "user_name": "신영호",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1167",
+   "user_name": "신영호",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-27T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1167",
+   "user_name": "신영호",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1167",
+   "user_name": "신영호",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1168",
+   "user_name": "한수아",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1168",
+   "user_name": "한수아",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1168",
+   "user_name": "한수아",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1168",
+   "user_name": "한수아",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1169",
+   "user_name": "배진우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1169",
+   "user_name": "배진우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-25T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1169",
+   "user_name": "배진우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1169",
+   "user_name": "배진우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-25T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1170",
+   "user_name": "서수빈",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1170",
+   "user_name": "서수빈",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-25T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1170",
+   "user_name": "서수빈",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1170",
+   "user_name": "서수빈",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1171",
+   "user_name": "서은지",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1171",
+   "user_name": "서은지",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1171",
+   "user_name": "서은지",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1171",
+   "user_name": "서은지",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1172",
+   "user_name": "박진우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1172",
+   "user_name": "박진우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1172",
+   "user_name": "박진우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1172",
+   "user_name": "박진우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1173",
+   "user_name": "강주원",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1173",
+   "user_name": "강주원",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1173",
+   "user_name": "강주원",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1173",
+   "user_name": "강주원",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-01T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1174",
+   "user_name": "정서연",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1174",
+   "user_name": "정서연",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1174",
+   "user_name": "정서연",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1174",
+   "user_name": "정서연",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1175",
+   "user_name": "정민서",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1175",
+   "user_name": "정민서",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-25T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1175",
+   "user_name": "정민서",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1175",
+   "user_name": "정민서",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1176",
+   "user_name": "유수빈",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1176",
+   "user_name": "유수빈",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1176",
+   "user_name": "유수빈",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1176",
+   "user_name": "유수빈",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1177",
+   "user_name": "배미경",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1177",
+   "user_name": "배미경",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1177",
+   "user_name": "배미경",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1177",
+   "user_name": "배미경",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-29T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1178",
+   "user_name": "정보람",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-18T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1178",
+   "user_name": "정보람",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1178",
+   "user_name": "정보람",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1178",
+   "user_name": "정보람",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1179",
+   "user_name": "백상훈",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1179",
+   "user_name": "백상훈",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1179",
+   "user_name": "백상훈",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1179",
+   "user_name": "백상훈",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1180",
+   "user_name": "황정민",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1180",
+   "user_name": "황정민",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1180",
+   "user_name": "황정민",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1180",
+   "user_name": "황정민",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-01T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1181",
+   "user_name": "남정우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-23T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1181",
+   "user_name": "남정우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1181",
+   "user_name": "남정우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1181",
+   "user_name": "남정우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1182",
+   "user_name": "정하윤",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-27T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1182",
+   "user_name": "정하윤",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-25T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1182",
+   "user_name": "정하윤",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1182",
+   "user_name": "정하윤",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1183",
+   "user_name": "김민준",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-29T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1183",
+   "user_name": "김민준",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1183",
+   "user_name": "김민준",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-29T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1183",
+   "user_name": "김민준",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1184",
+   "user_name": "홍예준",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1184",
+   "user_name": "홍예준",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1184",
+   "user_name": "홍예준",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1184",
+   "user_name": "홍예준",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1185",
+   "user_name": "안은지",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1185",
+   "user_name": "안은지",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1185",
+   "user_name": "안은지",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1185",
+   "user_name": "안은지",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1186",
+   "user_name": "남시우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1186",
+   "user_name": "남시우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1186",
+   "user_name": "남시우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1186",
+   "user_name": "남시우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1187",
+   "user_name": "신건우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1187",
+   "user_name": "신건우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1187",
+   "user_name": "신건우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1187",
+   "user_name": "신건우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1188",
+   "user_name": "백지아",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1188",
+   "user_name": "백지아",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-26T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1188",
+   "user_name": "백지아",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1188",
+   "user_name": "백지아",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1189",
+   "user_name": "김우진",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-18T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1189",
+   "user_name": "김우진",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-31T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1189",
+   "user_name": "김우진",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1189",
+   "user_name": "김우진",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1190",
+   "user_name": "조선우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-01T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1190",
+   "user_name": "조선우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1190",
+   "user_name": "조선우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1190",
+   "user_name": "조선우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1191",
+   "user_name": "안채원",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1191",
+   "user_name": "안채원",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1191",
+   "user_name": "안채원",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-05T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1191",
+   "user_name": "안채원",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1192",
+   "user_name": "손민서",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1192",
+   "user_name": "손민서",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1192",
+   "user_name": "손민서",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1192",
+   "user_name": "손민서",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1193",
+   "user_name": "한우진",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1193",
+   "user_name": "한우진",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-30T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1193",
+   "user_name": "한우진",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-01T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1193",
+   "user_name": "한우진",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1194",
+   "user_name": "송지훈",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1194",
+   "user_name": "송지훈",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1194",
+   "user_name": "송지훈",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1194",
+   "user_name": "송지훈",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1195",
+   "user_name": "백시우",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1195",
+   "user_name": "백시우",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1195",
+   "user_name": "백시우",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1195",
+   "user_name": "백시우",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1196",
+   "user_name": "이은지",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1196",
+   "user_name": "이은지",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1196",
+   "user_name": "이은지",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1196",
+   "user_name": "이은지",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1197",
+   "user_name": "오수빈",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-01T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1197",
+   "user_name": "오수빈",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-04T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1197",
+   "user_name": "오수빈",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-31T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1197",
+   "user_name": "오수빈",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1198",
+   "user_name": "고민서",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-25T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1198",
+   "user_name": "고민서",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1198",
+   "user_name": "고민서",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-27T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1198",
+   "user_name": "고민서",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1199",
+   "user_name": "백은서",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-18T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1199",
+   "user_name": "백은서",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-27T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1199",
+   "user_name": "백은서",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-21T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1199",
+   "user_name": "백은서",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-14T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1200",
+   "user_name": "신재민",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1200",
+   "user_name": "신재민",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-23T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1200",
+   "user_name": "신재민",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1200",
+   "user_name": "신재민",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1201",
+   "user_name": "정은서",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-29T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1201",
+   "user_name": "정은서",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1201",
+   "user_name": "정은서",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-01T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1201",
+   "user_name": "정은서",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1202",
+   "user_name": "안서연",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-31T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1202",
+   "user_name": "안서연",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-27T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1202",
+   "user_name": "안서연",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-12T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1202",
+   "user_name": "안서연",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1203",
+   "user_name": "허동현",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-17T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1203",
+   "user_name": "허동현",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1203",
+   "user_name": "허동현",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1203",
+   "user_name": "허동현",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-24T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1204",
+   "user_name": "손하린",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1204",
+   "user_name": "손하린",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-10T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1204",
+   "user_name": "손하린",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-25T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1204",
+   "user_name": "손하린",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-02T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1205",
+   "user_name": "전민준",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1205",
+   "user_name": "전민준",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1205",
+   "user_name": "전민준",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-28T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1205",
+   "user_name": "전민준",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1206",
+   "user_name": "손서윤",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-15T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1206",
+   "user_name": "손서윤",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1206",
+   "user_name": "손서윤",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-06T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1206",
+   "user_name": "손서윤",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-10-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1207",
+   "user_name": "강서윤",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-19T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1207",
+   "user_name": "강서윤",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-16T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1207",
+   "user_name": "강서윤",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-09T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1207",
+   "user_name": "강서윤",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1208",
+   "user_name": "양지유",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-06-08T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1208",
+   "user_name": "양지유",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1208",
+   "user_name": "양지유",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-08-11T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1208",
+   "user_name": "양지유",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-01T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1209",
+   "user_name": "송하은",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-07T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1209",
+   "user_name": "송하은",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-20T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1209",
+   "user_name": "송하은",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-03-22T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1209",
+   "user_name": "송하은",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-04-03T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1210",
+   "user_name": "한혜진",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-09-13T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1210",
+   "user_name": "한혜진",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-31T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1210",
+   "user_name": "한혜진",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-07-29T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1210",
+   "user_name": "한혜진",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 100,
+   "completed": true,
+   "completed_at": "2026-05-25T18:00:00+09:00"
+  },
+  {
+   "user_id": "E1211",
+   "user_name": "백승호",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1211",
+   "user_name": "백승호",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1211",
+   "user_name": "백승호",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1211",
+   "user_name": "백승호",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1212",
+   "user_name": "문가영",
+   "course": {
+    "title": "직장 내 성희롱 예방교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1212",
+   "user_name": "문가영",
+   "course": {
+    "title": "개인정보보호 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1212",
+   "user_name": "문가영",
+   "course": {
+    "title": "산업안전보건 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  },
+  {
+   "user_id": "E1212",
+   "user_name": "문가영",
+   "course": {
+    "title": "퇴직연금 교육"
+   },
+   "progress": 0,
+   "completed": false,
+   "completed_at": null
+  }
+ ],
+ "page": 1,
+ "has_next": false
+}

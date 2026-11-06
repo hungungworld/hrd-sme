@@ -2,7 +2,7 @@
    가져온 데이터는 이 브라우저(localStorage)에만 저장한다. 어디로도 보내지 않는다. */
 (function () {
   'use strict';
-  const H = window.HRD, SRC = H.SOURCES;
+  const H = window.HRD, SRC = H.SOURCES, C = window.HRDC;
   const OUT = ['depts', 'employees', 'training', 'monthly', 'legal_weekly', 'refund', 'comp_levels', 'meta'];
   const $ = (q, el = document) => el.querySelector(q);
   const esc = (v) => String(v == null ? '' : v).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -13,6 +13,8 @@
   let COMPS = [];          // 역량 정의 (data/competencies.csv)
   let IMP = null;          // 가져오는 중인 파일 { src, file, grid, head, hi, map, plan }
   let CUR = 'people';      // 고른 원본
+  let SUB = 'import';      // 설정 안의 탭: import(데이터 가져오기) | connect(연결)
+  let ERR = '';            // 연결에서 가져오지 못한 이유
 
   /* ───────── 불러오기·저장 ───────── */
   const objects = (grid) => grid.slice(1).map((r) => Object.fromEntries(grid[0].map((h, i) => [h, r[i]])));
@@ -55,27 +57,34 @@
     const el = $('#hr-fresh'); if (!el || !ST) return;
     const old = H.stale(ST).filter((x) => x.old);
     el.innerHTML = old.length
-      ? old.map((x) => `<button type="button" class="hr-stale" data-go="${x.src}"><span>${esc(SRC[x.src].name)} ${x.at ? `<span class="nw">${x.age}일 전</span>` : '가져온 적 없음'}</span><u>새로 가져오기</u></button>`).join('')
+      ? old.map((x) => `<button type="button" class="hr-stale" data-go="${x.src}"><span>${esc(SRC[x.src].name)} ${x.at ? `<span class="nw">${x.age}일 전</span>` : '가져온 적 없음'}</span><u>${C.CONN.sources[x.src] ? '지금 가져오기' : '새로 가져오기'}</u></button>`).join('')
       : `<button type="button" class="hr-fresh-ok" data-go="">데이터 모두 최신</button>`;
   }
-  function go(src) { if (src) { CUR = src; IMP = null; } window.hrShowPage('setup'); render(); window.scrollTo({ top: 0 }); }
+  function go(src) {
+    if (src) { CUR = src; IMP = null; } SUB = 'import'; ERR = '';
+    window.hrShowPage('setup'); render(); window.scrollTo({ top: 0 });
+    if (src && C.CONN.sources[src]) pullLinked(src); // 연결된 원본은 바로 가져온다
+  }
   document.addEventListener('click', (e) => { const b = e.target.closest('[data-go]'); if (b) go(b.dataset.go); });
 
   /* ───────── 설정 → 데이터 가져오기 ───────── */
   function render() {
     const el = $('#setup'); if (!el || !ST) return;
+    const nav = `<nav class="im-subtabs" aria-label="설정">${[['import', '데이터 가져오기'], ['connect', '연결']].map(([k, l]) => `<button type="button" data-sub="${k}"${k === SUB ? ' aria-current="page"' : ''}>${l}</button>`).join('')}</nav>`;
+    if (SUB === 'connect') { el.innerHTML = nav + connectView(); bind(el); return; }
     const t = H.today(ST), stale = new Map(H.stale(ST).map((x) => [x.src, x]));
     const cards = H.ORDER.map((k) => {
       const m = SRC[k], x = stale.get(k), at = ST.at[k];
       return `<button type="button" class="im-src${k === CUR ? ' is-on' : ''}" data-src="${k}" aria-pressed="${k === CUR}">
         <span class="im-src-name">${m.no} ${esc(m.name)}</span>
-        <span class="im-src-meta">${at ? `${md(at)} 가져옴` : '가져온 적 없음'}${ST.files[k] === '예시 데이터' ? ' · 예시' : ''}</span>
+        <span class="im-src-meta">${at ? `${md(at)} 가져옴` : '가져온 적 없음'}${ST.files[k] === '예시 데이터' ? ' · 예시' : ''}${C.CONN.sources[k] ? ` · ${C.KIND[C.CONN.sources[k].kind]} 연결` : ''}</span>
         ${x && x.old ? '<span class="im-src-warn">새로 가져오기</span>' : ''}</button>`;
     }).join('');
-    el.innerHTML = `
+    el.innerHTML = nav + `
       <div class="hr-takes"><p class="hr-take">
-        <span class="hr-line">이미 쓰고 있는 시스템에서</span>
-        <span class="hr-line">엑셀을 내려받아 올려요.</span>
+        <span class="hr-line">이미 쓰고 있는 시스템에서 가져와요.</span>
+        <span class="hr-line">API·구글 시트·구글 폼은 연결하고,</span>
+        <span class="hr-line">나머지는 엑셀을 올려요.</span>
         <span class="hr-line">열 이름이 달라도 <b>자동으로 맞춰요.</b></span>
       </p></div>
       <div class="im-grid">
@@ -103,7 +112,9 @@
       <dl class="im-kv"><dt>어디서</dt><dd>${esc(m.from)}</dd><dt>누가</dt><dd>${esc(m.who)}</dd><dt>언제</dt><dd>${esc(m.when)}</dd>
         <dt>같은 사람 판단</dt><dd>${esc(m.match)}</dd><dt>반영되는 것</dt><dd>${esc(m.does)}</dd></dl>
       <ol class="im-steps"><li class="${step >= 1 ? 'is-on' : ''}">파일 올리기</li><li class="${step >= 2 ? 'is-on' : ''}">열 맞추기</li><li class="${step >= 3 ? 'is-on' : ''}">바뀌는 내용 확인</li></ol>
+      ${ERR ? `<p class="im-err" role="alert">${esc(ERR)}</p>` : ''}
       ${step === 1 ? `
+        ${linkedBar(src)}
         <p class="im-req">꼭 있어야 하는 열 ${req}</p>
         <label class="im-drop" id="im-drop" for="im-file">
           <input type="file" id="im-file" class="im-sr" accept=".xlsx,.xls,.csv,.tsv,.txt">
@@ -113,12 +124,79 @@
         <div class="im-alts">
           <button type="button" class="im-alt" data-act="sample"><b>샘플 엑셀 받기</b><span>지금 화면 숫자와 맞물린 파일이에요. 고쳐서 올리면 숫자가 바뀌어요.</span></button>
           <button type="button" class="im-alt" data-act="paste-toggle" aria-expanded="false" aria-controls="im-paste-box"><b>엑셀에서 복사해 붙여넣기</b><span>파일 없이 표를 복사해서 바로 넣어요.</span></button>
+          ${m.links.length ? `<button type="button" class="im-alt" data-act="link-toggle" aria-expanded="false" aria-controls="im-link-box"><b>${m.links.map((k) => C.KIND[k]).join('·')}로 연결</b><span>한 번 연결하면 다음부터 버튼 한 번으로 가져와요.</span></button>` : ''}
         </div>
+        ${m.links.length ? linkBox(src) : `<p class="hr-note"><span class="hr-lead">연결할 수 있는 API가 없어요.</span>${esc(m.linkNote || '')}</p>`}
         <div id="im-paste-box" class="im-paste" hidden>
           <textarea id="im-paste" rows="6" placeholder="엑셀에서 머리글 줄까지 선택해 복사(Ctrl+C)한 뒤 여기에 붙여넣으세요(Ctrl+V)"></textarea>
           <div class="im-act"><button type="button" class="im-btn is-primary" data-act="paste">붙여넣은 내용 읽기</button></div>
         </div>`
       : step === 2 ? mapping(src) : planView()}`;
+  }
+
+  /* ───────── 연결 (Google 시트, Google 폼, 시스템 API) ───────── */
+  function linkedBar(src) {
+    const c = C.CONN.sources[src]; if (!c) return '';
+    const url = c.url.length > 64 ? c.url.slice(0, 61) + '…' : c.url;
+    return `<div class="im-linked"><div><b>${C.KIND[c.kind]}에 연결됨</b><span class="im-src-meta">${esc(url)}${c.at ? ` · 마지막 ${md(c.at)}` : ''}</span></div>
+      <div class="im-act"><button type="button" class="im-btn is-primary" data-act="link-pull">지금 가져오기</button><button type="button" class="im-btn" data-act="link-cut">연결 끊기</button></div></div>`;
+  }
+  const URL_LABEL = { sheet: '시트 주소', form: '폼 편집 화면 주소', api: 'API 주소' };
+  function linkBox(src) {
+    const m = SRC[src], k0 = m.links[0];
+    const PH = { sheet: 'https://docs.google.com/spreadsheets/d/…', form: 'https://docs.google.com/forms/d/…/edit', api: 'https://hr.회사.com/api/v1/employees' };
+    return `<div id="im-link-box" class="im-link" hidden>
+      <p class="hr-note">${esc(m.linkNote || '')}</p>
+      ${m.links.length > 1 ? `<div class="im-seg" role="radiogroup" aria-label="연결 방식">${m.links.map((k) => `<label><input type="radio" name="im-kind" value="${k}"${k === k0 ? ' checked' : ''}>${C.KIND[k]}</label>`).join('')}</div>` : `<input type="hidden" name="im-kind" value="${k0}">`}
+      <label class="im-fld"><span id="im-url-label">${URL_LABEL[k0]}</span><input id="im-url" autocomplete="off" spellcheck="false" placeholder="${PH[k0]}" data-ph="${esc(JSON.stringify(PH))}"></label>
+      <div class="im-api"${k0 === 'api' ? '' : ' hidden'}>
+        <label class="im-fld"><span>인증 헤더</span><textarea id="im-header" rows="2" placeholder="Authorization: Bearer 발급받은-키"></textarea></label>
+        <label class="im-fld"><span>목록 위치 <span class="hr-sec">(비우면 자동으로 찾아요)</span></span><input id="im-path" placeholder="예: data.employees"></label>
+        ${m.demo ? '<div class="im-act"><button type="button" class="im-btn" data-act="link-demo">예시 API 주소 넣기</button></div>' : ''}
+      </div>
+      <p class="hr-note im-hint" data-kind="sheet"${k0 === 'sheet' ? '' : ' hidden'}><span class="hr-lead">회사 계정 안에서만 공유한 시트도 읽을 수 있어요.</span>설정 → 연결에서 Google을 먼저 연결하세요.</p>
+      <p class="hr-note im-hint" data-kind="form"${k0 === 'form' ? '' : ' hidden'}><span class="hr-lead">폼 응답은 Google 연결이 있어야 읽을 수 있어요.</span>설정 → 연결에서 Google을 먼저 연결하세요.</p>
+      <label class="im-check"><input type="checkbox" id="im-keep" checked> 연결 저장 <span class="hr-sec">(다음부터 버튼 한 번)</span></label>
+      <div class="im-act"><button type="button" class="im-btn is-primary" data-act="link-load">가져오기</button></div>
+    </div>`;
+  }
+  function pullLinked(src, cfg, keep) {
+    cfg = cfg || C.CONN.sources[src];
+    ERR = ''; IMP = { src, linking: true }; toast('불러오는 중이에요…');
+    return C.pull(cfg).then((grid) => {
+      if (keep) { C.CONN.sources[src] = { ...(C.CONN.sources[src] || {}), ...cfg, at: H.today({}) }; C.save(); }
+      else if (C.CONN.sources[src]) { C.CONN.sources[src].at = H.today({}); C.save(); }
+      IMP.saved = (C.CONN.sources[src] || {}).map;
+      loadGrid(grid, C.KIND[cfg.kind]);
+    }).catch((e) => { ERR = e.message; IMP = { src }; render(); });
+  }
+  function connectView() {
+    const g = C.CONN.google;
+    const rows = H.ORDER.map((k) => { const c = C.CONN.sources[k], m = SRC[k];
+      return `<tr><td>${m.no} ${esc(m.name)}</td><td>${c ? `${C.KIND[c.kind]}${c.at ? ` · ${md(c.at)} 가져옴` : ''}` : '<span class="hr-sec">파일로 올림</span>'}</td><td class="wrap">${m.links.length ? m.links.map((x) => C.KIND[x]).join(', ') : '파일만 (API 없음)'}</td></tr>`; }).join('');
+    return `
+      <div class="hr-takes"><p class="hr-take">
+        <span class="hr-line">Google을 연결하면</span>
+        <span class="hr-line">회사 안에서만 공유한 시트와</span>
+        <span class="hr-line">구글 폼 응답을 <b>바로 읽어요.</b></span>
+      </p></div>
+      <section class="hr-card">
+        <h2>Google <span class="im-tag${g.ok ? ' is-ok' : ''}">${g.clientId ? (g.ok ? '연결됨' : 'Client ID 저장됨') : '연결 안 됨'}</span></h2>
+        <p class="hr-note"><span class="hr-lead">구글 시트와 구글 폼 응답을 읽는 데 써요.</span>읽기 권한만 요청해요. 시트나 폼을 고치지 않아요.</p>
+        <label class="im-fld"><span>OAuth Client ID</span><input id="im-gclient" value="${esc(g.clientId)}" placeholder="1234-abcd.apps.googleusercontent.com" autocomplete="off" spellcheck="false"></label>
+        <div class="im-act"><button type="button" class="im-btn is-primary" data-act="g-save">저장하고 로그인 시험</button></div>
+        <details class="im-howto"><summary>Client ID 만드는 법</summary><ol>
+          <li>Google Cloud 콘솔에서 프로젝트를 만들고 <b>Google Sheets API</b>와 <b>Google Forms API</b>를 사용 설정해요.</li>
+          <li>OAuth 동의 화면을 만들고, 테스트 사용자에 본인 계정을 넣어요.</li>
+          <li>사용자 인증 정보 → OAuth 클라이언트 ID → 웹 애플리케이션을 골라요.</li>
+          <li>승인된 JavaScript 원본에 <code>${esc(location.origin)}</code>를 넣고, 만들어진 Client ID를 붙여넣어요.</li>
+        </ol><p class="hr-note">비밀 키(Client Secret)는 필요 없어요.</p></details>
+      </section>
+      <section class="hr-card">
+        <h2>원본별 연결</h2>
+        <div class="hr-tablewrap"><table class="hr-table"><thead><tr><th>원본</th><th>지금</th><th class="wrap">연결할 수 있는 곳</th></tr></thead><tbody>${rows}</tbody></table></div>
+        <p class="hr-note"><span class="hr-lead">연결은 데이터 가져오기 탭에서 원본마다 해요.</span>연결 정보는 이 브라우저에만 저장되고, 예시 데이터로 되돌려도 남아요.</p>
+      </section>`;
   }
 
   /* 2단계: 열 맞추기 */
@@ -135,6 +213,13 @@
     if (grid.length < 2) { toast('머리글 줄과 데이터가 있어야 해요.'); return; }
     Object.assign(IMP, { file: name, grid, head: grid[0].map((c) => String(c == null ? '' : c)), map: null, plan: null });
     IMP.map = H.guessMap(H.fieldsOf(IMP.src, COMPS), IMP.head);
+    // 연결에서 가져올 때 지난번에 맞춘 열 이름이 그대로 있으면 열 맞추기를 건너뛴다
+    const saved = IMP.saved;
+    if (saved) {
+      Object.entries(saved).forEach(([k, h]) => { const i = IMP.head.indexOf(h); if (i >= 0) IMP.map[k] = i; });
+      const ok = H.fieldsOf(IMP.src, COMPS).every((f) => !f[2] || IMP.map[f[0]] !== undefined);
+      if (ok) { makePlan(); return; }
+    }
     render();
   }
   function mapping(src) {
@@ -205,7 +290,7 @@
     const p = IMP.plan, cut = 40;
     const sec = (g) => `<details class="im-group ${g.cls || ''}"${g.list.length <= 8 ? ' open' : ''}><summary><b>${esc(g.title)}</b> <span class="nw">${fmt(g.list.length)}건</span></summary>
       <ul>${g.list.slice(0, cut).map((x) => `<li>${esc(x)}</li>`).join('')}${g.list.length > cut ? `<li class="hr-note">외 ${fmt(g.list.length - cut)}건</li>` : ''}</ul></details>`;
-    return `<p class="hr-note"><span class="hr-lead">아직 반영하지 않았어요.</span>올린 파일이 이 데이터 전체를 바꿔요. 아래 내용을 확인하고 반영하기를 누르세요.</p>
+    return `<p class="hr-note"><span class="hr-lead">아직 반영하지 않았어요.</span>${IMP.linking ? '가져온 데이터가' : '올린 파일이'} 이 데이터 전체를 바꿔요. 아래 내용을 확인하고 반영하기를 누르세요.</p>
       ${p.note ? `<p class="im-sum">${esc(p.note)}</p>` : ''}
       ${p.groups.map(sec).join('')}
       ${p.skip.length ? sec({ title: '건너뜀', list: p.skip.map((x) => `${x.row} · ${x.why}`), cls: 'is-skip' }) : ''}
@@ -221,6 +306,7 @@
     const summary = [`${fmt(p.rows.length)}줄 반영`, ...p.groups.map((g) => `${g.title} ${fmt(g.list.length)}`), p.skip.length ? `건너뜀 ${fmt(p.skip.length)}` : ''].filter(Boolean).join(' · ');
     ST.log.push({ at: H.today({}), src, file, summary });
     if (!save()) { ST = JSON.parse(keep); toast('이 브라우저에 저장할 수 없어서 반영하지 못했어요.'); return; }
+    if (IMP.linking && C.CONN.sources[src]) { C.CONN.sources[src].map = Object.fromEntries(Object.entries(IMP.map).map(([k, i]) => [k, IMP.head[i]])); C.save(); }
     IMP = null; compute(); render();
     toast(`${SRC[src].name}을 반영했어요.`);
   }
@@ -257,7 +343,15 @@
   }
 
   function bind(el) {
-    el.querySelectorAll('[data-src]').forEach((b) => b.addEventListener('click', () => { CUR = b.dataset.src; IMP = null; render(); }));
+    el.querySelectorAll('[data-src]').forEach((b) => b.addEventListener('click', () => { CUR = b.dataset.src; IMP = null; ERR = ''; render(); }));
+    el.querySelectorAll('[data-sub]').forEach((b) => b.addEventListener('click', () => { SUB = b.dataset.sub; ERR = ''; render(); }));
+    el.querySelectorAll('[name=im-kind]').forEach((r) => r.addEventListener('change', () => {
+      const k = r.value, ph = JSON.parse($('#im-url', el).dataset.ph);
+      $('#im-url', el).placeholder = ph[k];
+      $('#im-url-label', el).textContent = { sheet: '시트 주소', form: '폼 편집 화면 주소', api: 'API 주소' }[k];
+      $('.im-api', el).hidden = k !== 'api';
+      el.querySelectorAll('.im-hint').forEach((h) => { h.hidden = h.dataset.kind !== k; });
+    }));
     const f = $('#im-file', el), drop = $('#im-drop', el);
     if (f) f.addEventListener('change', () => f.files[0] && readFile(f.files[0]));
     if (drop) {
@@ -273,6 +367,21 @@
       const a = b.dataset.act;
       if (a === 'sample') downloadSample(IMP.src);
       if (a === 'paste-toggle') { const box = $('#im-paste-box', el); box.hidden = !box.hidden; b.setAttribute('aria-expanded', String(!box.hidden)); if (!box.hidden) $('#im-paste', el).focus(); }
+      if (a === 'link-toggle') { const box = $('#im-link-box', el); box.hidden = !box.hidden; b.setAttribute('aria-expanded', String(!box.hidden)); if (!box.hidden) $('#im-url', el).focus(); }
+      if (a === 'link-demo') { $('#im-url', el).value = new URL(SRC[IMP.src].demo, location.href).href; $('#im-header', el).value = 'Authorization: Bearer demo-key'; }
+      if (a === 'link-load') {
+        const kind = (el.querySelector('[name=im-kind]:checked') || el.querySelector('[name=im-kind]')).value, url = $('#im-url', el).value.trim();
+        if (!url) { toast('주소를 넣어 주세요.'); return; }
+        const cfg = { kind, url, header: kind === 'api' ? $('#im-header', el).value : '', path: kind === 'api' ? $('#im-path', el).value.trim() : '' };
+        pullLinked(IMP.src, cfg, $('#im-keep', el).checked);
+      }
+      if (a === 'link-pull') pullLinked(IMP.src);
+      if (a === 'link-cut') { delete C.CONN.sources[IMP.src]; C.save(); render(); fresh(); toast('연결을 끊었어요. 파일로 올리는 방법은 그대로 쓸 수 있어요.'); }
+      if (a === 'g-save') {
+        C.CONN.google.clientId = $('#im-gclient', el).value.trim(); delete C.CONN.google.ok; C.save();
+        if (!C.CONN.google.clientId) { render(); toast('Client ID를 지웠어요.'); return; }
+        C.token(true).then(() => { render(); toast('Google에 연결됐어요.'); }, (e) => { render(); toast(e.message); });
+      }
       if (a === 'paste') { const v = $('#im-paste', el).value; if (!v.trim()) { toast('붙여넣은 내용이 없어요.'); return; } loadGrid(H.parseCSV(v), '붙여넣은 표'); }
       if (a === 'again') { IMP = { src: IMP.src }; render(); }
       if (a === 'plan') makePlan();

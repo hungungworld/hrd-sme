@@ -1,0 +1,2764 @@
+{
+ "result": "success",
+ "data": {
+  "total": 212,
+  "employees": [
+   {
+    "employee_no": "E1001",
+    "name": "한서윤",
+    "department": {
+     "code": "D00",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2023-08-17",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1001@example.com"
+   },
+   {
+    "employee_no": "E1002",
+    "name": "서미경",
+    "department": {
+     "code": "D01",
+     "name": "해외영업1팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2023-11-26",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1002@example.com"
+   },
+   {
+    "employee_no": "E1003",
+    "name": "이지호",
+    "department": {
+     "code": "D02",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2024-06-16",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1003@example.com"
+   },
+   {
+    "employee_no": "E1004",
+    "name": "백성민",
+    "department": {
+     "code": "D03",
+     "name": "해외영업1팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2022-10-27",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1004@example.com"
+   },
+   {
+    "employee_no": "E1005",
+    "name": "최예린",
+    "department": {
+     "code": "D04",
+     "name": "해외영업1팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2014-05-19",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1005@example.com"
+   },
+   {
+    "employee_no": "E1006",
+    "name": "류하은",
+    "department": {
+     "code": "D05",
+     "name": "해외영업1팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2024-07-25",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1006@example.com"
+   },
+   {
+    "employee_no": "E1007",
+    "name": "남재민",
+    "department": {
+     "code": "D06",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2013-04-10",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1007@example.com"
+   },
+   {
+    "employee_no": "E1008",
+    "name": "조도윤",
+    "department": {
+     "code": "D07",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2017-07-28",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1008@example.com"
+   },
+   {
+    "employee_no": "E1009",
+    "name": "박나연",
+    "department": {
+     "code": "D08",
+     "name": "해외영업1팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2016-04-16",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1009@example.com"
+   },
+   {
+    "employee_no": "E1010",
+    "name": "신지호",
+    "department": {
+     "code": "D09",
+     "name": "해외영업1팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2018-03-18",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1010@example.com"
+   },
+   {
+    "employee_no": "E1011",
+    "name": "윤수아",
+    "department": {
+     "code": "D10",
+     "name": "해외영업1팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2012-12-11",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1011@example.com"
+   },
+   {
+    "employee_no": "E1012",
+    "name": "송나연",
+    "department": {
+     "code": "D11",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2014-03-11",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1012@example.com"
+   },
+   {
+    "employee_no": "E1013",
+    "name": "이준혁",
+    "department": {
+     "code": "D12",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2023-05-22",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1013@example.com"
+   },
+   {
+    "employee_no": "E1014",
+    "name": "최현우",
+    "department": {
+     "code": "D13",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2022-02-21",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1014@example.com"
+   },
+   {
+    "employee_no": "E1015",
+    "name": "홍영호",
+    "department": {
+     "code": "D14",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2024-08-06",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1015@example.com"
+   },
+   {
+    "employee_no": "E1016",
+    "name": "류민서",
+    "department": {
+     "code": "D15",
+     "name": "해외영업1팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2012-08-16",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1016@example.com"
+   },
+   {
+    "employee_no": "E1017",
+    "name": "서하은",
+    "department": {
+     "code": "D16",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2013-06-03",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1017@example.com"
+   },
+   {
+    "employee_no": "E1018",
+    "name": "윤도윤",
+    "department": {
+     "code": "D17",
+     "name": "해외영업1팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2021-12-10",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1018@example.com"
+   },
+   {
+    "employee_no": "E1019",
+    "name": "송시우",
+    "department": {
+     "code": "D18",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2019-04-21",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1019@example.com"
+   },
+   {
+    "employee_no": "E1020",
+    "name": "임지훈",
+    "department": {
+     "code": "D19",
+     "name": "해외영업1팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2025-09-26",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1020@example.com"
+   },
+   {
+    "employee_no": "E1021",
+    "name": "정성민",
+    "department": {
+     "code": "D20",
+     "name": "해외영업1팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2023-05-04",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1021@example.com"
+   },
+   {
+    "employee_no": "E1022",
+    "name": "최준혁",
+    "department": {
+     "code": "D21",
+     "name": "해외영업1팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2025-08-05",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1022@example.com"
+   },
+   {
+    "employee_no": "E1023",
+    "name": "임하윤",
+    "department": {
+     "code": "D22",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2023-06-27",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1023@example.com"
+   },
+   {
+    "employee_no": "E1024",
+    "name": "백혜진",
+    "department": {
+     "code": "D23",
+     "name": "해외영업1팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2016-06-21",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1024@example.com"
+   },
+   {
+    "employee_no": "E1025",
+    "name": "강예준",
+    "department": {
+     "code": "D24",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2018-03-20",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1025@example.com"
+   },
+   {
+    "employee_no": "E1026",
+    "name": "류준혁",
+    "department": {
+     "code": "D25",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2022-02-22",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1026@example.com"
+   },
+   {
+    "employee_no": "E1027",
+    "name": "홍건우",
+    "department": {
+     "code": "D26",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2023-05-25",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1027@example.com"
+   },
+   {
+    "employee_no": "E1028",
+    "name": "오예준",
+    "department": {
+     "code": "D27",
+     "name": "해외영업1팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2023-12-17",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1028@example.com"
+   },
+   {
+    "employee_no": "E1029",
+    "name": "송선영",
+    "department": {
+     "code": "D28",
+     "name": "해외영업1팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2022-09-21",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1029@example.com"
+   },
+   {
+    "employee_no": "E1030",
+    "name": "박준혁",
+    "department": {
+     "code": "D29",
+     "name": "해외영업1팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2023-05-22",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1030@example.com"
+   },
+   {
+    "employee_no": "E1031",
+    "name": "이보람",
+    "department": {
+     "code": "D30",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2017-07-21",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1031@example.com"
+   },
+   {
+    "employee_no": "E1032",
+    "name": "조유진",
+    "department": {
+     "code": "D31",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2023-09-26",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1032@example.com"
+   },
+   {
+    "employee_no": "E1033",
+    "name": "고성민",
+    "department": {
+     "code": "D32",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2017-10-27",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1033@example.com"
+   },
+   {
+    "employee_no": "E1034",
+    "name": "신연우",
+    "department": {
+     "code": "D33",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2024-07-19",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1034@example.com"
+   },
+   {
+    "employee_no": "E1035",
+    "name": "권민서",
+    "department": {
+     "code": "D34",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2016-07-17",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1035@example.com"
+   },
+   {
+    "employee_no": "E1036",
+    "name": "남수빈",
+    "department": {
+     "code": "D35",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2022-01-14",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1036@example.com"
+   },
+   {
+    "employee_no": "E1037",
+    "name": "오다은",
+    "department": {
+     "code": "D36",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2015-01-28",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1037@example.com"
+   },
+   {
+    "employee_no": "E1038",
+    "name": "윤하린",
+    "department": {
+     "code": "D37",
+     "name": "해외영업1팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2021-05-06",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1038@example.com"
+   },
+   {
+    "employee_no": "E1039",
+    "name": "문채원",
+    "department": {
+     "code": "D38",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2014-09-23",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1039@example.com"
+   },
+   {
+    "employee_no": "E1040",
+    "name": "임은서",
+    "department": {
+     "code": "D39",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2020-10-19",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1040@example.com"
+   },
+   {
+    "employee_no": "E1041",
+    "name": "황소율",
+    "department": {
+     "code": "D40",
+     "name": "해외영업2팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2021-11-30",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1041@example.com"
+   },
+   {
+    "employee_no": "E1042",
+    "name": "양동현",
+    "department": {
+     "code": "D41",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2019-02-01",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1042@example.com"
+   },
+   {
+    "employee_no": "E1043",
+    "name": "임상훈",
+    "department": {
+     "code": "D42",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2013-08-17",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1043@example.com"
+   },
+   {
+    "employee_no": "E1044",
+    "name": "박지유",
+    "department": {
+     "code": "D43",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2017-05-25",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1044@example.com"
+   },
+   {
+    "employee_no": "E1045",
+    "name": "안지훈",
+    "department": {
+     "code": "D44",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2021-08-09",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1045@example.com"
+   },
+   {
+    "employee_no": "E1046",
+    "name": "강소율",
+    "department": {
+     "code": "D45",
+     "name": "해외영업2팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2013-08-22",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1046@example.com"
+   },
+   {
+    "employee_no": "E1047",
+    "name": "정유진",
+    "department": {
+     "code": "D46",
+     "name": "해외영업2팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2016-10-08",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1047@example.com"
+   },
+   {
+    "employee_no": "E1048",
+    "name": "신도윤",
+    "department": {
+     "code": "D47",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2018-10-16",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1048@example.com"
+   },
+   {
+    "employee_no": "E1049",
+    "name": "고지호",
+    "department": {
+     "code": "D48",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2014-09-29",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1049@example.com"
+   },
+   {
+    "employee_no": "E1050",
+    "name": "손하윤",
+    "department": {
+     "code": "D49",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2015-06-19",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1050@example.com"
+   },
+   {
+    "employee_no": "E1051",
+    "name": "류연우",
+    "department": {
+     "code": "D50",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2026-06-07",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1051@example.com"
+   },
+   {
+    "employee_no": "E1052",
+    "name": "한광수",
+    "department": {
+     "code": "D51",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2020-03-18",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1052@example.com"
+   },
+   {
+    "employee_no": "E1053",
+    "name": "오상훈",
+    "department": {
+     "code": "D52",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2015-03-17",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1053@example.com"
+   },
+   {
+    "employee_no": "E1054",
+    "name": "황민서",
+    "department": {
+     "code": "D53",
+     "name": "해외영업2팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2017-09-04",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1054@example.com"
+   },
+   {
+    "employee_no": "E1055",
+    "name": "배수빈",
+    "department": {
+     "code": "D54",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2015-01-29",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1055@example.com"
+   },
+   {
+    "employee_no": "E1056",
+    "name": "박수아",
+    "department": {
+     "code": "D55",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2022-06-28",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1056@example.com"
+   },
+   {
+    "employee_no": "E1057",
+    "name": "장태윤",
+    "department": {
+     "code": "D56",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2016-12-03",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1057@example.com"
+   },
+   {
+    "employee_no": "E1058",
+    "name": "문정민",
+    "department": {
+     "code": "D57",
+     "name": "해외영업2팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2014-02-10",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1058@example.com"
+   },
+   {
+    "employee_no": "E1059",
+    "name": "박하은",
+    "department": {
+     "code": "D58",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2020-12-06",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1059@example.com"
+   },
+   {
+    "employee_no": "E1060",
+    "name": "양광수",
+    "department": {
+     "code": "D59",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2022-12-05",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1060@example.com"
+   },
+   {
+    "employee_no": "E1061",
+    "name": "임미경",
+    "department": {
+     "code": "D60",
+     "name": "해외영업2팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2015-08-26",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1061@example.com"
+   },
+   {
+    "employee_no": "E1062",
+    "name": "류혜진",
+    "department": {
+     "code": "D61",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2017-01-06",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1062@example.com"
+   },
+   {
+    "employee_no": "E1063",
+    "name": "백동현",
+    "department": {
+     "code": "D62",
+     "name": "해외영업2팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2015-08-15",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1063@example.com"
+   },
+   {
+    "employee_no": "E1064",
+    "name": "임선영",
+    "department": {
+     "code": "D63",
+     "name": "해외영업2팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2021-09-05",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1064@example.com"
+   },
+   {
+    "employee_no": "E1065",
+    "name": "서정민",
+    "department": {
+     "code": "D64",
+     "name": "해외영업2팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2023-07-25",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1065@example.com"
+   },
+   {
+    "employee_no": "E1066",
+    "name": "오서연",
+    "department": {
+     "code": "D65",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2021-01-21",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1066@example.com"
+   },
+   {
+    "employee_no": "E1067",
+    "name": "권정우",
+    "department": {
+     "code": "D66",
+     "name": "해외영업2팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2019-08-10",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1067@example.com"
+   },
+   {
+    "employee_no": "E1068",
+    "name": "강보람",
+    "department": {
+     "code": "D67",
+     "name": "해외영업2팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2021-06-13",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1068@example.com"
+   },
+   {
+    "employee_no": "E1069",
+    "name": "최유진",
+    "department": {
+     "code": "D68",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2016-05-22",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1069@example.com"
+   },
+   {
+    "employee_no": "E1070",
+    "name": "이지아",
+    "department": {
+     "code": "D69",
+     "name": "해외영업2팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2019-12-31",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1070@example.com"
+   },
+   {
+    "employee_no": "E1071",
+    "name": "손선우",
+    "department": {
+     "code": "D70",
+     "name": "해외영업2팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2019-02-22",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1071@example.com"
+   },
+   {
+    "employee_no": "E1072",
+    "name": "정은지",
+    "department": {
+     "code": "D71",
+     "name": "해외영업2팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2014-01-25",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1072@example.com"
+   },
+   {
+    "employee_no": "E1073",
+    "name": "윤가은",
+    "department": {
+     "code": "D72",
+     "name": "트레이딩팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2020-03-16",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1073@example.com"
+   },
+   {
+    "employee_no": "E1074",
+    "name": "서유진",
+    "department": {
+     "code": "D73",
+     "name": "트레이딩팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2012-06-08",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1074@example.com"
+   },
+   {
+    "employee_no": "E1075",
+    "name": "박주원",
+    "department": {
+     "code": "D74",
+     "name": "트레이딩팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2019-07-31",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1075@example.com"
+   },
+   {
+    "employee_no": "E1076",
+    "name": "권가은",
+    "department": {
+     "code": "D75",
+     "name": "트레이딩팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2024-06-04",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1076@example.com"
+   },
+   {
+    "employee_no": "E1077",
+    "name": "송윤서",
+    "department": {
+     "code": "D76",
+     "name": "트레이딩팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2022-04-15",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1077@example.com"
+   },
+   {
+    "employee_no": "E1078",
+    "name": "유시우",
+    "department": {
+     "code": "D77",
+     "name": "트레이딩팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2021-11-17",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1078@example.com"
+   },
+   {
+    "employee_no": "E1079",
+    "name": "백나연",
+    "department": {
+     "code": "D78",
+     "name": "트레이딩팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2012-05-28",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1079@example.com"
+   },
+   {
+    "employee_no": "E1080",
+    "name": "허하윤",
+    "department": {
+     "code": "D79",
+     "name": "트레이딩팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2020-08-14",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1080@example.com"
+   },
+   {
+    "employee_no": "E1081",
+    "name": "장선영",
+    "department": {
+     "code": "D80",
+     "name": "트레이딩팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2019-06-08",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1081@example.com"
+   },
+   {
+    "employee_no": "E1082",
+    "name": "신정우",
+    "department": {
+     "code": "D81",
+     "name": "트레이딩팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2023-08-09",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1082@example.com"
+   },
+   {
+    "employee_no": "E1083",
+    "name": "고승현",
+    "department": {
+     "code": "D82",
+     "name": "트레이딩팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2025-12-29",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1083@example.com"
+   },
+   {
+    "employee_no": "E1084",
+    "name": "윤서윤",
+    "department": {
+     "code": "D83",
+     "name": "트레이딩팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2018-08-17",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1084@example.com"
+   },
+   {
+    "employee_no": "E1085",
+    "name": "박하린",
+    "department": {
+     "code": "D84",
+     "name": "트레이딩팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2023-06-28",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1085@example.com"
+   },
+   {
+    "employee_no": "E1086",
+    "name": "정현우",
+    "department": {
+     "code": "D85",
+     "name": "트레이딩팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2013-06-10",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1086@example.com"
+   },
+   {
+    "employee_no": "E1087",
+    "name": "고현우",
+    "department": {
+     "code": "D86",
+     "name": "트레이딩팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2014-07-13",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1087@example.com"
+   },
+   {
+    "employee_no": "E1088",
+    "name": "김유진",
+    "department": {
+     "code": "D87",
+     "name": "트레이딩팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2017-02-15",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1088@example.com"
+   },
+   {
+    "employee_no": "E1089",
+    "name": "백민서",
+    "department": {
+     "code": "D88",
+     "name": "트레이딩팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2014-05-08",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1089@example.com"
+   },
+   {
+    "employee_no": "E1090",
+    "name": "강우진",
+    "department": {
+     "code": "D89",
+     "name": "트레이딩팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2013-11-19",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1090@example.com"
+   },
+   {
+    "employee_no": "E1091",
+    "name": "임민준",
+    "department": {
+     "code": "D90",
+     "name": "트레이딩팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2017-12-15",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1091@example.com"
+   },
+   {
+    "employee_no": "E1092",
+    "name": "정지훈",
+    "department": {
+     "code": "D91",
+     "name": "트레이딩팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2018-02-05",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1092@example.com"
+   },
+   {
+    "employee_no": "E1093",
+    "name": "송예린",
+    "department": {
+     "code": "D92",
+     "name": "트레이딩팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2012-11-20",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1093@example.com"
+   },
+   {
+    "employee_no": "E1094",
+    "name": "전준혁",
+    "department": {
+     "code": "D93",
+     "name": "트레이딩팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2016-01-27",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1094@example.com"
+   },
+   {
+    "employee_no": "E1095",
+    "name": "한시우",
+    "department": {
+     "code": "D94",
+     "name": "트레이딩팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2018-01-24",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1095@example.com"
+   },
+   {
+    "employee_no": "E1096",
+    "name": "문재민",
+    "department": {
+     "code": "D95",
+     "name": "트레이딩팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2014-11-27",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1096@example.com"
+   },
+   {
+    "employee_no": "E1097",
+    "name": "전미경",
+    "department": {
+     "code": "D96",
+     "name": "트레이딩팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2021-06-21",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1097@example.com"
+   },
+   {
+    "employee_no": "E1098",
+    "name": "고은지",
+    "department": {
+     "code": "D97",
+     "name": "트레이딩팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2017-10-19",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1098@example.com"
+   },
+   {
+    "employee_no": "E1099",
+    "name": "이수빈",
+    "department": {
+     "code": "D98",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2021-02-07",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1099@example.com"
+   },
+   {
+    "employee_no": "E1100",
+    "name": "유혜진",
+    "department": {
+     "code": "D99",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2015-05-08",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1100@example.com"
+   },
+   {
+    "employee_no": "E1101",
+    "name": "배하윤",
+    "department": {
+     "code": "D100",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2024-01-13",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1101@example.com"
+   },
+   {
+    "employee_no": "E1102",
+    "name": "서가은",
+    "department": {
+     "code": "D101",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2023-07-19",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1102@example.com"
+   },
+   {
+    "employee_no": "E1103",
+    "name": "최태윤",
+    "department": {
+     "code": "D102",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2024-10-18",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1103@example.com"
+   },
+   {
+    "employee_no": "E1104",
+    "name": "홍가은",
+    "department": {
+     "code": "D103",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2023-02-03",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1104@example.com"
+   },
+   {
+    "employee_no": "E1105",
+    "name": "이건우",
+    "department": {
+     "code": "D104",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2019-05-03",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1105@example.com"
+   },
+   {
+    "employee_no": "E1106",
+    "name": "박지아",
+    "department": {
+     "code": "D105",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2014-01-02",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1106@example.com"
+   },
+   {
+    "employee_no": "E1107",
+    "name": "권주원",
+    "department": {
+     "code": "D106",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2018-04-05",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1107@example.com"
+   },
+   {
+    "employee_no": "E1108",
+    "name": "최소율",
+    "department": {
+     "code": "D107",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2013-04-16",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1108@example.com"
+   },
+   {
+    "employee_no": "E1109",
+    "name": "전하은",
+    "department": {
+     "code": "D108",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2016-02-10",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1109@example.com"
+   },
+   {
+    "employee_no": "E1110",
+    "name": "최민준",
+    "department": {
+     "code": "D109",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2021-07-16",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1110@example.com"
+   },
+   {
+    "employee_no": "E1111",
+    "name": "류서윤",
+    "department": {
+     "code": "D110",
+     "name": "물류팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2013-08-16",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1111@example.com"
+   },
+   {
+    "employee_no": "E1112",
+    "name": "송예준",
+    "department": {
+     "code": "D111",
+     "name": "물류팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2018-01-12",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1112@example.com"
+   },
+   {
+    "employee_no": "E1113",
+    "name": "오보람",
+    "department": {
+     "code": "D112",
+     "name": "물류팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2012-05-17",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1113@example.com"
+   },
+   {
+    "employee_no": "E1114",
+    "name": "김지호",
+    "department": {
+     "code": "D113",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2026-03-25",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1114@example.com"
+   },
+   {
+    "employee_no": "E1115",
+    "name": "허지아",
+    "department": {
+     "code": "D114",
+     "name": "물류팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2013-12-26",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1115@example.com"
+   },
+   {
+    "employee_no": "E1116",
+    "name": "전승현",
+    "department": {
+     "code": "D115",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2017-11-04",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1116@example.com"
+   },
+   {
+    "employee_no": "E1117",
+    "name": "정영호",
+    "department": {
+     "code": "D116",
+     "name": "물류팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2013-11-17",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1117@example.com"
+   },
+   {
+    "employee_no": "E1118",
+    "name": "장정우",
+    "department": {
+     "code": "D117",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2025-08-22",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1118@example.com"
+   },
+   {
+    "employee_no": "E1119",
+    "name": "전예린",
+    "department": {
+     "code": "D118",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2016-12-26",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1119@example.com"
+   },
+   {
+    "employee_no": "E1120",
+    "name": "황지유",
+    "department": {
+     "code": "D119",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2013-06-29",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1120@example.com"
+   },
+   {
+    "employee_no": "E1121",
+    "name": "권태윤",
+    "department": {
+     "code": "D120",
+     "name": "물류팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2017-12-06",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1121@example.com"
+   },
+   {
+    "employee_no": "E1122",
+    "name": "황다은",
+    "department": {
+     "code": "D121",
+     "name": "물류팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2014-09-23",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1122@example.com"
+   },
+   {
+    "employee_no": "E1123",
+    "name": "박서윤",
+    "department": {
+     "code": "D122",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2022-03-06",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1123@example.com"
+   },
+   {
+    "employee_no": "E1124",
+    "name": "최은지",
+    "department": {
+     "code": "D123",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2012-04-04",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1124@example.com"
+   },
+   {
+    "employee_no": "E1125",
+    "name": "한은지",
+    "department": {
+     "code": "D124",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2019-08-10",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1125@example.com"
+   },
+   {
+    "employee_no": "E1126",
+    "name": "백광수",
+    "department": {
+     "code": "D125",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2024-05-27",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1126@example.com"
+   },
+   {
+    "employee_no": "E1127",
+    "name": "강은서",
+    "department": {
+     "code": "D126",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2021-05-15",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1127@example.com"
+   },
+   {
+    "employee_no": "E1128",
+    "name": "김지아",
+    "department": {
+     "code": "D127",
+     "name": "물류팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2018-01-03",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1128@example.com"
+   },
+   {
+    "employee_no": "E1129",
+    "name": "안예린",
+    "department": {
+     "code": "D128",
+     "name": "물류팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2025-12-10",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1129@example.com"
+   },
+   {
+    "employee_no": "E1130",
+    "name": "정광수",
+    "department": {
+     "code": "D129",
+     "name": "물류팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2014-11-24",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1130@example.com"
+   },
+   {
+    "employee_no": "E1131",
+    "name": "송서연",
+    "department": {
+     "code": "D130",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2012-12-19",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1131@example.com"
+   },
+   {
+    "employee_no": "E1132",
+    "name": "손은서",
+    "department": {
+     "code": "D131",
+     "name": "물류팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2023-10-26",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1132@example.com"
+   },
+   {
+    "employee_no": "E1133",
+    "name": "허수아",
+    "department": {
+     "code": "D132",
+     "name": "물류팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2017-05-07",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1133@example.com"
+   },
+   {
+    "employee_no": "E1134",
+    "name": "문우진",
+    "department": {
+     "code": "D133",
+     "name": "물류팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2014-06-15",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1134@example.com"
+   },
+   {
+    "employee_no": "E1135",
+    "name": "남주원",
+    "department": {
+     "code": "D134",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2015-08-15",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1135@example.com"
+   },
+   {
+    "employee_no": "E1136",
+    "name": "오현우",
+    "department": {
+     "code": "D135",
+     "name": "물류팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2017-11-15",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1136@example.com"
+   },
+   {
+    "employee_no": "E1137",
+    "name": "송성민",
+    "department": {
+     "code": "D136",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2013-02-16",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1137@example.com"
+   },
+   {
+    "employee_no": "E1138",
+    "name": "손재민",
+    "department": {
+     "code": "D137",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2016-01-23",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1138@example.com"
+   },
+   {
+    "employee_no": "E1139",
+    "name": "한영호",
+    "department": {
+     "code": "D138",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2016-07-10",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1139@example.com"
+   },
+   {
+    "employee_no": "E1140",
+    "name": "윤보람",
+    "department": {
+     "code": "D139",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2018-12-30",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1140@example.com"
+   },
+   {
+    "employee_no": "E1141",
+    "name": "배건우",
+    "department": {
+     "code": "D140",
+     "name": "구매팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2026-02-06",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1141@example.com"
+   },
+   {
+    "employee_no": "E1142",
+    "name": "배채원",
+    "department": {
+     "code": "D141",
+     "name": "구매팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2018-11-03",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1142@example.com"
+   },
+   {
+    "employee_no": "E1143",
+    "name": "백가은",
+    "department": {
+     "code": "D142",
+     "name": "구매팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2023-11-29",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1143@example.com"
+   },
+   {
+    "employee_no": "E1144",
+    "name": "양현우",
+    "department": {
+     "code": "D143",
+     "name": "구매팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2016-08-13",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1144@example.com"
+   },
+   {
+    "employee_no": "E1145",
+    "name": "조은서",
+    "department": {
+     "code": "D144",
+     "name": "구매팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2018-07-03",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1145@example.com"
+   },
+   {
+    "employee_no": "E1146",
+    "name": "황정우",
+    "department": {
+     "code": "D145",
+     "name": "구매팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2021-12-30",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1146@example.com"
+   },
+   {
+    "employee_no": "E1147",
+    "name": "양서연",
+    "department": {
+     "code": "D146",
+     "name": "구매팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2023-03-20",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1147@example.com"
+   },
+   {
+    "employee_no": "E1148",
+    "name": "김윤서",
+    "department": {
+     "code": "D147",
+     "name": "구매팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2015-12-28",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1148@example.com"
+   },
+   {
+    "employee_no": "E1149",
+    "name": "황우진",
+    "department": {
+     "code": "D148",
+     "name": "구매팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2018-01-25",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1149@example.com"
+   },
+   {
+    "employee_no": "E1150",
+    "name": "조광수",
+    "department": {
+     "code": "D149",
+     "name": "구매팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2019-10-13",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1150@example.com"
+   },
+   {
+    "employee_no": "E1151",
+    "name": "전정우",
+    "department": {
+     "code": "D150",
+     "name": "구매팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2012-05-28",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1151@example.com"
+   },
+   {
+    "employee_no": "E1152",
+    "name": "권진우",
+    "department": {
+     "code": "D151",
+     "name": "구매팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2017-08-13",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1152@example.com"
+   },
+   {
+    "employee_no": "E1153",
+    "name": "오예린",
+    "department": {
+     "code": "D152",
+     "name": "구매팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2012-10-29",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1153@example.com"
+   },
+   {
+    "employee_no": "E1154",
+    "name": "박현우",
+    "department": {
+     "code": "D153",
+     "name": "구매팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2012-05-05",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1154@example.com"
+   },
+   {
+    "employee_no": "E1155",
+    "name": "황건우",
+    "department": {
+     "code": "D154",
+     "name": "구매팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2012-05-31",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1155@example.com"
+   },
+   {
+    "employee_no": "E1156",
+    "name": "한지아",
+    "department": {
+     "code": "D155",
+     "name": "구매팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2023-05-05",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1156@example.com"
+   },
+   {
+    "employee_no": "E1157",
+    "name": "황보람",
+    "department": {
+     "code": "D156",
+     "name": "구매팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2024-05-11",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1157@example.com"
+   },
+   {
+    "employee_no": "E1158",
+    "name": "유보람",
+    "department": {
+     "code": "D157",
+     "name": "구매팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2016-04-01",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1158@example.com"
+   },
+   {
+    "employee_no": "E1159",
+    "name": "백민준",
+    "department": {
+     "code": "D158",
+     "name": "구매팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2023-07-14",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1159@example.com"
+   },
+   {
+    "employee_no": "E1160",
+    "name": "황미경",
+    "department": {
+     "code": "D159",
+     "name": "구매팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2022-08-25",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1160@example.com"
+   },
+   {
+    "employee_no": "E1161",
+    "name": "오미경",
+    "department": {
+     "code": "D160",
+     "name": "구매팀"
+    },
+    "job_type": "출장 잦은 직무",
+    "hire_date": "2017-07-05",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1161@example.com"
+   },
+   {
+    "employee_no": "E1162",
+    "name": "박정민",
+    "department": {
+     "code": "D161",
+     "name": "구매팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2022-01-10",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1162@example.com"
+   },
+   {
+    "employee_no": "E1163",
+    "name": "최승현",
+    "department": {
+     "code": "D162",
+     "name": "경영기획팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2014-05-20",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1163@example.com"
+   },
+   {
+    "employee_no": "E1164",
+    "name": "배선영",
+    "department": {
+     "code": "D163",
+     "name": "경영기획팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2021-09-10",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1164@example.com"
+   },
+   {
+    "employee_no": "E1165",
+    "name": "손건우",
+    "department": {
+     "code": "D164",
+     "name": "경영기획팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2023-02-07",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1165@example.com"
+   },
+   {
+    "employee_no": "E1166",
+    "name": "황하린",
+    "department": {
+     "code": "D165",
+     "name": "경영기획팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2024-03-30",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1166@example.com"
+   },
+   {
+    "employee_no": "E1167",
+    "name": "신영호",
+    "department": {
+     "code": "D166",
+     "name": "경영기획팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2020-10-25",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1167@example.com"
+   },
+   {
+    "employee_no": "E1168",
+    "name": "한수아",
+    "department": {
+     "code": "D167",
+     "name": "경영기획팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2023-05-13",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1168@example.com"
+   },
+   {
+    "employee_no": "E1169",
+    "name": "배진우",
+    "department": {
+     "code": "D168",
+     "name": "경영기획팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2018-11-26",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1169@example.com"
+   },
+   {
+    "employee_no": "E1170",
+    "name": "서수빈",
+    "department": {
+     "code": "D169",
+     "name": "경영기획팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2016-10-28",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1170@example.com"
+   },
+   {
+    "employee_no": "E1171",
+    "name": "서은지",
+    "department": {
+     "code": "D170",
+     "name": "경영기획팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2017-02-23",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1171@example.com"
+   },
+   {
+    "employee_no": "E1172",
+    "name": "박진우",
+    "department": {
+     "code": "D171",
+     "name": "경영기획팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2019-09-08",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1172@example.com"
+   },
+   {
+    "employee_no": "E1173",
+    "name": "강주원",
+    "department": {
+     "code": "D172",
+     "name": "경영기획팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2016-06-15",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1173@example.com"
+   },
+   {
+    "employee_no": "E1174",
+    "name": "정서연",
+    "department": {
+     "code": "D173",
+     "name": "경영기획팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2026-04-06",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1174@example.com"
+   },
+   {
+    "employee_no": "E1175",
+    "name": "정민서",
+    "department": {
+     "code": "D174",
+     "name": "경영기획팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2015-02-18",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1175@example.com"
+   },
+   {
+    "employee_no": "E1176",
+    "name": "유수빈",
+    "department": {
+     "code": "D175",
+     "name": "경영기획팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2021-01-28",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1176@example.com"
+   },
+   {
+    "employee_no": "E1177",
+    "name": "배미경",
+    "department": {
+     "code": "D176",
+     "name": "경영기획팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2019-10-18",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1177@example.com"
+   },
+   {
+    "employee_no": "E1178",
+    "name": "정보람",
+    "department": {
+     "code": "D177",
+     "name": "경영기획팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2013-03-21",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1178@example.com"
+   },
+   {
+    "employee_no": "E1179",
+    "name": "백상훈",
+    "department": {
+     "code": "D178",
+     "name": "재무회계팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2014-11-29",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1179@example.com"
+   },
+   {
+    "employee_no": "E1180",
+    "name": "황정민",
+    "department": {
+     "code": "D179",
+     "name": "재무회계팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2012-04-26",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1180@example.com"
+   },
+   {
+    "employee_no": "E1181",
+    "name": "남정우",
+    "department": {
+     "code": "D180",
+     "name": "재무회계팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2013-08-02",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1181@example.com"
+   },
+   {
+    "employee_no": "E1182",
+    "name": "정하윤",
+    "department": {
+     "code": "D181",
+     "name": "재무회계팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2026-01-10",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1182@example.com"
+   },
+   {
+    "employee_no": "E1183",
+    "name": "김민준",
+    "department": {
+     "code": "D182",
+     "name": "재무회계팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2017-09-24",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1183@example.com"
+   },
+   {
+    "employee_no": "E1184",
+    "name": "홍예준",
+    "department": {
+     "code": "D183",
+     "name": "재무회계팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2021-08-29",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1184@example.com"
+   },
+   {
+    "employee_no": "E1185",
+    "name": "안은지",
+    "department": {
+     "code": "D184",
+     "name": "재무회계팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2015-08-30",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1185@example.com"
+   },
+   {
+    "employee_no": "E1186",
+    "name": "남시우",
+    "department": {
+     "code": "D185",
+     "name": "재무회계팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2013-03-29",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1186@example.com"
+   },
+   {
+    "employee_no": "E1187",
+    "name": "신건우",
+    "department": {
+     "code": "D186",
+     "name": "재무회계팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2013-11-23",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1187@example.com"
+   },
+   {
+    "employee_no": "E1188",
+    "name": "백지아",
+    "department": {
+     "code": "D187",
+     "name": "재무회계팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2020-07-17",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1188@example.com"
+   },
+   {
+    "employee_no": "E1189",
+    "name": "김우진",
+    "department": {
+     "code": "D188",
+     "name": "재무회계팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2023-05-07",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1189@example.com"
+   },
+   {
+    "employee_no": "E1190",
+    "name": "조선우",
+    "department": {
+     "code": "D189",
+     "name": "재무회계팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2018-04-28",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1190@example.com"
+   },
+   {
+    "employee_no": "E1191",
+    "name": "안채원",
+    "department": {
+     "code": "D190",
+     "name": "재무회계팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2025-06-06",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1191@example.com"
+   },
+   {
+    "employee_no": "E1192",
+    "name": "손민서",
+    "department": {
+     "code": "D191",
+     "name": "재무회계팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2017-06-07",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1192@example.com"
+   },
+   {
+    "employee_no": "E1193",
+    "name": "한우진",
+    "department": {
+     "code": "D192",
+     "name": "재무회계팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2018-07-28",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1193@example.com"
+   },
+   {
+    "employee_no": "E1194",
+    "name": "송지훈",
+    "department": {
+     "code": "D193",
+     "name": "재무회계팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2013-01-05",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1194@example.com"
+   },
+   {
+    "employee_no": "E1195",
+    "name": "백시우",
+    "department": {
+     "code": "D194",
+     "name": "재무회계팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2022-04-21",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1195@example.com"
+   },
+   {
+    "employee_no": "E1196",
+    "name": "이은지",
+    "department": {
+     "code": "D195",
+     "name": "재무회계팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2016-02-27",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1196@example.com"
+   },
+   {
+    "employee_no": "E1197",
+    "name": "오수빈",
+    "department": {
+     "code": "D196",
+     "name": "인사총무팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2015-07-14",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1197@example.com"
+   },
+   {
+    "employee_no": "E1198",
+    "name": "고민서",
+    "department": {
+     "code": "D197",
+     "name": "인사총무팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2018-01-12",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1198@example.com"
+   },
+   {
+    "employee_no": "E1199",
+    "name": "백은서",
+    "department": {
+     "code": "D198",
+     "name": "인사총무팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2021-12-31",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1199@example.com"
+   },
+   {
+    "employee_no": "E1200",
+    "name": "신재민",
+    "department": {
+     "code": "D199",
+     "name": "인사총무팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2012-01-30",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1200@example.com"
+   },
+   {
+    "employee_no": "E1201",
+    "name": "정은서",
+    "department": {
+     "code": "D200",
+     "name": "인사총무팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2017-11-26",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1201@example.com"
+   },
+   {
+    "employee_no": "E1202",
+    "name": "안서연",
+    "department": {
+     "code": "D201",
+     "name": "인사총무팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2020-03-02",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1202@example.com"
+   },
+   {
+    "employee_no": "E1203",
+    "name": "허동현",
+    "department": {
+     "code": "D202",
+     "name": "인사총무팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2019-05-18",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1203@example.com"
+   },
+   {
+    "employee_no": "E1204",
+    "name": "손하린",
+    "department": {
+     "code": "D203",
+     "name": "인사총무팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2024-04-08",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1204@example.com"
+   },
+   {
+    "employee_no": "E1205",
+    "name": "전민준",
+    "department": {
+     "code": "D204",
+     "name": "인사총무팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2019-04-04",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1205@example.com"
+   },
+   {
+    "employee_no": "E1206",
+    "name": "손서윤",
+    "department": {
+     "code": "D205",
+     "name": "인사총무팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2017-06-25",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1206@example.com"
+   },
+   {
+    "employee_no": "E1207",
+    "name": "강서윤",
+    "department": {
+     "code": "D206",
+     "name": "인사총무팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2012-10-09",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1207@example.com"
+   },
+   {
+    "employee_no": "E1208",
+    "name": "양지유",
+    "department": {
+     "code": "D207",
+     "name": "인사총무팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2018-12-10",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1208@example.com"
+   },
+   {
+    "employee_no": "E1209",
+    "name": "송하은",
+    "department": {
+     "code": "D208",
+     "name": "인사총무팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2016-11-19",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1209@example.com"
+   },
+   {
+    "employee_no": "E1210",
+    "name": "한혜진",
+    "department": {
+     "code": "D209",
+     "name": "인사총무팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2019-12-31",
+    "status": "ACTIVE",
+    "resign_date": null,
+    "email": "e1210@example.com"
+   },
+   {
+    "employee_no": "E1211",
+    "name": "백승호",
+    "department": {
+     "code": "D210",
+     "name": "물류팀"
+    },
+    "job_type": "현장직",
+    "hire_date": "2021-03-02",
+    "status": "퇴직",
+    "resign_date": "2026-08-31",
+    "email": "e1211@example.com"
+   },
+   {
+    "employee_no": "E1212",
+    "name": "문가영",
+    "department": {
+     "code": "D211",
+     "name": "해외영업2팀"
+    },
+    "job_type": "사무직",
+    "hire_date": "2024-07-01",
+    "status": "퇴직",
+    "resign_date": "2026-10-15",
+    "email": "e1212@example.com"
+   }
+  ]
+ }
+}

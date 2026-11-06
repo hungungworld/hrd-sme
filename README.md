@@ -24,7 +24,7 @@ HRD를 혼자 맡은 중소 무역회사 담당자가 **이번 주에 무엇을 
 ## 데이터
 
 화면 숫자는 **원본 파일 6개**에서 브라우저가 계산합니다. 원본을 어디서 받는지, 어떻게 계산하는지는 [PLANNING.md](PLANNING.md)에 있습니다.
-**설정 → 데이터 가져오기**에서 엑셀을 올리면 그 원본이 바뀌고, 화면 숫자도 다시 계산됩니다. 가져온 데이터는 방문자 브라우저에만 저장됩니다.
+**설정 → 데이터 가져오기**에서 API·구글 시트·구글 폼을 연결하거나 엑셀을 올리면 그 원본이 바뀌고, 화면 숫자도 다시 계산됩니다. 가져온 데이터는 방문자 브라우저에만 저장됩니다.
 
 | 원본 (`data/raw/`) | 내용 |
 |---|---|
@@ -41,6 +41,8 @@ HRD를 혼자 맡은 중소 무역회사 담당자가 **이번 주에 무엇을 
 |---|---|
 | `assets/hrd-data.js` | 원본 정의(열 이름 동의어), 원본 → 화면 데이터 계산 |
 | `assets/hrd-app.js`, `assets/hrd-app.css` | 원본 불러오기·저장, 기준일 줄, 설정 → 데이터 가져오기 화면 |
+| `assets/hrd-connect.js` | 연결: Google 로그인, 구글 시트, 구글 폼(Forms API), 시스템 API(JSON) |
+| `data/api/*.json`, `_source/scripts/gen_api.py` | 시험용 예시 API 응답 (인사 명단, 법정교육 수강 현황) |
 | `_source/scripts/gen_raw.py` | 원본 샘플 만들기 (예전 계산 결과 `_source/legacy/`에 맞춰 거꾸로 만듦) |
 | `_source/scripts/verify.js` | 원본으로 계산한 숫자가 예전 숫자와 같은지 확인 (`node _source/scripts/verify.js`) |
 
